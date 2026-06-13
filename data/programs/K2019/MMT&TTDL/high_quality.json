@@ -1,0 +1,21 @@
+{
+  "program_id": "K2019-MMT&TTDL-high_quality",
+  "cohort": "K2019",
+  "major": "MMT&TTDL",
+  "program_type": "high_quality",
+  "program_label": "C. CHẤT LƯỢNG CAO",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-14-2019",
+  "extracted_at": "2026-06-03T04:44:11.587142Z",
+  "total_credits": 137,
+  "designed_semesters": null,
+  "knowledge_blocks": [
+    {
+      "block_id": "B01",
+      "block_name": "",
+      "heading_path": "",
+      "required_credits": null,
+      "is_elective": false
+    }
+  ],
+  "courses": []
+}

@@ -1,0 +1,310 @@
+{
+  "major": "KHdl",
+  "cohort": "K2023",
+  "source_url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-18-2023",
+  "generated_at": "2026-06-03T06:24:25.511478Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": 123,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3.3 Khối kiến thức giáo dục đại cương",
+          "heading_path": "3.3 Khối kiến thức giáo dục đại cương",
+          "required_credits": 45,
+          "is_elective": false,
+          "courses": [
+            "SS003",
+            "SS007",
+            "SS008",
+            "SS009",
+            "SS010",
+            "SS006",
+            "MA006",
+            "MA003",
+            "MA004",
+            "MA005",
+            "IT001",
+            "ENG01",
+            "ENG02",
+            "ENG03",
+            "PE231",
+            "PE232",
+            "ME001",
+            "SS004"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "3.4.1 Nhóm các môn học cơ sở ngành",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.1 Nhóm các môn học cơ sở ngành",
+          "required_credits": 42,
+          "is_elective": false,
+          "courses": [
+            "DS005",
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT010",
+            "IT007",
+            "DS107",
+            "DS101",
+            "DS105",
+            "DS102",
+            "DS108"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.4.2.2 Nhóm các môn học chuyên ngành tự chọn",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.2 Nhóm các môn học chuyên ngành > 3.4.2.2 Nhóm các môn học chuyên ngành tự chọn",
+          "required_credits": null,
+          "is_elective": true,
+          "courses": [
+            "DS304",
+            "DS307",
+            "DS200",
+            "DS315",
+            "IE224",
+            "DS104",
+            "DS317",
+            "DS316",
+            "DS318",
+            "DS204",
+            "DS201",
+            "DS310",
+            "DS106",
+            "DS312",
+            "DS313",
+            "DS314",
+            "IE108",
+            "IE104",
+            "DS311",
+            "IE310",
+            "IE103",
+            "DS309"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.4.2.3 Nhóm các môn học tự chọn tự do",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.2 Nhóm các môn học chuyên ngành > 3.4.2.3 Nhóm các môn học tự chọn tự do",
+          "required_credits": null,
+          "is_elective": true,
+          "courses": [
+            "BUS1125",
+            "TLH025",
+            "CS231",
+            "CS331",
+            "CS412",
+            "IS353",
+            "CS323",
+            "CS321",
+            "CS410",
+            "CS112",
+            "CS116",
+            "CS115",
+            "CS406"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.5 Khối kiến thức tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "DS207",
+            "DS505"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.5 Khối kiến thức tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "DS207",
+            "DS300",
+            "DS301",
+            "DS306",
+            "DS305",
+            "DS302",
+            "DS303",
+            "DS308",
+            "IE403"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "3.5 Khối kiến thức tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "PE232"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B01",
+      "group_name": "3.3 Khối kiến thức giáo dục đại cương",
+      "required_credits": 45,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS003",
+        "SS007",
+        "SS008",
+        "SS009",
+        "SS010",
+        "SS006",
+        "MA006",
+        "MA003",
+        "MA004",
+        "MA005",
+        "IT001",
+        "ENG01",
+        "ENG02",
+        "ENG03",
+        "PE231",
+        "PE232",
+        "ME001",
+        "SS004"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B02",
+      "group_name": "3.4.1 Nhóm các môn học cơ sở ngành",
+      "required_credits": 42,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "DS005",
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT010",
+        "IT007",
+        "DS107",
+        "DS101",
+        "DS105",
+        "DS102",
+        "DS108"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B03",
+      "group_name": "3.4.2.2 Nhóm các môn học chuyên ngành tự chọn",
+      "required_credits": null,
+      "is_elective": true,
+      "selection_type": "choose_any",
+      "courses": [
+        "DS304",
+        "DS307",
+        "DS200",
+        "DS315",
+        "IE224",
+        "DS104",
+        "DS317",
+        "DS316",
+        "DS318",
+        "DS204",
+        "DS201",
+        "DS310",
+        "DS106",
+        "DS312",
+        "DS313",
+        "DS314",
+        "IE108",
+        "IE104",
+        "DS311",
+        "IE310",
+        "IE103",
+        "DS309"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B04",
+      "group_name": "3.4.2.3 Nhóm các môn học tự chọn tự do",
+      "required_credits": null,
+      "is_elective": true,
+      "selection_type": "choose_any",
+      "courses": [
+        "BUS1125",
+        "TLH025",
+        "CS231",
+        "CS331",
+        "CS412",
+        "IS353",
+        "CS323",
+        "CS321",
+        "CS410",
+        "CS112",
+        "CS116",
+        "CS115",
+        "CS406"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B05",
+      "group_name": "3.5 Khối kiến thức tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "DS207",
+        "DS505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B06",
+      "group_name": "3.5 Khối kiến thức tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "DS207",
+        "DS300",
+        "DS301",
+        "DS306",
+        "DS305",
+        "DS302",
+        "DS303",
+        "DS308",
+        "IE403"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B07",
+      "group_name": "3.5 Khối kiến thức tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "PE232"
+      ]
+    }
+  ]
+}

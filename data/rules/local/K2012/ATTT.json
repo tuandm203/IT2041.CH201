@@ -1,0 +1,288 @@
+{
+  "major": "ATTT",
+  "cohort": "K2012",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-va-chuyen-nganh-toan-ninh-thong-tin-ap-dung-tu-khoa-7-den-khoa-8",
+  "generated_at": "2026-06-03T06:24:25.439346Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": 148,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "2.1 Lý luận Triết học Mác-Lênin và Tư tưởng Hồ Chí Minh",
+          "heading_path": "2. Khối kiến thức giáo dục đại cương > 2.1 Lý luận Triết học Mác-Lênin và Tư tưởng Hồ Chí Minh",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "SS001",
+            "SS002",
+            "SS003"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "2.2. Toán – Tin học - Khoa học tự nhiên",
+          "heading_path": "2. Khối kiến thức giáo dục đại cương > 2.2. Toán – Tin học - Khoa học tự nhiên",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "MA001",
+            "MA002",
+            "MA003",
+            "MA005",
+            "MA004",
+            "PH001",
+            "PH002",
+            "IT001"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.1. Kiến thức cơ sở nhóm ngành",
+          "heading_path": "3. Khối kiến thức giáo dục chuyên nghiệp > 3.1. Kiến thức cơ sở nhóm ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT006",
+            "IT003",
+            "IT004",
+            "IT007",
+            "IT005"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.2. Kiến thức ngành",
+          "heading_path": "3. Khối kiến thức giáo dục chuyên nghiệp > 3.2. Kiến thức ngành",
+          "required_credits": 39,
+          "is_elective": false,
+          "courses": [
+            "NT103",
+            "NT405",
+            "NT106",
+            "NT101",
+            "NT105",
+            "SE107",
+            "NT111",
+            "NT119",
+            "NT114",
+            "SS004",
+            "IT009"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.3. Kiến thức ngành An toàn Thông tin",
+          "heading_path": "3. Khối kiến thức giáo dục chuyên nghiệp > 3.3. Kiến thức ngành An toàn Thông tin",
+          "required_credits": 12,
+          "is_elective": false,
+          "courses": [
+            "NT334",
+            "NT211",
+            "NT205",
+            "NT331"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.4. Học phần tự chọn:",
+          "heading_path": "3. Khối kiến thức giáo dục chuyên nghiệp > 3.4. Học phần tự chọn:",
+          "required_credits": null,
+          "is_elective": true,
+          "courses": [
+            "NT310",
+            "NT204",
+            "NT206",
+            "NT311",
+            "NT312",
+            "NT212",
+            "NT213",
+            "NT330"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "4. Thực tập, khóa luận tốt nghiệp",
+          "heading_path": "4. Thực tập, khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT115",
+            "NT404"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "5. Yêu cầu về môn học tài năng của chương trình",
+          "heading_path": "5. Yêu cầu về môn học tài năng của chương trình",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT334",
+            "NT211",
+            "NT205",
+            "NT331",
+            "NT310",
+            "NT204",
+            "NT206",
+            "NT311",
+            "NT312",
+            "NT212",
+            "NT213",
+            "NT330",
+            "NT115",
+            "NT404"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B01",
+      "group_name": "2.1 Lý luận Triết học Mác-Lênin và Tư tưởng Hồ Chí Minh",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS001",
+        "SS002",
+        "SS003"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B02",
+      "group_name": "2.2. Toán – Tin học - Khoa học tự nhiên",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "MA001",
+        "MA002",
+        "MA003",
+        "MA005",
+        "MA004",
+        "PH001",
+        "PH002",
+        "IT001"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B03",
+      "group_name": "3.1. Kiến thức cơ sở nhóm ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT006",
+        "IT003",
+        "IT004",
+        "IT007",
+        "IT005"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B04",
+      "group_name": "3.2. Kiến thức ngành",
+      "required_credits": 39,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT103",
+        "NT405",
+        "NT106",
+        "NT101",
+        "NT105",
+        "SE107",
+        "NT111",
+        "NT119",
+        "NT114",
+        "SS004",
+        "IT009"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B05",
+      "group_name": "3.3. Kiến thức ngành An toàn Thông tin",
+      "required_credits": 12,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT334",
+        "NT211",
+        "NT205",
+        "NT331"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B06",
+      "group_name": "3.4. Học phần tự chọn:",
+      "required_credits": null,
+      "is_elective": true,
+      "selection_type": "choose_any",
+      "courses": [
+        "NT310",
+        "NT204",
+        "NT206",
+        "NT311",
+        "NT312",
+        "NT212",
+        "NT213",
+        "NT330"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B07",
+      "group_name": "4. Thực tập, khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT115",
+        "NT404"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B08",
+      "group_name": "5. Yêu cầu về môn học tài năng của chương trình",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT334",
+        "NT211",
+        "NT205",
+        "NT331",
+        "NT310",
+        "NT204",
+        "NT206",
+        "NT311",
+        "NT312",
+        "NT212",
+        "NT213",
+        "NT330",
+        "NT115",
+        "NT404"
+      ]
+    }
+  ]
+}

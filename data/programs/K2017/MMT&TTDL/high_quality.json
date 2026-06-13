@@ -1,0 +1,43 @@
+{
+  "program_id": "MMT&TTDL_K2017_high_quality",
+  "cohort": "K2017",
+  "major": "MMT&TTDL",
+  "program_type": "high_quality",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-12-2017",
+  "total_credits": null,
+  "designed_semesters": 8,
+  "courses": [
+    {
+      "course_id": "ENG04",
+      "course_name": "Anh văn 4",
+      "credits": 4,
+      "credits_lt": 4,
+      "credits_th": 0,
+      "block_id": "B2",
+      "block_name": "2.Về mục tiêu, chuẩn đầu ra của chương trình:",
+      "group_id": "",
+      "group_name": "",
+      "is_mandatory": true,
+      "semester": null,
+      "prerequisite_ids": [],
+      "prior_ids": [],
+      "corequisite_ids": []
+    },
+    {
+      "course_id": "ENG05",
+      "course_name": "Anh văn 5",
+      "credits": 4,
+      "credits_lt": 4,
+      "credits_th": 0,
+      "block_id": "B2",
+      "block_name": "2.Về mục tiêu, chuẩn đầu ra của chương trình:",
+      "group_id": "",
+      "group_name": "",
+      "is_mandatory": true,
+      "semester": null,
+      "prerequisite_ids": [],
+      "prior_ids": [],
+      "corequisite_ids": []
+    }
+  ]
+}

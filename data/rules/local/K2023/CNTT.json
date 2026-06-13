@@ -1,0 +1,1362 @@
+{
+  "major": "CNTT",
+  "cohort": "K2023",
+  "source_url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-18-2023",
+  "generated_at": "2026-06-03T06:24:25.508069Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "high_quality",
+      "total_credits": 132,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3.3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 55,
+          "is_elective": false,
+          "courses": [
+            "SS003",
+            "SS007",
+            "SS008",
+            "SS009",
+            "SS010",
+            "SS006",
+            "MA006",
+            "MA003",
+            "MA004",
+            "MA005",
+            "IT001",
+            "PE231",
+            "PE232",
+            "ME001",
+            "SS004",
+            "CU001"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "3.3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 55,
+          "is_elective": false,
+          "courses": [
+            "JAN01",
+            "JAN02",
+            "JAN03",
+            "JAN04",
+            "JAN05",
+            "JAN06",
+            "JAN07",
+            "JAN08"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": 25,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT012",
+            "IT007",
+            "IE005"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": 25,
+          "is_elective": false,
+          "courses": [
+            "IE101",
+            "IE103",
+            "IE104",
+            "IE106",
+            "IE105",
+            "IE108",
+            "IS402"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.4.2. Nhóm các môn học chuyên ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành",
+          "required_credits": 6,
+          "is_elective": false,
+          "courses": [
+            "DS107",
+            "DS102",
+            "IE212",
+            "IS254"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.4.2. Nhóm các môn học chuyên ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành",
+          "required_credits": 6,
+          "is_elective": false,
+          "courses": [
+            "IE213",
+            "IE204",
+            "IS353",
+            "IS334"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "3.4.2. Nhóm các môn học chuyên ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành",
+          "required_credits": 6,
+          "is_elective": false,
+          "courses": [
+            "SE113",
+            "IE225",
+            "IE226",
+            "IE227",
+            "IE232"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "3.4.2. Nhóm các môn học chuyên ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành",
+          "required_credits": 6,
+          "is_elective": false,
+          "courses": [
+            "IE301",
+            "IE302",
+            "IE303",
+            "IE304",
+            "IE102",
+            "IE307",
+            "IE231",
+            "IE203",
+            "IE230",
+            "IE221",
+            "IE224",
+            "IE310"
+          ]
+        },
+        {
+          "block_id": "B09",
+          "block_name": "3.4.2. Nhóm các môn học chuyên ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành",
+          "required_credits": 6,
+          "is_elective": false,
+          "courses": [
+            "BUS1125",
+            "TLH025",
+            "SE401",
+            "SE310",
+            "IS208",
+            "NT213",
+            "IS217",
+            "IS251"
+          ]
+        },
+        {
+          "block_id": "B10",
+          "block_name": "3.5.1. Thực tập tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.1. Thực tập tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE309"
+          ]
+        },
+        {
+          "block_id": "B11",
+          "block_name": "3.5.2. Đồ án",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.2. Đồ án",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE207"
+          ]
+        },
+        {
+          "block_id": "B12",
+          "block_name": "3.5.3. Khóa luận tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.3. Khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE505"
+          ]
+        },
+        {
+          "block_id": "B13",
+          "block_name": "3.5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE401",
+            "IE402",
+            "IE403",
+            "IE405",
+            "IE406"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B01",
+      "group_name": "3.3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 55,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS003",
+        "SS007",
+        "SS008",
+        "SS009",
+        "SS010",
+        "SS006",
+        "MA006",
+        "MA003",
+        "MA004",
+        "MA005",
+        "IT001",
+        "PE231",
+        "PE232",
+        "ME001",
+        "SS004",
+        "CU001"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B02",
+      "group_name": "3.3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 55,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "JAN01",
+        "JAN02",
+        "JAN03",
+        "JAN04",
+        "JAN05",
+        "JAN06",
+        "JAN07",
+        "JAN08"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B03",
+      "group_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": 25,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT012",
+        "IT007",
+        "IE005"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B04",
+      "group_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": 25,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE101",
+        "IE103",
+        "IE104",
+        "IE106",
+        "IE105",
+        "IE108",
+        "IS402"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B05",
+      "group_name": "3.4.2. Nhóm các môn học chuyên ngành",
+      "required_credits": 6,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "DS107",
+        "DS102",
+        "IE212",
+        "IS254"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B06",
+      "group_name": "3.4.2. Nhóm các môn học chuyên ngành",
+      "required_credits": 6,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE213",
+        "IE204",
+        "IS353",
+        "IS334"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B07",
+      "group_name": "3.4.2. Nhóm các môn học chuyên ngành",
+      "required_credits": 6,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SE113",
+        "IE225",
+        "IE226",
+        "IE227",
+        "IE232"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B08",
+      "group_name": "3.4.2. Nhóm các môn học chuyên ngành",
+      "required_credits": 6,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE301",
+        "IE302",
+        "IE303",
+        "IE304",
+        "IE102",
+        "IE307",
+        "IE231",
+        "IE203",
+        "IE230",
+        "IE221",
+        "IE224",
+        "IE310"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B09",
+      "group_name": "3.4.2. Nhóm các môn học chuyên ngành",
+      "required_credits": 6,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "BUS1125",
+        "TLH025",
+        "SE401",
+        "SE310",
+        "IS208",
+        "NT213",
+        "IS217",
+        "IS251"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B10",
+      "group_name": "3.5.1. Thực tập tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE309"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B11",
+      "group_name": "3.5.2. Đồ án",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE207"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B12",
+      "group_name": "3.5.3. Khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "high_quality",
+      "block_id": "B13",
+      "group_name": "3.5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE401",
+        "IE402",
+        "IE403",
+        "IE405",
+        "IE406"
+      ]
+    },
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "second_degree",
+      "total_credits": 74,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3.3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 8,
+          "is_elective": false,
+          "courses": [
+            "IT001",
+            "MA004"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": 40,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT012",
+            "IE005",
+            "IE101",
+            "IE103",
+            "IE104",
+            "IE105",
+            "IE106"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE201",
+            "IE212",
+            "IS217",
+            "IS254",
+            "IE221",
+            "IE224",
+            "IE309"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE231",
+            "IE203",
+            "IS208",
+            "IS336",
+            "IE301",
+            "IE302",
+            "IE102"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE204",
+            "IE213",
+            "IS353",
+            "IS334",
+            "IE303",
+            "IE307"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IS251",
+            "IS352",
+            "IS351",
+            "IE205",
+            "IE304",
+            "IE305"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "3.4.2.5. Tự chọn tự do",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.5. Tự chọn tự do",
+          "required_credits": null,
+          "is_elective": true,
+          "courses": [
+            "NT213",
+            "SE113",
+            "SE401",
+            "BUS1125",
+            "TLH025"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "3.5.1. Khóa luận tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.1. Khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE505"
+          ]
+        },
+        {
+          "block_id": "B09",
+          "block_name": "3.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE401",
+            "IE402",
+            "IE403",
+            "IE405",
+            "IE406"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B01",
+      "group_name": "3.3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 8,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT001",
+        "MA004"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B02",
+      "group_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": 40,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT012",
+        "IE005",
+        "IE101",
+        "IE103",
+        "IE104",
+        "IE105",
+        "IE106"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B03",
+      "group_name": "3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE201",
+        "IE212",
+        "IS217",
+        "IS254",
+        "IE221",
+        "IE224",
+        "IE309"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B04",
+      "group_name": "3.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE231",
+        "IE203",
+        "IS208",
+        "IS336",
+        "IE301",
+        "IE302",
+        "IE102"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B05",
+      "group_name": "3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE204",
+        "IE213",
+        "IS353",
+        "IS334",
+        "IE303",
+        "IE307"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B06",
+      "group_name": "3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IS251",
+        "IS352",
+        "IS351",
+        "IE205",
+        "IE304",
+        "IE305"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B07",
+      "group_name": "3.4.2.5. Tự chọn tự do",
+      "required_credits": null,
+      "is_elective": true,
+      "selection_type": "choose_any",
+      "courses": [
+        "NT213",
+        "SE113",
+        "SE401",
+        "BUS1125",
+        "TLH025"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B08",
+      "group_name": "3.5.1. Khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "second_degree",
+      "block_id": "B09",
+      "group_name": "3.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE401",
+        "IE402",
+        "IE403",
+        "IE405",
+        "IE406"
+      ]
+    },
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": 125,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3.3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 45,
+          "is_elective": false,
+          "courses": [
+            "SS003",
+            "SS007",
+            "SS008",
+            "SS009",
+            "SS010",
+            "SS006",
+            "MA006",
+            "MA003",
+            "MA004",
+            "MA005",
+            "IT001",
+            "ENG01",
+            "ENG02",
+            "ENG03",
+            "PE231",
+            "PE232",
+            "ME001",
+            "SS004"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": 25,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT012",
+            "IT007",
+            "IE005"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": 25,
+          "is_elective": false,
+          "courses": [
+            "IE101",
+            "IE103",
+            "IE104",
+            "IE105",
+            "IE106",
+            "IE108",
+            "IS402"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE201",
+            "IE212",
+            "IS217",
+            "IS254",
+            "IE221",
+            "IE224",
+            "IE309",
+            "BUS1125"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.4.2.2. Hướng ứng dụng CNTT để quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.2. Hướng ứng dụng CNTT để quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE231",
+            "IE203",
+            "IS208",
+            "IS336",
+            "IE301",
+            "IE302",
+            "IE102"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE204",
+            "IE213",
+            "IS353",
+            "IS334",
+            "IE303",
+            "IE307"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IS251",
+            "IS352",
+            "IS351",
+            "IE205",
+            "IE304",
+            "IE305"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "3.4.2.5. Tự chọn tự do",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.4. Khối kiến thức giáo dục chuyên nghiệp > 3.4.2. Nhóm các môn học chuyên ngành > 3.4.2.5. Tự chọn tự do",
+          "required_credits": 6,
+          "is_elective": true,
+          "courses": [
+            "TLH025",
+            "IE310"
+          ]
+        },
+        {
+          "block_id": "B09",
+          "block_name": "3.5.1. Đồ án",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.1. Đồ án",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE207"
+          ]
+        },
+        {
+          "block_id": "B10",
+          "block_name": "3.5.2. Khóa luận tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.2. Khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE505"
+          ]
+        },
+        {
+          "block_id": "B11",
+          "block_name": "3.5.3. Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "3. CHƯƠNG TRÌNH ĐÀO TẠO > 3.5. Khối kiến thức tốt nghiệp > 3.5.3. Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE401",
+            "IE402",
+            "IE403",
+            "IE405",
+            "IE406"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B01",
+      "group_name": "3.3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 45,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS003",
+        "SS007",
+        "SS008",
+        "SS009",
+        "SS010",
+        "SS006",
+        "MA006",
+        "MA003",
+        "MA004",
+        "MA005",
+        "IT001",
+        "ENG01",
+        "ENG02",
+        "ENG03",
+        "PE231",
+        "PE232",
+        "ME001",
+        "SS004"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B02",
+      "group_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": 25,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT012",
+        "IT007",
+        "IE005"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B03",
+      "group_name": "3.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": 25,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE101",
+        "IE103",
+        "IE104",
+        "IE105",
+        "IE106",
+        "IE108",
+        "IS402"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B04",
+      "group_name": "3.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE201",
+        "IE212",
+        "IS217",
+        "IS254",
+        "IE221",
+        "IE224",
+        "IE309",
+        "BUS1125"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B05",
+      "group_name": "3.4.2.2. Hướng ứng dụng CNTT để quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE231",
+        "IE203",
+        "IS208",
+        "IS336",
+        "IE301",
+        "IE302",
+        "IE102"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B06",
+      "group_name": "3.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE204",
+        "IE213",
+        "IS353",
+        "IS334",
+        "IE303",
+        "IE307"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B07",
+      "group_name": "3.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IS251",
+        "IS352",
+        "IS351",
+        "IE205",
+        "IE304",
+        "IE305"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B08",
+      "group_name": "3.4.2.5. Tự chọn tự do",
+      "required_credits": 6,
+      "is_elective": true,
+      "selection_type": "min_credits",
+      "courses": [
+        "TLH025",
+        "IE310"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B09",
+      "group_name": "3.5.1. Đồ án",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE207"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B10",
+      "group_name": "3.5.2. Khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B11",
+      "group_name": "3.5.3. Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE401",
+        "IE402",
+        "IE403",
+        "IE405",
+        "IE406"
+      ]
+    },
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "transfer",
+      "total_credits": null,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "4.3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 10,
+          "is_elective": false,
+          "courses": [
+            "MA003",
+            "MA004",
+            "MA005"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "4.4.1. Nhóm các môn học cơ sở ngành",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.1. Nhóm các môn học cơ sở ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IT007",
+            "IE005",
+            "IT003",
+            "IE101",
+            "IE103",
+            "IE105",
+            "IE108"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "4.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.2. Nhóm các môn học chuyên ngành > 4.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE201",
+            "IE403",
+            "IS217",
+            "IS254",
+            "IE221",
+            "IE224",
+            "IE309"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "4.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.2. Nhóm các môn học chuyên ngành > 4.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE231",
+            "IE203",
+            "IS208",
+            "IS336",
+            "IE301",
+            "IE302",
+            "IE102",
+            "SE104"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "4.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.2. Nhóm các môn học chuyên ngành > 4.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE204",
+            "IE213",
+            "IS353",
+            "IS334",
+            "IE303",
+            "IE307"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "4.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.2. Nhóm các môn học chuyên ngành > 4.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IS251",
+            "IS352",
+            "IS351",
+            "IE205",
+            "IE304",
+            "IE305"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "4.4.2.5. Tự chọn tự do",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.4. Khối kiến thức giáo dục chuyên nghiệp > 4.4.2. Nhóm các môn học chuyên ngành > 4.4.2.5. Tự chọn tự do",
+          "required_credits": null,
+          "is_elective": true,
+          "courses": [
+            "BUS1125",
+            "TLH025"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "4.5.1. Khóa luận tốt nghiệp",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.5. Khối kiến thức tốt nghiệp > 4.5.1. Khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE505"
+          ]
+        },
+        {
+          "block_id": "B09",
+          "block_name": "4.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "4. CHƯƠNG TRÌNH ĐÀO TẠO > 4.5. Khối kiến thức tốt nghiệp > 4.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IE401",
+            "IE402",
+            "IE405",
+            "IE406"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B01",
+      "group_name": "4.3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 10,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "MA003",
+        "MA004",
+        "MA005"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B02",
+      "group_name": "4.4.1. Nhóm các môn học cơ sở ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT007",
+        "IE005",
+        "IT003",
+        "IE101",
+        "IE103",
+        "IE105",
+        "IE108"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B03",
+      "group_name": "4.4.2.1. Hướng ứng dụng CNTT để phân tích dữ liệu định lượng trợ giúp hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE201",
+        "IE403",
+        "IS217",
+        "IS254",
+        "IE221",
+        "IE224",
+        "IE309"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B04",
+      "group_name": "4.4.2.2. Hướng ứng dụng CNTT quản lý, giám sát, tư vấn các hoạt động doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE231",
+        "IE203",
+        "IS208",
+        "IS336",
+        "IE301",
+        "IE302",
+        "IE102",
+        "SE104"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B05",
+      "group_name": "4.4.2.3. Hướng ứng dụng truyền thông xã hội và công nghệ Web",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE204",
+        "IE213",
+        "IS353",
+        "IS334",
+        "IE303",
+        "IE307"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B06",
+      "group_name": "4.4.2.4. Hướng ứng dụng CNTT vào Tài nguyên – Môi trường, Địa lý",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IS251",
+        "IS352",
+        "IS351",
+        "IE205",
+        "IE304",
+        "IE305"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B07",
+      "group_name": "4.4.2.5. Tự chọn tự do",
+      "required_credits": null,
+      "is_elective": true,
+      "selection_type": "choose_any",
+      "courses": [
+        "BUS1125",
+        "TLH025"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B08",
+      "group_name": "4.5.1. Khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "transfer",
+      "block_id": "B09",
+      "group_name": "4.5.2. Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IE401",
+        "IE402",
+        "IE405",
+        "IE406"
+      ]
+    }
+  ]
+}

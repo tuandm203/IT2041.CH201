@@ -1,0 +1,113 @@
+{
+  "program_id": "K2019-KTPM-high_quality",
+  "cohort": "K2019",
+  "major": "KTPM",
+  "program_type": "high_quality",
+  "program_label": "C. CHẤT LƯỢNG CAO",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-14-2019",
+  "extracted_at": "2026-06-03T04:44:11.473763Z",
+  "total_credits": 137,
+  "designed_semesters": null,
+  "knowledge_blocks": [
+    {
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ",
+      "heading_path": "2. CÁC MÔN HỌC CHẤT LƯỢNG CAO > 2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ",
+      "required_credits": null,
+      "is_elective": false
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "IT002",
+      "course_name": "Lập trình hướng đối tượng",
+      "credits": 4,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "IT008",
+      "course_name": "Lập trình trực quan",
+      "credits": 4,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "SE104",
+      "course_name": "Nhập môn Công nghệ phần mềm",
+      "credits": 4,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "SE102",
+      "course_name": "Nhập môn phát triển game",
+      "credits": 3,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "SE106",
+      "course_name": "Đặc tả hình thức",
+      "credits": 4,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "SE100",
+      "course_name": "Phương pháp phát triển phần mềm hướng đối tượng",
+      "credits": 4,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    },
+    {
+      "course_id": "SE346",
+      "course_name": "Lập trình trên thiết bị di động",
+      "credits": 3,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "Chứng chỉ bậc 5/6(Loại chứng chỉ)",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "2.2 Các môn giảng dạy bằng tiếng Anh, song ngữ"
+    }
+  ]
+}

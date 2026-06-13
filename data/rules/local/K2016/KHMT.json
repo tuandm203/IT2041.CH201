@@ -1,0 +1,15 @@
+{
+  "major": "KHMT",
+  "cohort": "K2016",
+  "source_url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-11-2016",
+  "generated_at": "2026-06-03T06:24:25.459866Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": null,
+      "designed_semesters": 8,
+      "knowledge_blocks": []
+    }
+  ]
+}

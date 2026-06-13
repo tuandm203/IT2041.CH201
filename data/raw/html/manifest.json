@@ -1,0 +1,577 @@
+{
+  "K2012/ATTT": {
+    "cohort": "K2012",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-va-chuyen-nganh-toan-ninh-thong-tin-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2012/CNTT": {
+    "cohort": "K2012",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2012/HTTT": {
+    "cohort": "K2012",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2012/KHMT": {
+    "cohort": "K2012",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2012/KTMT": {
+    "cohort": "K2012",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-7-2012"
+  },
+  "K2012/KTPM": {
+    "cohort": "K2012",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-7-2012"
+  },
+  "K2012/MMT&TTDL": {
+    "cohort": "K2012",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2013/ATTT": {
+    "cohort": "K2013",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-va-chuyen-nganh-toan-ninh-thong-tin-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2013/CNTT": {
+    "cohort": "K2013",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2013/HTTT": {
+    "cohort": "K2013",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2013/KHMT": {
+    "cohort": "K2013",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2013/KTMT": {
+    "cohort": "K2013",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-7-2012"
+  },
+  "K2013/KTPM": {
+    "cohort": "K2013",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-7-2012"
+  },
+  "K2013/MMT&TTDL": {
+    "cohort": "K2013",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-7-den-khoa-8"
+  },
+  "K2014/ATTT": {
+    "cohort": "K2014",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-9-2014"
+  },
+  "K2014/CNTT": {
+    "cohort": "K2014",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2014/HTTT": {
+    "cohort": "K2014",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2014/KHMT": {
+    "cohort": "K2014",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-9-2014"
+  },
+  "K2014/KTMT": {
+    "cohort": "K2014",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-7-2012"
+  },
+  "K2014/KTPM": {
+    "cohort": "K2014",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-7-2012"
+  },
+  "K2014/MMT&TTDL": {
+    "cohort": "K2014",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-9-2014"
+  },
+  "K2015/ATTT": {
+    "cohort": "K2015",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-9-2014"
+  },
+  "K2015/CNTT": {
+    "cohort": "K2015",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2015/HTTT": {
+    "cohort": "K2015",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-7-2012"
+  },
+  "K2015/KHMT": {
+    "cohort": "K2015",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-9-2014"
+  },
+  "K2015/KTMT": {
+    "cohort": "K2015",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-7-2012"
+  },
+  "K2015/KTPM": {
+    "cohort": "K2015",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-7-2012"
+  },
+  "K2015/MMT&TTDL": {
+    "cohort": "K2015",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-9-2014"
+  },
+  "K2016/ATTT": {
+    "cohort": "K2016",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-11-2016"
+  },
+  "K2016/CNTT": {
+    "cohort": "K2016",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-11-2016"
+  },
+  "K2017/ATTT": {
+    "cohort": "K2017",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/CNTT": {
+    "cohort": "K2017",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/HTTT": {
+    "cohort": "K2017",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/KHMT": {
+    "cohort": "K2017",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/KTMT": {
+    "cohort": "K2017",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/KTPM": {
+    "cohort": "K2017",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-12-2017"
+  },
+  "K2017/MMT&TTDL": {
+    "cohort": "K2017",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-truyen-thong-va-mang-may-tinh-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/ATTT": {
+    "cohort": "K2018",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/CNTT": {
+    "cohort": "K2018",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/HTTT": {
+    "cohort": "K2018",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/KHMT": {
+    "cohort": "K2018",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/KHdl": {
+    "cohort": "K2018",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-13-2018"
+  },
+  "K2018/KTMT": {
+    "cohort": "K2018",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/KTPM": {
+    "cohort": "K2018",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-12-2017"
+  },
+  "K2018/MMT&TTDL": {
+    "cohort": "K2018",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-13-2018"
+  },
+  "K2018/TMDT": {
+    "cohort": "K2018",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-13-2018"
+  },
+  "K2019/ATTT": {
+    "cohort": "K2019",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-toan-thong-tin-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/CNTT": {
+    "cohort": "K2019",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/HTTT": {
+    "cohort": "K2019",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-he-thong-thong-tin-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/KHMT": {
+    "cohort": "K2019",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/KHdl": {
+    "cohort": "K2019",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/KTMT": {
+    "cohort": "K2019",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/KTPM": {
+    "cohort": "K2019",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/MMT&TTDL": {
+    "cohort": "K2019",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/ky-su-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-14-2019"
+  },
+  "K2019/TMDT": {
+    "cohort": "K2019",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-14-2019"
+  },
+  "K2020/ATTT": {
+    "cohort": "K2020",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-toan-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/CNTT": {
+    "cohort": "K2020",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/HTTT": {
+    "cohort": "K2020",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/KHMT": {
+    "cohort": "K2020",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/KHdl": {
+    "cohort": "K2020",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/KTMT": {
+    "cohort": "K2020",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-va-cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/KTPM": {
+    "cohort": "K2020",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/MMT&TTDL": {
+    "cohort": "K2020",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2020/TMDT": {
+    "cohort": "K2020",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/ATTT": {
+    "cohort": "K2021",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-toan-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/CNTT": {
+    "cohort": "K2021",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/HTTT": {
+    "cohort": "K2021",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/KHMT": {
+    "cohort": "K2021",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/KHdl": {
+    "cohort": "K2021",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/KTMT": {
+    "cohort": "K2021",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/ky-su-va-cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/KTPM": {
+    "cohort": "K2021",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/MMT&TTDL": {
+    "cohort": "K2021",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2021/TMDT": {
+    "cohort": "K2021",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-15-2020"
+  },
+  "K2022/ATTT": {
+    "cohort": "K2022",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-toan-thong-tin-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/CNTT": {
+    "cohort": "K2022",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/HTTT": {
+    "cohort": "K2022",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/KHdl": {
+    "cohort": "K2022",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/KTMT": {
+    "cohort": "K2022",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/KTPM": {
+    "cohort": "K2022",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/MMT&TTDL": {
+    "cohort": "K2022",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/TMDT": {
+    "cohort": "K2022",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-17-2022"
+  },
+  "K2022/TTNT": {
+    "cohort": "K2022",
+    "major": "TTNT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-tri-tue-nhan-tao-ap-dung-tu-khoa-17-2022"
+  },
+  "K2023/ATTT": {
+    "cohort": "K2023",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-an-toan-thong-tin-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/CNTT": {
+    "cohort": "K2023",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/HTTT": {
+    "cohort": "K2023",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/KHMT": {
+    "cohort": "K2023",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/KHdl": {
+    "cohort": "K2023",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/KTMT": {
+    "cohort": "K2023",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/KTPM": {
+    "cohort": "K2023",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/MMT&TTDL": {
+    "cohort": "K2023",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/TMDT": {
+    "cohort": "K2023",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-18-2023"
+  },
+  "K2023/TTNT": {
+    "cohort": "K2023",
+    "major": "TTNT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-tri-tue-nhan-tao-ap-dung-tu-khoa-18-2023"
+  },
+  "K2024/ATTT": {
+    "cohort": "K2024",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-toan-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/CNTT": {
+    "cohort": "K2024",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/HTTT": {
+    "cohort": "K2024",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/KHMT": {
+    "cohort": "K2024",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/KHdl": {
+    "cohort": "K2024",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/KTMT": {
+    "cohort": "K2024",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/KTPM": {
+    "cohort": "K2024",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/MMT&TTDL": {
+    "cohort": "K2024",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/TKVM": {
+    "cohort": "K2024",
+    "major": "TKVM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thiet-ke-vi-mach-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/TMDT": {
+    "cohort": "K2024",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2024/TTNT": {
+    "cohort": "K2024",
+    "major": "TTNT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-tri-tue-nhan-tao-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/ATTT": {
+    "cohort": "K2025",
+    "major": "ATTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-toan-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/CNTT": {
+    "cohort": "K2025",
+    "major": "CNTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-cong-nghe-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/HTTT": {
+    "cohort": "K2025",
+    "major": "HTTT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-he-thong-thong-tin-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/KHMT": {
+    "cohort": "K2025",
+    "major": "KHMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-khoa-hoc-may-tinh-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/KHdl": {
+    "cohort": "K2025",
+    "major": "KHdl",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-khoa-hoc-nganh-khoa-hoc-du-lieu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/KTMT": {
+    "cohort": "K2025",
+    "major": "KTMT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/KTPM": {
+    "cohort": "K2025",
+    "major": "KTPM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-20-2025"
+  },
+  "K2025/MMT&TTDL": {
+    "cohort": "K2025",
+    "major": "MMT&TTDL",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/TKVM": {
+    "cohort": "K2025",
+    "major": "TKVM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thiet-ke-vi-mach-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/TMDT": {
+    "cohort": "K2025",
+    "major": "TMDT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-thuong-mai-dien-tu-ap-dung-tu-khoa-19-2024"
+  },
+  "K2025/TTDM": {
+    "cohort": "K2025",
+    "major": "TTDM",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-truyen-thong-da-phuong-tien-ap-dung-tu-khoa-20-2025"
+  },
+  "K2025/TTNT": {
+    "cohort": "K2025",
+    "major": "TTNT",
+    "url": "https://student.uit.edu.vn/content/cu-nhan-nganh-tri-tue-nhan-tao-ap-dung-tu-khoa-19-2024"
+  }
+}

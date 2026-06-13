@@ -1,0 +1,35 @@
+{
+  "program_id": "K2017-KTPM-high_quality",
+  "cohort": "K2017",
+  "major": "KTPM",
+  "program_type": "high_quality",
+  "program_label": "C. CHẤT LƯỢNG CAO",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-12-2017",
+  "extracted_at": "2026-06-03T04:44:09.680415Z",
+  "total_credits": 140,
+  "designed_semesters": null,
+  "knowledge_blocks": [
+    {
+      "block_id": "B01",
+      "block_name": "1.1 Thông tin chung của chương trình",
+      "heading_path": "1. GIỚI THIỆU VỀ CHƯƠNG TRÌNH CHẤT LƯỢNG CAO > 1.1 Thông tin chung của chương trình",
+      "required_credits": null,
+      "is_elective": false
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "D480103",
+      "course_name": "",
+      "credits": null,
+      "credits_lt": null,
+      "credits_th": null,
+      "group_name": "",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "1.1 Thông tin chung của chương trình"
+    }
+  ]
+}
