@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+{% block title %}Schedule Optimizer — Đề xuất thời khóa biểu{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-sm">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">📤 Tải lên file Excel & cấu hình ràng buộc</h4>
+            </div>
+            <div class="card-body">
+
+                {% if error %}
+                <div class="alert alert-danger">{{ error }}</div>
+                {% endif %}
+
+                <form action="/optimize" method="post" enctype="multipart/form-data" id="optimizeForm">
+                    <!-- File upload -->
+                    <div class="mb-3">
+                        <label for="file" class="form-label fw-bold">File Excel (.xlsx)</label>
+                        <input class="form-control" type="file" name="file" id="file" accept=".xlsx,.xls" required>
+                        <div class="form-text">
+                            File phải có cột <strong>mã_môn</strong>, <strong>tên_môn</strong>, <strong>tín_chỉ</strong>.
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#formatModal">Xem mẫu file</a>
+                        </div>
+                    </div>
+
+                    <!-- Ràng buộc tín chỉ -->
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="min_credits" class="form-label">Số TC tối thiểu</label>
+                            <input type="number" class="form-control" name="min_credits" id="min_credits"
+                                   min="1" max="50" value="12" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="max_credits" class="form-label">Số TC tối đa</label>
+                            <input type="number" class="form-control" name="max_credits" id="max_credits"
+                                   min="1" max="50" value="25" required>
+                        </div>
+                    </div>
+
+                    <!-- Số môn tối đa (tùy chọn) -->
+                    <div class="mb-3 mt-3">
+                        <label for="max_courses" class="form-label">Số môn tối đa (tùy chọn)</label>
+                        <input type="number" class="form-control" name="max_courses" id="max_courses"
+                               min="1" max="20" placeholder="Không giới hạn">
+                    </div>
+
+                    <!-- Nút submit -->
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-success btn-lg" id="submitBtn">
+                            🚀 Đề xuất thời khóa biểu
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal: mẫu file Excel -->
+<div class="modal fade" id="formatModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Định dạng file Excel</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>File Excel cần có các cột sau:</p>
+                <table class="table table-sm table-bordered">
+                    <thead class="table-light">
+                        <tr>
+                            <th>mã_môn</th>
+                            <th>tên_môn</th>
+                            <th>tín_chỉ</th>
+                            <th>ghi_chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>IT001</td><td>Nhập môn IT</td><td>3</td><td></td></tr>
+                        <tr><td>IT002</td><td>Lập trình C</td><td>4</td><td></td></tr>
+                        <tr><td>IT003</td><td>Cấu trúc dữ liệu</td><td>4</td><td></td></tr>
+                    </tbody>
+                </table>
+                <p class="text-muted small">Lưu ý: Tên cột có thể viết khác nhau (ví dụ: "ma_mon", "course_id", "tin_chi", ...).</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
