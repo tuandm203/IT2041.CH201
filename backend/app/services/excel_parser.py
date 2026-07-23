@@ -1,71 +1,78 @@
-"""
-Excel parser — đọc file Excel và trả về danh sách Course.
-
-Định dạng file Excel (các cột có thể đặt tên khác nhau, không phân biệt hoa/thường):
-
-  | mã_môn | tên_môn        | tín_chỉ | ghi_chú |
-  |--------|----------------|---------|---------|
-  | IT001  | Nhập môn IT    | 3       |         |
-  | IT002  | Lập trình C    | 4       |         |
-
-Các tên cột được hỗ trợ:
-  - Mã môn: "mã_môn", "ma_mon", "mã môn", "course_id", "mã hp", "mã học phần"
-  - Tên môn: "tên_môn", "ten_mon", "tên môn", "course_name", "tên học phần"
-  - Tín chỉ: "tín_chỉ", "tin_chi", "tín chỉ", "credits", "số tc", "số tín chỉ"
-  - Ghi chú: "ghi_chú", "ghi_chu", "ghi chú", "note", "ghi chú"
-"""
-
+import unicodedata
+from io import BytesIO
 import pandas as pd
 from fastapi import UploadFile
 
 from app.models.schedule import Course
 
 
-# Ánh xạ tên cột (lowercase, không dấu cách) → key chuẩn
+# 1. Bổ sung các alias xuất hiện trong file Excel mới
 COLUMN_ALIASES = {
-    "course_id": ["mã_môn", "ma_mon", "mã môn", "course_id", "mã hp", "mã học phần", "code"],
-    "course_name": ["tên_môn", "ten_mon", "tên môn", "course_name", "tên học phần", "name", "tên"],
-    "credits": ["tín_chỉ", "tin_chi", "tín chỉ", "credits", "số tc", "số tín chỉ", "credit"],
-    "note": ["ghi_chú", "ghi_chu", "ghi chú", "note", "ghi chu"],
+    "course_id": [
+        "mã_môn", "ma_mon", "mã môn", "course_id", "mã hp", "mã học phần", "code",
+        "mã mh", "ma_mh", "mamh"
+    ],
+    "course_name": [
+        "tên_môn", "ten_mon", "tên môn", "course_name", "tên học phần", "name", "tên",
+        "tên môn học", "ten_mon_hoc", "tenmonhoc"
+    ],
+    "credits": [
+        "tín_chỉ", "tin_chi", "tín chỉ", "credits", "số tc", "số tín chỉ", "credit",
+        "tổ tc", "to_tc", "totc"
+    ],
+    "note": [
+        "ghi_chú", "ghi_chu", "ghi chú", "note", "ghi chu", "ghichu"
+    ],
 }
 
 
-def _normalize_col_name(name: str) -> str:
-    """Chuẩn hóa tên cột: lowercase, bỏ dấu cách, bỏ dấu."""
-    import unicodedata
-    name = str(name).strip().lower()
-    # Bỏ dấu tiếng Việt
-    name = unicodedata.normalize("NFD", name)
-    name = "".join(c for c in name if unicodedata.category(c) != "Mn")
-    # Thay dấu cách bằng _
-    name = name.replace(" ", "_")
-    return name
+def _normalize_str(text: str) -> str:
+    """Chuẩn hóa chuỗi: lowercase, bỏ dấu tiếng Việt, chuyển khoảng trắng thành _"""
+    if not text:
+        return ""
+    text = str(text).strip().lower()
+    text = unicodedata.normalize("NFD", text)
+    text = "".join(c for c in text if unicodedata.category(c) != "Mn")
+    text = text.replace(" ", "_")
+    return text
 
 
 def _find_column(df: pd.DataFrame, aliases: list[str]) -> str | None:
     """Tìm tên cột thực sự trong DataFrame dựa trên danh sách alias."""
-    normalized_cols = {_normalize_col_name(c): c for c in df.columns}
+    normalized_cols = {_normalize_str(c): c for c in df.columns}
     for alias in aliases:
-        if alias in normalized_cols:
-            return normalized_cols[alias]
+        norm_alias = _normalize_str(alias)
+        if norm_alias in normalized_cols:
+            return normalized_cols[norm_alias]
     return None
+
+
+def _detect_header_row(content: bytes) -> int:
+    """Tự động quét 15 dòng đầu để tìm dòng chứa tiêu đề cột chính xác."""
+    df_raw = pd.read_excel(BytesIO(content), header=None, nrows=15, engine="openpyxl")
+    
+    for idx, row in df_raw.iterrows():
+        row_values = " ".join([str(val).lower() for val in row.dropna().values])
+        # Nếu dòng chứa các từ khóa đặc trưng của tiêu đề
+        if any(k in row_values for k in ["mã mh", "ma mh", "mã môn", "tên môn học"]):
+            return idx
+    return 0  # Mặc định lấy dòng 0 nếu không quét thấy
 
 
 async def parse_excel_file(file: UploadFile) -> list[Course]:
     """
     Đọc file Excel và trả về danh sách Course.
-
-    Raises:
-      ValueError: Nếu file không có cột mã môn hoặc tên môn.
     """
-    # Đọc file
     content = await file.read()
-    df = pd.read_excel(content, engine="openpyxl")
+    
+    # Tự động xác định dòng chứa header
+    header_row = _detect_header_row(content)
+    df = pd.read_excel(BytesIO(content), header=header_row, engine="openpyxl")
 
     if df.empty:
         raise ValueError("File Excel không có dữ liệu.")
 
-    # Tìm cột
+    # Tìm tên các cột trong DF
     id_col = _find_column(df, COLUMN_ALIASES["course_id"])
     name_col = _find_column(df, COLUMN_ALIASES["course_name"])
     credits_col = _find_column(df, COLUMN_ALIASES["credits"])
@@ -73,26 +80,41 @@ async def parse_excel_file(file: UploadFile) -> list[Course]:
 
     if not id_col or not name_col:
         raise ValueError(
-            "File Excel phải có cột 'mã_môn' và 'tên_môn'. "
-            f"Các cột hiện có: {list(df.columns)}"
+            "File Excel phải có cột 'Mã môn' (MÃ MH) và 'Tên môn' (TÊN MÔN HỌC). "
+            f"Các cột phát hiện được: {list(df.columns)}"
         )
 
     courses: list[Course] = []
+    seen_ids = set()  # Bật nếu muốn lọc trùng các môn xuất hiện nhiều lần (do chia nhiều Lớp)
+
     for _, row in df.iterrows():
         course_id = str(row[id_col]).strip()
-        if not course_id or course_id.lower() in ("nan", "none", ""):
+        
+        # Bỏ qua dòng trống hoặc dòng lặp lại header
+        if not course_id or course_id.lower() in ("nan", "none", "", "mã mh"):
             continue
 
         course_name = str(row[name_col]).strip()
+        if not course_name or course_name.lower() in ("nan", "none"):
+            continue
 
-        # Tín chỉ: mặc định 3 nếu không có cột hoặc giá trị không hợp lệ
+        # Lọc trùng môn học (Ví dụ EC201 xuất hiện ở 2 dòng cho lớp P21 và P22)
+        # Bỏ comment 2 dòng dưới nếu bạn chỉ muốn giữ lại 1 Môn duy nhất
+        # if course_id in seen_ids:
+        #     continue
+        # seen_ids.add(course_id)
+
+        # Tín chỉ: chuyển dạng float trước rồi mới ép về int để tránh lỗi với '3.0'
         credits = 3
         if credits_col:
             try:
-                credits = int(row[credits_col])
+                val = row[credits_col]
+                if pd.notna(val):
+                    credits = int(float(val))
             except (ValueError, TypeError):
                 credits = 3
 
+        # Ghi chú
         note = None
         if note_col:
             note_val = row[note_col]

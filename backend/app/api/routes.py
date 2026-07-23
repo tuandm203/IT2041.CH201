@@ -94,4 +94,4 @@ async def optimize(
 def app_templates(request: Request, template_name: str, **context):
     """Render template với context mặc định."""
     from app.main import templates
-    return templates.TemplateResponse(request, template_name, **context)
+    return templates.TemplateResponse(request, template_name, context)

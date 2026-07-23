@@ -3,11 +3,14 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Cài đặt dependencies
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
-COPY app/ ./app/
+COPY backend/app/ ./app/
+
+# Copy frontend (templates + static)
+COPY frontend/ ./frontend/
 
 # Tạo thư mục uploads
 RUN mkdir -p /app/uploads
