@@ -54,7 +54,7 @@ python scripts/test_track_weighting.py   # chứng minh track-weighting đổi t
 python scripts/train_ranker.py           # train lại model GP2 — không bắt buộc, artifact đã có sẵn ở data/models/
 ```
 
-Kiến trúc chi tiết: [docs/system_design.md](docs/system_design.md).
+Kiến trúc chi tiết: [docs/system_design.md](docs/system_design.md). Báo cáo đồ án đầy đủ (input/output, dữ liệu, phương pháp luận, pipeline, kết quả đánh giá): [docs/REPORT.md](docs/REPORT.md).
 
 ---
 

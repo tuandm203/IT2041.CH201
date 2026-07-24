@@ -1,7 +1,7 @@
 # System Design — Course Recommendation Engine
 
 **Trạng thái:** Đã implement (GP1/GP2 engine + GTE track-weighting) trên branch `dangnh`, verify end-to-end (Docker container thật, model thật, regression test thật).
-**Liên quan:** [research_directions.md](research_directions.md) (bối cảnh & hướng nghiên cứu đã chọn), [schemas/extraction_pipeline.md](schemas/extraction_pipeline.md) (pipeline sinh rule từ PDF).
+**Liên quan:** [research_directions.md](research_directions.md) (bối cảnh & hướng nghiên cứu đã chọn), [schemas/extraction_pipeline.md](schemas/extraction_pipeline.md) (pipeline sinh rule từ PDF), [REPORT.md](REPORT.md) (báo cáo đồ án đầy đủ — input/output, methodology, kết quả đánh giá).
 
 ---
 
