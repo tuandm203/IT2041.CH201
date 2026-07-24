@@ -3,6 +3,25 @@
 
 {% block content %}
 
+<div class="stat-row">
+    <div class="stat-tile">
+        <div class="stat-value">{{ result.total_credits }}</div>
+        <div class="stat-label">Tổng tín chỉ</div>
+    </div>
+    <div class="stat-tile">
+        <div class="stat-value">{{ result.total_courses }}</div>
+        <div class="stat-label">Số môn đã chọn</div>
+    </div>
+    <div class="stat-tile">
+        <div class="stat-value {{ 'accent-gp2' if show_priority else 'accent-gp1' }}">{{ 'GP2' if show_priority else 'GP1' }}</div>
+        <div class="stat-label">{{ 'Mô hình học máy' if show_priority else 'Luật & Đồ thị' }}</div>
+    </div>
+    <div class="stat-tile">
+        <div class="stat-value">{{ result.not_selected|length }}</div>
+        <div class="stat-label">Môn chưa chọn</div>
+    </div>
+</div>
+
 {% if result.warnings %}
 <div class="callout warn">
     <span class="mark">!</span>

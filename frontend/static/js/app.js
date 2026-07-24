@@ -57,6 +57,107 @@ document.addEventListener("DOMContentLoaded", function () {
         majorSelect.addEventListener("change", updateTrackOptions);
     }
 
+    // "Dùng file mẫu có sẵn" — tải file TKB thật đã bundle sẵn trong repo và
+    // gán thẳng vào input[type=file] qua DataTransfer (không cần user tự chọn).
+    const useSampleBtn = document.getElementById("useSampleBtn");
+    const sampleStatus = document.getElementById("sampleStatus");
+    const fileInputEl = document.getElementById("file");
+
+    function loadSampleTkb() {
+        if (!fileInputEl) return Promise.resolve();
+        if (useSampleBtn) {
+            useSampleBtn.disabled = true;
+            useSampleBtn.textContent = "⏳ Đang tải file mẫu...";
+        }
+        if (sampleStatus) sampleStatus.textContent = "";
+
+        return fetch("/api/sample-tkb")
+            .then(function (response) {
+                if (!response.ok) throw new Error("Không tải được file mẫu");
+                const disposition = response.headers.get("Content-Disposition") || "";
+                const match = disposition.match(/filename="?([^"]+)"?/);
+                const filename = match ? match[1] : "TKB_mau.xlsx";
+                return response.blob().then(function (blob) { return { blob: blob, filename: filename }; });
+            })
+            .then(function (result) {
+                const file = new File([result.blob], result.filename, {
+                    type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                });
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                fileInputEl.files = dataTransfer.files;
+
+                const fileErr = document.getElementById("fileError");
+                if (fileErr) fileErr.classList.remove("show");
+                if (sampleStatus) sampleStatus.textContent = "✓ Đã dùng " + result.filename;
+            })
+            .catch(function (error) {
+                if (sampleStatus) sampleStatus.textContent = "Không tải được file mẫu.";
+                console.warn("Lỗi tải file mẫu:", error);
+            })
+            .finally(function () {
+                if (useSampleBtn) {
+                    useSampleBtn.textContent = "⚡ Dùng file mẫu có sẵn (TKB thật HK2 2024–2025)";
+                    useSampleBtn.disabled = false;
+                }
+            });
+    }
+
+    if (useSampleBtn) {
+        useSampleBtn.addEventListener("click", loadSampleTkb);
+    }
+
+    // "Hồ sơ sinh viên mẫu" — điền nhanh ngành/khóa/môn đã học/TC dựa trên
+    // data/train/student_case_*.json, kèm luôn file TKB mẫu để demo 1 click
+    // thay vì phải tự gõ hàng chục mã môn.
+    const sampleCaseSelect = document.getElementById("sampleCase");
+    let sampleCases = [];
+
+    if (sampleCaseSelect) {
+        fetch("/api/sample-cases")
+            .then(function (response) {
+                if (!response.ok) throw new Error("Không thể tải hồ sơ mẫu");
+                return response.json();
+            })
+            .then(function (cases) {
+                sampleCases = cases || [];
+                sampleCases.forEach(function (c, idx) {
+                    const option = document.createElement("option");
+                    option.value = String(idx);
+                    option.textContent = c.case_name + " (" + c.major + "/" + c.cohort + ")";
+                    option.title = c.description || "";
+                    sampleCaseSelect.appendChild(option);
+                });
+            })
+            .catch(function (error) {
+                console.warn("Không thể tải hồ sơ sinh viên mẫu:", error);
+            });
+
+        sampleCaseSelect.addEventListener("change", function () {
+            if (sampleCaseSelect.value === "") return;
+            const selectedCase = sampleCases[parseInt(sampleCaseSelect.value, 10)];
+            if (!selectedCase) return;
+
+            const setValue = function (id, value) {
+                const el = document.getElementById(id);
+                if (el != null && value != null) el.value = value;
+            };
+
+            setValue("min_credits", selectedCase.min_credits);
+            setValue("max_credits", selectedCase.max_credits);
+            setValue("completed_courses", (selectedCase.completed_courses || []).join(", "));
+            setValue("retake_courses", (selectedCase.retake_courses || []).join(", "));
+            setValue("cohort", selectedCase.cohort);
+
+            if (majorSelect && selectedCase.major) {
+                majorSelect.value = selectedCase.major;
+                majorSelect.dispatchEvent(new Event("change"));
+            }
+
+            loadSampleTkb();
+        });
+    }
+
     const fileError = document.getElementById("fileError");
     const creditError = document.getElementById("creditError");
 

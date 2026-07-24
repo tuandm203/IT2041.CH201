@@ -11,11 +11,15 @@ Endpoints:
   GET  /health              → health check
 """
 
+import json as _json
+from pathlib import Path as _Path
+
 from fastapi import APIRouter, Request, File, UploadFile, Form, Query
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi.responses import HTMLResponse, JSONResponse, FileResponse
 from fastapi import status
 
 from typing import Literal, Optional
+from app.core.config import settings
 from app.models.schedule import (
     OptimizeRequest, OptimizeResponse, StudentProfile,
     EnglishLevel, DEFAULT_PE_COURSES, TRAINING_SYSTEM_LIST,
@@ -37,6 +41,57 @@ router = APIRouter()
 async def health_check():
     """Kiểm tra service còn sống không."""
     return {"status": "ok", "service": "schedule-optimizer"}
+
+
+# ── File TKB mẫu (thật) — để UI cho phép dùng ngay không cần tự upload ─────────
+
+@router.get("/api/sample-tkb")
+async def sample_tkb():
+    """Trả về file TKB thật có sẵn trong repo, dùng làm mẫu demo nhanh."""
+    path: _Path = settings.sample_tkb_path
+    if not path.exists():
+        return JSONResponse(status_code=404, content={"error": "Không tìm thấy file TKB mẫu."})
+    return FileResponse(
+        path,
+        media_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        filename=path.name,
+    )
+
+
+# ── Hồ sơ sinh viên mẫu — demo nhanh có "môn đã học" thật ──────────────────────
+
+@router.get("/api/sample-cases", response_class=JSONResponse)
+async def sample_cases():
+    """
+    Trả về danh sách hồ sơ SV mẫu (data/train/student_case_*.json) để UI
+    cho phép điền nhanh major/cohort/completed_courses/... — nếu không có
+    field này, form không có cách nào biết SV đã học môn gì, mọi môn sẽ
+    hiện là "môn mới" hết, demo không có ý nghĩa.
+    """
+    cases_dir: _Path = settings.data_dir / "train"
+    if not cases_dir.exists():
+        return []
+
+    cases = []
+    for path in sorted(cases_dir.glob("student_case_*.json")):
+        try:
+            with path.open(encoding="utf-8") as f:
+                data = _json.load(f)
+        except (OSError, ValueError):
+            continue
+        cases.append({
+            "case_id": data.get("case_id"),
+            "case_name": data.get("case_name"),
+            "description": data.get("description"),
+            "major": data.get("major"),
+            "cohort": data.get("cohort"),
+            "completed_courses": data.get("completed_courses", []),
+            "retake_courses": data.get("retake_courses", []),
+            "english_level": data.get("english_level", "b1"),
+            "min_credits": data.get("min_credits", 12),
+            "max_credits": data.get("max_credits", 25),
+        })
+    return cases
 
 
 # ── Trang chủ — multi-step form ───────────────────────────────────────────────
