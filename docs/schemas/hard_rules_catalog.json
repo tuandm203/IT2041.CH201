@@ -1,0 +1,322 @@
+{
+  "description": "Catalog tham chiếu: payload chuẩn cho từng rule_type. Tách khỏi schema để schema giữ nguyên là pure JSON Schema.",
+  "source": "Quy chế 790/QĐ-ĐHCNTT-2022 (ban hành 28/09/2022, hiệu lực từ HK1 2022-2023)",
+
+  "global_rules": {
+
+    "GRADE_SCALE": {
+      "source": "Điều 21, Khoản 1",
+      "payload": {
+        "passing_grade_10": 5.0,
+        "rounding": 0.1,
+        "excluded_from_gpa": ["GDQP-AN", "GDTC"],
+        "special_grades": {
+          "I":  "Hoãn thi — không tính vào ĐTBHK kỳ đó; phải đăng ký thi lại trong 2 kỳ tiếp",
+          "BL": "Bảo lưu từ CSĐT khác — tính vào ĐTBC/ĐTBCTL",
+          "M":  "Điểm từ kỳ thi quốc gia/quốc tế — tính tùy trường hợp"
+        },
+        "scale_entries": [
+          {"grade_gte": 9.0, "grade_lt": null,  "points_4": 4.0, "letter": "A+", "label": "Xuất sắc",      "passed": true},
+          {"grade_gte": 8.0, "grade_lt": 9.0,   "points_4": 3.5, "letter": "A",  "label": "Giỏi",          "passed": true},
+          {"grade_gte": 7.0, "grade_lt": 8.0,   "points_4": 3.0, "letter": "B+", "label": "Khá",           "passed": true},
+          {"grade_gte": 6.0, "grade_lt": 7.0,   "points_4": 2.5, "letter": "B",  "label": "Trung bình khá","passed": true},
+          {"grade_gte": 5.0, "grade_lt": 6.0,   "points_4": 2.0, "letter": "C",  "label": "Trung bình",    "passed": true},
+          {"grade_gte": 4.0, "grade_lt": 5.0,   "points_4": 1.5, "letter": "D+", "label": "Yếu",           "passed": false},
+          {"grade_gte": 3.0, "grade_lt": 4.0,   "points_4": 1.0, "letter": "D",  "label": "Kém",           "passed": false},
+          {"grade_gte": 0.0, "grade_lt": 3.0,   "points_4": 0.0, "letter": "F",  "label": "",              "passed": false}
+        ]
+      }
+    },
+
+    "GPA_CALCULATION": {
+      "source": "Điều 24–25",
+      "payload": {
+        "formula": "A = Σ(grade_i × credits_i) / Σ(credits_i)",
+        "rounding": 0.01,
+        "gpa_types": {
+          "DTBHK": {
+            "description": "Điểm trung bình học kỳ",
+            "includes": "Tất cả môn đã đăng ký trong kỳ, kể cả không đạt",
+            "grade_version": "Điểm học phần của kỳ đó (không lấy lần cao nhất)",
+            "used_for": ["xét học bổng", "xét cảnh báo học vụ", "xét học vượt"]
+          },
+          "DTBC": {
+            "description": "Điểm trung bình chung",
+            "includes": "Tất cả môn từ đầu khóa đến hiện tại, kể cả không đạt",
+            "grade_version": "Điểm cao nhất trong các lần học",
+            "used_for": ["xét đăng ký tín chỉ", "xét học vượt", "chuyển ngành", "điều kiện khóa luận"]
+          },
+          "DTBCTL": {
+            "description": "Điểm trung bình chung tích lũy",
+            "includes": "Chỉ các môn đã tích lũy (đạt ≥ 5.0)",
+            "grade_version": "Điểm cao nhất trong các lần học",
+            "used_for": ["xét tốt nghiệp", "xếp loại bằng tốt nghiệp"]
+          }
+        }
+      }
+    },
+
+    "ENROLLMENT_CREDIT_LIMIT": {
+      "source": "Điều 14, Khoản 1",
+      "payload": {
+        "main_semester": [
+          {
+            "condition": "DTBC_lt_8",
+            "dtbc_lt": 8.0,
+            "min_credits": 14,
+            "max_credits": 24
+          },
+          {
+            "condition": "DTBC_gte_8",
+            "dtbc_gte": 8.0,
+            "min_credits": 14,
+            "max_credits": 30
+          },
+          {
+            "condition": "remaining_credits_lt_14",
+            "note": "Không áp dụng min khi SV còn <14 TC để hoàn thành CTĐT",
+            "min_credits": null,
+            "max_credits": 24
+          }
+        ],
+        "summer_semester": {
+          "max_credits": 12,
+          "allowed_types": ["retake", "improvement", "foreign_language", "internship"],
+          "new_course_allowed_if": "DTBC_gte_7"
+        }
+      }
+    },
+
+    "RETAKE_MANDATORY": {
+      "source": "Điều 14, Khoản 2",
+      "payload": {
+        "trigger_grade_lt": 5.0,
+        "mandatory_course": "phải học lại môn đó",
+        "elective_course": "được chọn môn thay thế trong nhóm tự chọn tương ứng"
+      }
+    },
+
+    "RETAKE_OPTIONAL": {
+      "source": "Điều 14, Khoản 3",
+      "payload": {
+        "trigger_grade_gte": 5.0,
+        "grade_policy": "take_highest",
+        "note": "Điểm tất cả lần học được lưu trong học bạ; chỉ điểm cao nhất tính vào ĐTBC/ĐTBCTL"
+      }
+    },
+
+    "ATTENDANCE_REQUIREMENT": {
+      "source": "Điều 20, Khoản 1",
+      "payload": {
+        "min_attendance_rate": 0.80,
+        "consequence_if_below": "Không đủ điều kiện dự thi cuối kỳ"
+      }
+    },
+
+    "ACADEMIC_WARNING": {
+      "source": "Điều 16, Khoản 1",
+      "payload": {
+        "trigger_any_of": [
+          {"type": "DTBHK_lt",             "threshold": 3.0, "note": "ĐTBHK < 3.0 trong 1 kỳ"},
+          {"type": "consecutive_DTBHK_lt", "threshold": 4.0, "consecutive_semesters": 2, "note": "ĐTBHK < 4.0 hai kỳ liên tiếp"},
+          {"type": "tuition_unpaid"}
+        ],
+        "duration_semesters": 1,
+        "auto_cleared_after": "1 học kỳ chính nếu không tái phạm"
+      }
+    },
+
+    "ACADEMIC_SUSPENSION": {
+      "source": "Điều 16, Khoản 2",
+      "payload": {
+        "trigger_any_of": [
+          {"type": "exam_fraud_first_offense", "note": "Vi phạm lần đầu thi hộ/nhờ thi hộ"},
+          {"type": "disciplinary_during_warning", "note": "Đang bị cảnh báo mà vi phạm kỷ luật thêm"}
+        ],
+        "duration_semesters": 1,
+        "note": "Đình chỉ 1 học kỳ chính — khác với Thôi học (Khoản 3)"
+      }
+    },
+
+    "ACADEMIC_EXPULSION": {
+      "source": "Điều 16, Khoản 3",
+      "payload": {
+        "trigger_any_of": [
+          {"type": "DTBHK_zero_consecutive",   "consecutive_semesters": 2},
+          {"type": "warning_twice_consecutive", "note": "Cảnh báo lần 2 liên tiếp và vẫn tái phạm Khoản 1"},
+          {"type": "exceeded_max_duration",     "note": "Hết thời gian tối đa theo Điều 6"},
+          {"type": "twice_suspended",           "note": "Bị đình chỉ lần thứ hai"},
+          {"type": "serious_disciplinary"}
+        ]
+      }
+    },
+
+    "GRADUATION_REQUIREMENT": {
+      "source": "Điều 33, Khoản 1",
+      "payload": {
+        "must_satisfy_all": [
+          {"condition": "no_criminal_or_major_discipline"},
+          {"condition": "tuition_paid"},
+          {"condition": "all_curriculum_credits_fulfilled"},
+          {"condition": "physical_education_completed"},
+          {"condition": "national_defense_certificate"},
+          {"condition": "foreign_language_standard_met"},
+          {"condition": "conduct_score_gte", "value": 50},
+          {"condition": "library_books_returned"}
+        ]
+      }
+    },
+
+    "GRADUATION_RANK": {
+      "source": "Điều 34, Khoản 2 + Điều 21, Khoản 1",
+      "payload": {
+        "basis": "DTBCTL",
+        "scale": "4.0",
+        "ranks": [
+          {"label": "Xuất sắc",      "dtbctl_gte": 3.6,  "dtbctl_lt": null},
+          {"label": "Giỏi",          "dtbctl_gte": 3.2,  "dtbctl_lt": 3.6},
+          {"label": "Khá",           "dtbctl_gte": 2.5,  "dtbctl_lt": 3.2},
+          {"label": "Trung bình khá","dtbctl_gte": 2.0,  "dtbctl_lt": 2.5},
+          {"label": "Trung bình",    "dtbctl_gte": 0.0,  "dtbctl_lt": 2.0}
+        ]
+      }
+    },
+
+    "GRADUATION_RANK_DOWNGRADE": {
+      "source": "Điều 34, Khoản 2",
+      "payload": {
+        "downgrade_by": 1,
+        "max_downgrade": 1,
+        "note": "Dù vi phạm nhiều điều kiện cùng lúc vẫn chỉ giảm tối đa 1 bậc",
+        "cases": [
+          {
+            "applies_to_rank": "Xuất sắc",
+            "trigger_any_of": [
+              {"type": "exceeded_semesters",      "value": 2,    "note": "Học vượt quá 2 kỳ so với thiết kế CTĐT"},
+              {"type": "had_disciplinary_warning", "note": "Từng bị kỷ luật mức cảnh cáo trở lên"},
+              {"type": "retake_ratio_gt",          "value": 0.05, "note": "TC học lại > 5% tổng TC toàn khóa"},
+              {"type": "conduct_score_lt",         "value": 75,   "note": "Điểm rèn luyện TB toàn khóa < 75"}
+            ]
+          },
+          {
+            "applies_to_rank": "Giỏi",
+            "trigger_any_of": [
+              {"type": "conduct_score_lt", "value": 65, "note": "Điểm rèn luyện TB toàn khóa < 65"}
+            ]
+          }
+        ]
+      }
+    },
+
+    "PROGRAM_TOTAL_CREDITS": {
+      "source": "Điều 7, Khoản 1",
+      "payload": {
+        "standard_program": {"min_credits": 120, "max_credits": 132},
+        "specialized_program": {"min_credits": 150},
+        "excluded_from_count": ["GDQP-AN", "GDTC"],
+        "max_study_semesters": 12,
+        "note": "Thời gian tối đa = số kỳ thiết kế + 4 kỳ gia hạn (Điều 6)"
+      }
+    },
+
+    "THESIS_ELIGIBILITY": {
+      "source": "Điều 31, Khoản 3",
+      "payload": {
+        "max_remaining_credits": 8,
+        "min_dtbc": 6.5,
+        "note": "Từng khoa có thể nâng min_dtbc cao hơn — xem CURRICULUM override"
+      }
+    }
+  },
+
+  "curriculum_rules": {
+
+    "PROGRAM_STRUCTURE": {
+      "description": "Tổng quan cấu trúc chương trình: tổng TC, khối kiến thức. THAY ĐỔI theo ngành/khóa.",
+      "payload_shape": {
+        "total_credits_required": "integer",
+        "designed_semesters": "integer",
+        "knowledge_blocks": [
+          {
+            "block_id": "string",
+            "block_name": "string",
+            "required_credits": "integer",
+            "sub_blocks": [
+              {"name": "string", "credits": "integer|string", "mandatory": "boolean"}
+            ]
+          }
+        ]
+      }
+    },
+
+    "COURSE_GROUP_REQUIREMENT": {
+      "description": "Nhóm môn tự chọn với yêu cầu tín chỉ tối thiểu. THAY ĐỔI theo ngành/khóa.",
+      "payload_shape": {
+        "group_id": "string",
+        "group_name": "string",
+        "required_credits_min": "integer",
+        "courses": [{"course_id": "string", "course_name": "string", "credits": "integer"}]
+      }
+    },
+
+    "COURSE_PREREQUISITE": {
+      "description": "Tiên quyết: phải ĐẠT (≥5.0) trước khi đăng ký. Nguồn: danh-muc-mon-hoc hoặc bảng CTĐT.",
+      "payload_shape": {
+        "course": {"course_id": "string"},
+        "requires_all": [{"course_id": "string"}],
+        "requires_any": [{"course_id": "string"}],
+        "min_grade": 5.0
+      }
+    },
+
+    "COURSE_PRIOR": {
+      "description": "Học trước: nên học trước nhưng không cần đạt.",
+      "payload_shape": {
+        "course": {"course_id": "string"},
+        "prior_courses": [{"course_id": "string"}]
+      }
+    },
+
+    "COURSE_COREQUISITE": {
+      "description": "Song hành: phải đăng ký đồng thời trong cùng kỳ.",
+      "payload_shape": {
+        "course": {"course_id": "string"},
+        "must_pair_with": [{"course_id": "string"}]
+      }
+    },
+
+    "COURSE_EQUIVALENT": {
+      "description": "Tương đương: chỉ cần tích lũy một trong hai. Thường do đổi mã môn giữa các khóa.",
+      "payload_shape": {
+        "course_a": {"course_id": "string"},
+        "course_b": {"course_id": "string"}
+      }
+    },
+
+    "COURSE_REPLACEMENT": {
+      "description": "Thay thế: môn cũ ngừng giảng dạy, môn mới thay thế để tích lũy.",
+      "payload_shape": {
+        "discontinued_course": {"course_id": "string"},
+        "replacement_course": {"course_id": "string"}
+      }
+    },
+
+    "THESIS_ELIGIBILITY": {
+      "description": "Override ngưỡng ĐTBC so với global (6.5). Từng khoa quy định riêng.",
+      "payload_shape": {
+        "max_remaining_credits": 8,
+        "min_dtbc": "number > 6.5"
+      }
+    },
+
+    "FOREIGN_LANGUAGE_STANDARD": {
+      "description": "Chuẩn ngoại ngữ đầu ra. THAY ĐỔI theo ngành/khóa/chương trình.",
+      "payload_shape": {
+        "accepted_certificates": [
+          {"name": "TOEIC|IELTS|TOEFL iBT|...", "min_score": "number"}
+        ],
+        "or_pass_university_test": "boolean"
+      }
+    }
+  }
+}

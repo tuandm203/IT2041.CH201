@@ -1,0 +1,15 @@
+{
+  "major": "KTPM",
+  "cohort": "K2016",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-phan-mem-ap-dung-tu-khoa-11-2016",
+  "generated_at": "2026-06-03T06:24:25.460444Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": 152,
+      "designed_semesters": 9,
+      "knowledge_blocks": []
+    }
+  ]
+}

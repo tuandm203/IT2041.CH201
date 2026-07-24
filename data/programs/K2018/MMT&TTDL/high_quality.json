@@ -1,0 +1,48 @@
+{
+  "program_id": "K2018-MMT&TTDL-high_quality",
+  "cohort": "K2018",
+  "major": "MMT&TTDL",
+  "program_type": "high_quality",
+  "program_label": "C. CHẤT LƯỢNG CAO",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-13-2018",
+  "extracted_at": "2026-06-03T04:44:10.506194Z",
+  "total_credits": 136,
+  "designed_semesters": null,
+  "knowledge_blocks": [
+    {
+      "block_id": "B01",
+      "block_name": "SO VỚI CHƯƠNG TRÌNH CHÍNH QUY ĐẠI TRÀ",
+      "heading_path": "SO VỚI CHƯƠNG TRÌNH CHÍNH QUY ĐẠI TRÀ",
+      "required_credits": null,
+      "is_elective": false
+    }
+  ],
+  "courses": [
+    {
+      "course_id": "ENG04",
+      "course_name": "Anh văn 4",
+      "credits": 4,
+      "credits_lt": 4,
+      "credits_th": 0,
+      "group_name": "",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "SO VỚI CHƯƠNG TRÌNH CHÍNH QUY ĐẠI TRÀ"
+    },
+    {
+      "course_id": "ENG05",
+      "course_name": "Anh văn 5",
+      "credits": 4,
+      "credits_lt": 4,
+      "credits_th": 0,
+      "group_name": "",
+      "note": null,
+      "is_mandatory": true,
+      "semester": null,
+      "block_id": "B01",
+      "block_name": "SO VỚI CHƯƠNG TRÌNH CHÍNH QUY ĐẠI TRÀ"
+    }
+  ]
+}

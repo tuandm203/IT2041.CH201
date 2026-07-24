@@ -1,0 +1,352 @@
+{
+  "major": "MMT&TTDL",
+  "cohort": "K2024",
+  "source_url": "https://student.uit.edu.vn/content/cu-nhan-nganh-mang-may-tinh-va-truyen-thong-du-lieu-ap-dung-tu-khoa-19-2024",
+  "generated_at": "2026-06-03T06:24:25.523075Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": 130,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3.3 Khối kiến thức giáo dục đại cương",
+          "heading_path": "3.3 Khối kiến thức giáo dục đại cương",
+          "required_credits": 47,
+          "is_elective": false,
+          "courses": [
+            "SS003",
+            "SS006",
+            "SS007",
+            "SS008",
+            "SS009",
+            "SS010",
+            "MA006",
+            "MA003",
+            "MA004",
+            "MA005",
+            "PH002",
+            "IT001",
+            "ENG01",
+            "ENG02",
+            "ENG03",
+            "ME001",
+            "PE231",
+            "PE232"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "3.4.1 Nhóm các môn học cơ sở ngành",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.1 Nhóm các môn học cơ sở ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT006",
+            "IT007",
+            "NT005",
+            "NT101",
+            "NT131",
+            "NT105",
+            "NT106",
+            "NT118",
+            "NT132",
+            "NT113"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "3.4.2 Nhóm các môn học chuyên ngành",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.2 Nhóm các môn học chuyên ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT531",
+            "NT532",
+            "NT533",
+            "NT536",
+            "NT402",
+            "NT538",
+            "NT540",
+            "NT542",
+            "NT543",
+            "NT535",
+            "NT545",
+            "NT546",
+            "NT209"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "3.4.3 Nhóm các môn học khác",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.3 Nhóm các môn học khác",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "SS004"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "3.4.3 Nhóm các môn học khác",
+          "heading_path": "3.4 Khối kiến thức giáo dục chuyên nghiệp > 3.4.3 Nhóm các môn học khác",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT210",
+            "NT334",
+            "NT205",
+            "NT330",
+            "NT207",
+            "NT534",
+            "NT405",
+            "NT208",
+            "NT201",
+            "NT109",
+            "NT204",
+            "NT121"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "3.5.1 Thực tập doanh nghiệp, đồ án",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp > 3.5.1 Thực tập doanh nghiệp, đồ án",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT114",
+            "NT215"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "3.5.2 Khóa luận tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp > 3.5.2 Khóa luận tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT505"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "3.5.3 Đồ án thực tập tại doanh nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp > 3.5.3 Đồ án thực tập tại doanh nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT506"
+          ]
+        },
+        {
+          "block_id": "B09",
+          "block_name": "3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp > 3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT508"
+          ]
+        },
+        {
+          "block_id": "B10",
+          "block_name": "3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "3.5 Khối kiến thức tốt nghiệp > 3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "NT332",
+            "NT539",
+            "NT541",
+            "NT544",
+            "NT548"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B01",
+      "group_name": "3.3 Khối kiến thức giáo dục đại cương",
+      "required_credits": 47,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS003",
+        "SS006",
+        "SS007",
+        "SS008",
+        "SS009",
+        "SS010",
+        "MA006",
+        "MA003",
+        "MA004",
+        "MA005",
+        "PH002",
+        "IT001",
+        "ENG01",
+        "ENG02",
+        "ENG03",
+        "ME001",
+        "PE231",
+        "PE232"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B02",
+      "group_name": "3.4.1 Nhóm các môn học cơ sở ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT006",
+        "IT007",
+        "NT005",
+        "NT101",
+        "NT131",
+        "NT105",
+        "NT106",
+        "NT118",
+        "NT132",
+        "NT113"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B03",
+      "group_name": "3.4.2 Nhóm các môn học chuyên ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT531",
+        "NT532",
+        "NT533",
+        "NT536",
+        "NT402",
+        "NT538",
+        "NT540",
+        "NT542",
+        "NT543",
+        "NT535",
+        "NT545",
+        "NT546",
+        "NT209"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B04",
+      "group_name": "3.4.3 Nhóm các môn học khác",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS004"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B05",
+      "group_name": "3.4.3 Nhóm các môn học khác",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT210",
+        "NT334",
+        "NT205",
+        "NT330",
+        "NT207",
+        "NT534",
+        "NT405",
+        "NT208",
+        "NT201",
+        "NT109",
+        "NT204",
+        "NT121"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B06",
+      "group_name": "3.5.1 Thực tập doanh nghiệp, đồ án",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT114",
+        "NT215"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B07",
+      "group_name": "3.5.2 Khóa luận tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT505"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B08",
+      "group_name": "3.5.3 Đồ án thực tập tại doanh nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT506"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B09",
+      "group_name": "3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT508"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B10",
+      "group_name": "3.5.4 Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "NT332",
+        "NT539",
+        "NT541",
+        "NT544",
+        "NT548"
+      ]
+    }
+  ]
+}

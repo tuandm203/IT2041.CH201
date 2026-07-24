@@ -1,0 +1,296 @@
+{
+  "major": "KTMT",
+  "cohort": "K2013",
+  "source_url": "https://student.uit.edu.vn/content/ky-su-nganh-ky-thuat-may-tinh-ap-dung-tu-khoa-7-2012",
+  "generated_at": "2026-06-03T06:24:25.447718Z",
+  "rules": [
+    {
+      "rule_type": "PROGRAM_STRUCTURE",
+      "program_type": "standard",
+      "total_credits": null,
+      "designed_semesters": null,
+      "knowledge_blocks": [
+        {
+          "block_id": "B01",
+          "block_name": "3. Khối kiến thức giáo dục đại cương",
+          "heading_path": "3. Khối kiến thức giáo dục đại cương",
+          "required_credits": 49,
+          "is_elective": false,
+          "courses": [
+            "SS001",
+            "SS002",
+            "SS003",
+            "MA001",
+            "MA002",
+            "MA003",
+            "MA004",
+            "MA005",
+            "PH001",
+            "PH002",
+            "IT001",
+            "EN001",
+            "EN002",
+            "EN003",
+            "ME001",
+            "PE001",
+            "PE002"
+          ]
+        },
+        {
+          "block_id": "B02",
+          "block_name": "4.1. Nhóm các môn học cơ sở nhóm ngành",
+          "heading_path": "4. Khối kiến thức giáo dục chuyên nghiệp > 4.1. Nhóm các môn học cơ sở nhóm ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "IT002",
+            "IT003",
+            "IT004",
+            "IT005",
+            "IT006",
+            "IT007",
+            "IT009"
+          ]
+        },
+        {
+          "block_id": "B03",
+          "block_name": "4.2. Nhóm các môn học cơ sở ngành",
+          "heading_path": "4. Khối kiến thức giáo dục chuyên nghiệp > 4.2. Nhóm các môn học cơ sở ngành",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "CE101",
+            "CE118",
+            "CE103",
+            "CE104",
+            "CE105",
+            "CE119",
+            "CE107",
+            "CE117"
+          ]
+        },
+        {
+          "block_id": "B04",
+          "block_name": "4.3. Nhóm các môn học chuyên ngành Thiết kế vi mạch và phần cứng",
+          "heading_path": "4. Khối kiến thức giáo dục chuyên nghiệp > 4.3. Nhóm các môn học chuyên ngành Thiết kế vi mạch và phần cứng",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "CE221",
+            "CE222",
+            "CE321",
+            "CE322",
+            "CE323",
+            "CE324",
+            "CE325",
+            "CE326",
+            "CE327"
+          ]
+        },
+        {
+          "block_id": "B05",
+          "block_name": "4.4. Nhóm các môn học chuyên chuyên ngành Hệ thống nhúng và Robot",
+          "heading_path": "4. Khối kiến thức giáo dục chuyên nghiệp > 4.4. Nhóm các môn học chuyên chuyên ngành Hệ thống nhúng và Robot",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "CE211",
+            "CE212",
+            "CE313",
+            "CE315",
+            "CE303",
+            "CE314",
+            "NT118",
+            "CE316",
+            "CE317",
+            "CE312"
+          ]
+        },
+        {
+          "block_id": "B06",
+          "block_name": "4.5. Nhóm các môn học khác",
+          "heading_path": "4. Khối kiến thức giáo dục chuyên nghiệp > 4.5. Nhóm các môn học khác",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "SS004",
+            "SE104",
+            "IS208"
+          ]
+        },
+        {
+          "block_id": "B07",
+          "block_name": "5.2. Nhóm các môn học đồ án",
+          "heading_path": "5. Khối kiến thức tốt nghiệp > 5.2. Nhóm các môn học đồ án",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "CE201",
+            "CE206"
+          ]
+        },
+        {
+          "block_id": "B08",
+          "block_name": "5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+          "heading_path": "5. Khối kiến thức tốt nghiệp > 5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+          "required_credits": null,
+          "is_elective": false,
+          "courses": [
+            "CE401",
+            "CE405",
+            "CE411",
+            "CE421"
+          ]
+        }
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B01",
+      "group_name": "3. Khối kiến thức giáo dục đại cương",
+      "required_credits": 49,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS001",
+        "SS002",
+        "SS003",
+        "MA001",
+        "MA002",
+        "MA003",
+        "MA004",
+        "MA005",
+        "PH001",
+        "PH002",
+        "IT001",
+        "EN001",
+        "EN002",
+        "EN003",
+        "ME001",
+        "PE001",
+        "PE002"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B02",
+      "group_name": "4.1. Nhóm các môn học cơ sở nhóm ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "IT002",
+        "IT003",
+        "IT004",
+        "IT005",
+        "IT006",
+        "IT007",
+        "IT009"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B03",
+      "group_name": "4.2. Nhóm các môn học cơ sở ngành",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "CE101",
+        "CE118",
+        "CE103",
+        "CE104",
+        "CE105",
+        "CE119",
+        "CE107",
+        "CE117"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B04",
+      "group_name": "4.3. Nhóm các môn học chuyên ngành Thiết kế vi mạch và phần cứng",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "CE221",
+        "CE222",
+        "CE321",
+        "CE322",
+        "CE323",
+        "CE324",
+        "CE325",
+        "CE326",
+        "CE327"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B05",
+      "group_name": "4.4. Nhóm các môn học chuyên chuyên ngành Hệ thống nhúng và Robot",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "CE211",
+        "CE212",
+        "CE313",
+        "CE315",
+        "CE303",
+        "CE314",
+        "NT118",
+        "CE316",
+        "CE317",
+        "CE312"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B06",
+      "group_name": "4.5. Nhóm các môn học khác",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "SS004",
+        "SE104",
+        "IS208"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B07",
+      "group_name": "5.2. Nhóm các môn học đồ án",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "CE201",
+        "CE206"
+      ]
+    },
+    {
+      "rule_type": "COURSE_GROUP_REQUIREMENT",
+      "program_type": "standard",
+      "block_id": "B08",
+      "group_name": "5.4. Nhóm các môn học chuyên đề tốt nghiệp",
+      "required_credits": null,
+      "is_elective": false,
+      "selection_type": "all",
+      "courses": [
+        "CE401",
+        "CE405",
+        "CE411",
+        "CE421"
+      ]
+    }
+  ]
+}
