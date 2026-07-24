@@ -10,6 +10,7 @@
 </div>
 {% endif %}
 
+<div class="layout-grid">
 <div class="panel">
     <div class="panel-body">
         <form action="/optimize" method="post" enctype="multipart/form-data" id="optimizeForm">
@@ -124,6 +125,25 @@
                             <input type="text" name="retake_courses" id="retake_courses"
                                    placeholder="VD: IT002 (tùy chọn)">
                         </div>
+                        <div class="field">
+                            <label for="english_level">Trình độ tiếng Anh</label>
+                            <select name="english_level" id="english_level">
+                                <option value="passed">Đã pass đầu ra</option>
+                                <option value="a1">A1 — Cơ bản</option>
+                                <option value="a2">A2 — Sơ cấp</option>
+                                <option value="b1" selected>B1 — Trung cấp</option>
+                                <option value="b2">B2 — Cao trung cấp</option>
+                            </select>
+                            <p class="hint" style="margin:0">Chưa pass → hệ thống tự thêm môn tiếng Anh còn thiếu vào đề xuất.</p>
+                        </div>
+                        <div class="field" style="justify-content:flex-end">
+                            <label style="display:flex; align-items:center; gap:0.5rem; font-weight:500">
+                                <input type="checkbox" id="skipPeCheckbox" style="width:auto">
+                                Đã hoàn thành Giáo dục thể chất — bỏ qua đề xuất môn TD
+                            </label>
+                            <input type="hidden" name="skip_pe_if_completed" id="skip_pe_if_completed" value="false">
+                            <input type="hidden" name="passed_pe_courses" id="passed_pe_courses" value="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,6 +170,14 @@
 
         </form>
     </div>
+</div>
+
+<aside class="panel-preview" id="profilePreview">
+    <div class="panel-preview-head">👤 Hồ sơ đang dùng để đề xuất</div>
+    <div class="panel-preview-body" id="profilePreviewBody">
+        <p class="muted" style="margin:0">Chưa có thông tin — chọn hồ sơ mẫu ở Bước 1 hoặc tự điền các bước bên trái.</p>
+    </div>
+</aside>
 </div>
 
 {% endblock %}

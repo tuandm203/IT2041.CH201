@@ -90,6 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 const fileErr = document.getElementById("fileError");
                 if (fileErr) fileErr.classList.remove("show");
                 if (sampleStatus) sampleStatus.textContent = "✓ Đã dùng " + result.filename;
+                // Gán qua DataTransfer không tự bắn sự kiện "change" như user
+                // thật chọn file, nên phải tự cập nhật preview ở đây.
+                renderProfilePreview();
             })
             .catch(function (error) {
                 if (sampleStatus) sampleStatus.textContent = "Không tải được file mẫu.";
@@ -106,6 +109,94 @@ document.addEventListener("DOMContentLoaded", function () {
     if (useSampleBtn) {
         useSampleBtn.addEventListener("click", loadSampleTkb);
     }
+
+    // Checkbox "Đã hoàn thành GDTC" chỉ hiện 1 field cho người dùng, nhưng
+    // backend cần 2 field: skip_pe_if_completed (bool) + passed_pe_courses
+    // (phải khác rỗng để logic bỏ qua môn TD thật sự kích hoạt).
+    const skipPeCheckbox = document.getElementById("skipPeCheckbox");
+    const skipPeHidden = document.getElementById("skip_pe_if_completed");
+    const passedPeHidden = document.getElementById("passed_pe_courses");
+    if (skipPeCheckbox && skipPeHidden && passedPeHidden) {
+        skipPeCheckbox.addEventListener("change", function () {
+            skipPeHidden.value = skipPeCheckbox.checked ? "true" : "false";
+            passedPeHidden.value = skipPeCheckbox.checked ? "Đã hoàn thành" : "";
+        });
+    }
+
+    // ── Hồ sơ đang dùng — preview trực quan, cập nhật theo trạng thái form ──
+    const previewBody = document.getElementById("profilePreviewBody");
+    const englishLevelSelect = document.getElementById("english_level");
+    const ENGLISH_LABELS = { passed: "Đã pass đầu ra", a1: "A1", a2: "A2", b1: "B1", b2: "B2" };
+
+    function chipList(csv, emptyText) {
+        const items = (csv || "").split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+        if (items.length === 0) {
+            return '<span class="muted">' + emptyText + '</span>';
+        }
+        const shown = items.slice(0, 12);
+        let html = '<div class="preview-chips">';
+        shown.forEach(function (item) { html += '<span class="preview-chip">' + item + '</span>'; });
+        if (items.length > shown.length) {
+            html += '<span class="preview-chip more">+' + (items.length - shown.length) + ' môn khác</span>';
+        }
+        html += '</div>';
+        return '<span class="preview-value">' + items.length + ' môn</span>' + html;
+    }
+
+    function renderProfilePreview() {
+        if (!previewBody) return;
+
+        const major = majorSelect ? majorSelect.value : "";
+        const cohort = document.getElementById("cohort");
+        const trackVal = trackSelect ? trackSelect.value : "";
+        const trackLabel = trackSelect && trackSelect.selectedOptions.length
+            ? trackSelect.selectedOptions[0].textContent : "";
+        const completed = document.getElementById("completed_courses");
+        const retake = document.getElementById("retake_courses");
+        const minC = document.getElementById("min_credits");
+        const maxC = document.getElementById("max_credits");
+        const engLabel = englishLevelSelect ? (ENGLISH_LABELS[englishLevelSelect.value] || englishLevelSelect.value) : "B1";
+        const fileName = fileInputEl && fileInputEl.files && fileInputEl.files[0] ? fileInputEl.files[0].name : null;
+
+        let html = '<div class="preview-grid">';
+
+        html += '<div class="preview-item"><div class="preview-label">File TKB</div><div class="preview-value">'
+            + (fileName ? '✓ ' + fileName : '<span class="muted">Chưa chọn</span>') + '</div></div>';
+
+        html += '<div class="preview-item"><div class="preview-label">Ngành / Khóa</div><div class="preview-value">'
+            + (major ? major : '<span class="muted">Không chọn</span>') + (cohort && major ? ' / ' + cohort.value : '')
+            + '</div></div>';
+
+        if (trackVal) {
+            html += '<div class="preview-item"><div class="preview-label">Định hướng</div><div class="preview-value">' + trackLabel + '</div></div>';
+        }
+
+        html += '<div class="preview-item"><div class="preview-label">Trình độ tiếng Anh</div><div class="preview-value">' + engLabel + '</div></div>';
+
+        html += '<div class="preview-item"><div class="preview-label">Ràng buộc tín chỉ</div><div class="preview-value">'
+            + (minC ? minC.value : '?') + '–' + (maxC ? maxC.value : '?') + ' TC</div></div>';
+
+        html += '<div class="preview-item"><div class="preview-label">Môn đã hoàn thành</div>'
+            + chipList(completed ? completed.value : "", "Chưa có") + '</div>';
+
+        html += '<div class="preview-item"><div class="preview-label">Muốn học lại</div>'
+            + chipList(retake ? retake.value : "", "Không có") + '</div>';
+
+        html += '</div>';
+        previewBody.innerHTML = html;
+    }
+
+    [
+        "major", "track", "cohort", "completed_courses", "retake_courses",
+        "min_credits", "max_credits", "english_level", "file",
+    ].forEach(function (id) {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener("change", renderProfilePreview);
+            el.addEventListener("input", renderProfilePreview);
+        }
+    });
+    renderProfilePreview();
 
     // "Hồ sơ sinh viên mẫu" — điền nhanh ngành/khóa/môn đã học/TC dựa trên
     // data/train/student_case_*.json, kèm luôn file TKB mẫu để demo 1 click
@@ -148,6 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
             setValue("completed_courses", (selectedCase.completed_courses || []).join(", "));
             setValue("retake_courses", (selectedCase.retake_courses || []).join(", "));
             setValue("cohort", selectedCase.cohort);
+            if (selectedCase.english_level) setValue("english_level", selectedCase.english_level);
 
             if (majorSelect && selectedCase.major) {
                 majorSelect.value = selectedCase.major;
@@ -155,6 +247,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
             loadSampleTkb();
+            renderProfilePreview();
         });
     }
 
