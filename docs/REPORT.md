@@ -2,7 +2,7 @@
 
 **Môn học:** Data-Driven Systems (DDS)
 **Trường:** Đại học Công nghệ Thông tin — ĐHQG TP.HCM (UIT)
-**Nhóm:** 13 — Đinh Minh Tuấn (250201097) | GVHD: Lê Thanh Tùng
+**Nhóm:** 13 — Đinh Minh Tuấn (250201097); Nguyễn Hải Đăng (250201047) | GVHD: Lê Thanh Tùng
 **Branch triển khai:** `dangnh`
 **Ngày cập nhật:** 2026-07-25
 
