@@ -24,9 +24,14 @@ def split_ids(raw: str) -> list[str]:
     """Split 'IT001IT002' or 'IT001, IT002' into list of valid course IDs."""
     # Try comma/space split first
     parts = [p.strip() for p in re.split(r'[,;\s]+', raw) if p.strip()]
-    # If no valid IDs found, try splitting by capital letter patterns
+    # If no valid IDs found, try splitting by capital letter patterns.
+    # No trailing optional char here: on a concatenated run like
+    # "IT001IT002IT003" the optional suffix greedily eats the first
+    # letter of the next code (IT001I, T002I, T003). Course IDs in this
+    # catalog never carry a trailing letter suffix, so plain
+    # letters+digits is the correct token boundary for this fallback.
     if not any(looks_course_id(p) for p in parts):
-        parts = re.findall(r'[A-Z]{1,5}\d{2,6}[A-Z0-9]?', raw)
+        parts = re.findall(r'[A-Z]{1,5}\d{2,6}', raw)
     return [p for p in parts if looks_course_id(p)]
 
 

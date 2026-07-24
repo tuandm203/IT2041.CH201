@@ -58,10 +58,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH001C"
+            "course_id": "PH001"
           },
           {
-            "course_id": "E101"
+            "course_id": "CE101"
           }
         ]
       }
@@ -91,13 +91,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA001M"
+            "course_id": "MA001"
           },
           {
-            "course_id": "A002M"
+            "course_id": "MA002"
           },
           {
-            "course_id": "A003"
+            "course_id": "MA003"
           }
         ]
       }
@@ -127,13 +127,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T006C"
+            "course_id": "IT006"
           },
           {
-            "course_id": "E103"
+            "course_id": "CE103"
           }
         ]
       }
@@ -193,10 +193,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH001C"
+            "course_id": "PH001"
           },
           {
-            "course_id": "E101"
+            "course_id": "CE101"
           }
         ]
       }
@@ -316,13 +316,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002C"
+            "course_id": "PH002"
           },
           {
-            "course_id": "E103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E121"
+            "course_id": "CE121"
           }
         ]
       }
@@ -352,13 +352,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002C"
+            "course_id": "PH002"
           },
           {
-            "course_id": "E103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E121"
+            "course_id": "CE121"
           }
         ]
       }
@@ -388,13 +388,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE226C"
+            "course_id": "CE226"
           },
           {
-            "course_id": "E436C"
+            "course_id": "CE436"
           },
           {
-            "course_id": "E433"
+            "course_id": "CE433"
           }
         ]
       }
@@ -484,10 +484,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA003M"
+            "course_id": "MA003"
           },
           {
-            "course_id": "A006"
+            "course_id": "MA006"
           }
         ]
       }
@@ -517,10 +517,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002C"
+            "course_id": "PH002"
           },
           {
-            "course_id": "E118"
+            "course_id": "CE118"
           }
         ]
       }
@@ -550,10 +550,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002C"
+            "course_id": "PH002"
           },
           {
-            "course_id": "E118"
+            "course_id": "CE118"
           }
         ]
       }
@@ -703,19 +703,19 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA001M"
+            "course_id": "MA001"
           },
           {
-            "course_id": "A002C"
+            "course_id": "MA002"
           },
           {
-            "course_id": "E101C"
+            "course_id": "CE101"
           },
           {
-            "course_id": "E212C"
+            "course_id": "CE212"
           },
           {
-            "course_id": "E107"
+            "course_id": "CE107"
           }
         ]
       }
@@ -745,13 +745,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA006M"
+            "course_id": "MA006"
           },
           {
-            "course_id": "A003C"
+            "course_id": "MA003"
           },
           {
-            "course_id": "E121"
+            "course_id": "CE121"
           }
         ]
       }
@@ -781,16 +781,16 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE121C"
+            "course_id": "CE121"
           },
           {
-            "course_id": "E224M"
+            "course_id": "CE224"
           },
           {
-            "course_id": "A001M"
+            "course_id": "MA001"
           },
           {
-            "course_id": "A002"
+            "course_id": "MA002"
           }
         ]
       }
@@ -820,16 +820,16 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007C"
+            "course_id": "IT007"
           },
           {
-            "course_id": "E103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E211"
+            "course_id": "CE211"
           }
         ]
       }
@@ -859,10 +859,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T006"
+            "course_id": "IT006"
           }
         ]
       }
@@ -892,10 +892,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE103M"
+            "course_id": "CE103"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -955,25 +955,25 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA001M"
+            "course_id": "MA001"
           },
           {
-            "course_id": "A002M"
+            "course_id": "MA002"
           },
           {
-            "course_id": "A003M"
+            "course_id": "MA003"
           },
           {
-            "course_id": "A004C"
+            "course_id": "MA004"
           },
           {
-            "course_id": "E101C"
+            "course_id": "CE101"
           },
           {
-            "course_id": "E104C"
+            "course_id": "CE104"
           },
           {
-            "course_id": "E212"
+            "course_id": "CE212"
           }
         ]
       }
@@ -1003,10 +1003,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -1156,13 +1156,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE101C"
+            "course_id": "CE101"
           },
           {
-            "course_id": "E104C"
+            "course_id": "CE104"
           },
           {
-            "course_id": "E103"
+            "course_id": "CE103"
           }
         ]
       }
@@ -1192,10 +1192,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE104C"
+            "course_id": "CE104"
           },
           {
-            "course_id": "E221"
+            "course_id": "CE221"
           }
         ]
       }
@@ -1225,13 +1225,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -1291,13 +1291,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118I"
+            "course_id": "CE118"
           },
           {
-            "course_id": "T006C"
+            "course_id": "IT006"
           },
           {
-            "course_id": "E221"
+            "course_id": "CE221"
           }
         ]
       }
@@ -1387,10 +1387,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "ENG03I"
+            "course_id": "ENG03"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -1420,10 +1420,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE124C"
+            "course_id": "CE124"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -1453,13 +1453,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -1489,10 +1489,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -1522,13 +1522,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006C"
+            "course_id": "IT006"
           },
           {
-            "course_id": "E118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -1558,10 +1558,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -1591,10 +1591,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E224"
+            "course_id": "CE224"
           }
         ]
       }
@@ -1774,10 +1774,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE213C"
+            "course_id": "CE213"
           },
           {
-            "course_id": "E436"
+            "course_id": "CE436"
           }
         ]
       }
@@ -1837,10 +1837,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -1870,13 +1870,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT007I"
+            "course_id": "IT007"
           },
           {
-            "course_id": "T006C"
+            "course_id": "IT006"
           },
           {
-            "course_id": "E107"
+            "course_id": "CE107"
           }
         ]
       }
@@ -1906,13 +1906,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002I"
+            "course_id": "PH002"
           },
           {
-            "course_id": "T006C"
+            "course_id": "IT006"
           },
           {
-            "course_id": "E221"
+            "course_id": "CE221"
           }
         ]
       }
@@ -2002,13 +2002,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE201C"
+            "course_id": "CE201"
           },
           {
-            "course_id": "E206C"
+            "course_id": "CE206"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -2038,10 +2038,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -2071,10 +2071,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E224"
+            "course_id": "CE224"
           }
         ]
       }
@@ -2164,10 +2164,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E224"
+            "course_id": "CE224"
           }
         ]
       }
@@ -2197,13 +2197,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E221C"
+            "course_id": "CE221"
           },
           {
-            "course_id": "E222"
+            "course_id": "CE222"
           }
         ]
       }
@@ -2233,10 +2233,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118C"
+            "course_id": "CE118"
           },
           {
-            "course_id": "E213"
+            "course_id": "CE213"
           }
         ]
       }
@@ -2266,10 +2266,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE118I"
+            "course_id": "CE118"
           },
           {
-            "course_id": "T006"
+            "course_id": "IT006"
           }
         ]
       }
@@ -2359,10 +2359,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA003M"
+            "course_id": "MA003"
           },
           {
-            "course_id": "A006"
+            "course_id": "MA006"
           }
         ]
       }
@@ -2452,10 +2452,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T006"
+            "course_id": "IT006"
           }
         ]
       }
@@ -2485,10 +2485,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E224"
+            "course_id": "CE224"
           }
         ]
       }
@@ -2518,10 +2518,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CE103C"
+            "course_id": "CE103"
           },
           {
-            "course_id": "E224"
+            "course_id": "CE224"
           }
         ]
       }
@@ -2641,10 +2641,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -2674,10 +2674,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -2707,13 +2707,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001M"
+            "course_id": "IT001"
           },
           {
-            "course_id": "A003M"
+            "course_id": "MA003"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -2773,10 +2773,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -2866,10 +2866,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -2899,13 +2899,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001M"
+            "course_id": "IT001"
           },
           {
-            "course_id": "A003M"
+            "course_id": "MA003"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -3055,10 +3055,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -3660,10 +3660,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -3753,13 +3753,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -3789,10 +3789,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003M"
+            "course_id": "IT003"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -3822,10 +3822,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003M"
+            "course_id": "IT003"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -3855,10 +3855,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -3918,10 +3918,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -3951,10 +3951,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CS221C"
+            "course_id": "CS221"
           },
           {
-            "course_id": "S114"
+            "course_id": "CS114"
           }
         ]
       }
@@ -3984,13 +3984,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "CS5423C"
+            "course_id": "CS5423"
           },
           {
-            "course_id": "S4283M"
+            "course_id": "CS4283"
           },
           {
-            "course_id": "SIS4013"
+            "course_id": "MSIS4013"
           }
         ]
       }
@@ -4052,10 +4052,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA006M"
+            "course_id": "MA006"
           },
           {
-            "course_id": "A003"
+            "course_id": "MA003"
           }
         ]
       }
@@ -4115,13 +4115,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA005I"
+            "course_id": "MA005"
           },
           {
-            "course_id": "T001D"
+            "course_id": "IT001"
           },
           {
-            "course_id": "S103"
+            "course_id": "DS103"
           }
         ]
       }
@@ -4211,10 +4211,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -4244,10 +4244,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001M"
+            "course_id": "IT001"
           },
           {
-            "course_id": "A005"
+            "course_id": "MA005"
           }
         ]
       }
@@ -4645,10 +4645,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -4678,13 +4678,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T002D"
+            "course_id": "IT002"
           },
           {
-            "course_id": "S102"
+            "course_id": "DS102"
           }
         ]
       }
@@ -4714,13 +4714,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003D"
+            "course_id": "IT003"
           },
           {
-            "course_id": "S102"
+            "course_id": "DS102"
           }
         ]
       }
@@ -4750,10 +4750,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA003I"
+            "course_id": "MA003"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -4815,10 +4815,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003D"
+            "course_id": "IT003"
           },
           {
-            "course_id": "S102"
+            "course_id": "DS102"
           }
         ]
       }
@@ -4848,13 +4848,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T002D"
+            "course_id": "IT002"
           },
           {
-            "course_id": "S102"
+            "course_id": "DS102"
           }
         ]
       }
@@ -4974,10 +4974,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "S207"
+            "course_id": "IS207"
           }
         ]
       }
@@ -5321,10 +5321,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T005"
+            "course_id": "IT005"
           }
         ]
       }
@@ -5384,10 +5384,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA005M"
+            "course_id": "MA005"
           },
           {
-            "course_id": "A006"
+            "course_id": "MA006"
           }
         ]
       }
@@ -5417,10 +5417,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -5510,10 +5510,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -5723,10 +5723,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IE101I"
+            "course_id": "IE101"
           },
           {
-            "course_id": "S251"
+            "course_id": "IS251"
           }
         ]
       }
@@ -5936,10 +5936,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004I"
+            "course_id": "IT004"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -6089,10 +6089,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004I"
+            "course_id": "IT004"
           },
           {
-            "course_id": "T005"
+            "course_id": "IT005"
           }
         ]
       }
@@ -6122,10 +6122,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -6275,10 +6275,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA005I"
+            "course_id": "MA005"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -6368,10 +6368,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -6491,10 +6491,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004I"
+            "course_id": "IT004"
           },
           {
-            "course_id": "S251"
+            "course_id": "IS251"
           }
         ]
       }
@@ -6524,10 +6524,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004M"
+            "course_id": "IT004"
           },
           {
-            "course_id": "A004"
+            "course_id": "MA004"
           }
         ]
       }
@@ -6557,10 +6557,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -6590,10 +6590,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -6623,10 +6623,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA005I"
+            "course_id": "MA005"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -6746,10 +6746,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "PH002I"
+            "course_id": "PH002"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -6809,10 +6809,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -7366,10 +7366,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "CS5423C"
+            "course_id": "CS5423"
           },
           {
-            "course_id": "S2134"
+            "course_id": "CS2134"
           }
         ]
       }
@@ -7669,10 +7669,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -7702,10 +7702,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004N"
+            "course_id": "IT004"
           },
           {
-            "course_id": "T106"
+            "course_id": "NT106"
           }
         ]
       }
@@ -7885,10 +7885,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "MA001M"
+            "course_id": "MA001"
           },
           {
-            "course_id": "A002"
+            "course_id": "MA002"
           }
         ]
       }
@@ -7918,10 +7918,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT007N"
+            "course_id": "IT007"
           },
           {
-            "course_id": "T101"
+            "course_id": "NT101"
           }
         ]
       }
@@ -8011,10 +8011,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -8164,10 +8164,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -8197,10 +8197,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -8230,10 +8230,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005N"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T106"
+            "course_id": "NT106"
           }
         ]
       }
@@ -8263,13 +8263,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T006I"
+            "course_id": "IT006"
           },
           {
-            "course_id": "T007"
+            "course_id": "IT007"
           }
         ]
       }
@@ -8509,10 +8509,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005N"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T101"
+            "course_id": "NT101"
           }
         ]
       }
@@ -8572,10 +8572,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005N"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T106"
+            "course_id": "NT106"
           }
         ]
       }
@@ -8635,10 +8635,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "NT101I"
+            "course_id": "NT101"
           },
           {
-            "course_id": "T005"
+            "course_id": "IT005"
           }
         ]
       }
@@ -8668,13 +8668,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005N"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T101N"
+            "course_id": "NT101"
           },
           {
-            "course_id": "T109"
+            "course_id": "NT109"
           }
         ]
       }
@@ -8704,10 +8704,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005N"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T101"
+            "course_id": "NT101"
           }
         ]
       }
@@ -8737,10 +8737,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "NT114N"
+            "course_id": "NT114"
           },
           {
-            "course_id": "T117"
+            "course_id": "NT117"
           }
         ]
       }
@@ -8770,10 +8770,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002N"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T209"
+            "course_id": "NT209"
           }
         ]
       }
@@ -9253,10 +9253,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -9346,10 +9346,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "SE104I"
+            "course_id": "SE104"
           },
           {
-            "course_id": "T008"
+            "course_id": "IT008"
           }
         ]
       }
@@ -9379,13 +9379,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -9445,10 +9445,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -9478,16 +9478,16 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T003S"
+            "course_id": "IT003"
           },
           {
-            "course_id": "E104I"
+            "course_id": "SE104"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -9517,13 +9517,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004S"
+            "course_id": "IT004"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -9553,10 +9553,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001S"
+            "course_id": "IT001"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -9616,19 +9616,19 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T004S"
+            "course_id": "IT004"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -9658,16 +9658,16 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T004S"
+            "course_id": "IT004"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -9727,10 +9727,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -9760,10 +9760,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -9883,13 +9883,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "SE104I"
+            "course_id": "SE104"
           },
           {
-            "course_id": "T001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -9979,22 +9979,22 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T004I"
+            "course_id": "IT004"
           },
           {
-            "course_id": "T002S"
+            "course_id": "IT002"
           },
           {
-            "course_id": "E104S"
+            "course_id": "SE104"
           },
           {
-            "course_id": "E109I"
+            "course_id": "SE109"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -10054,13 +10054,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004S"
+            "course_id": "IT004"
           },
           {
-            "course_id": "E104S"
+            "course_id": "SE104"
           },
           {
-            "course_id": "E347"
+            "course_id": "SE347"
           }
         ]
       }
@@ -10090,13 +10090,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T001"
+            "course_id": "IT001"
           }
         ]
       }
@@ -10126,10 +10126,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -10219,13 +10219,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003I"
+            "course_id": "IT003"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -10285,13 +10285,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003S"
+            "course_id": "IT003"
           },
           {
-            "course_id": "E102"
+            "course_id": "SE102"
           }
         ]
       }
@@ -10351,10 +10351,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002"
+            "course_id": "IT002"
           }
         ]
       }
@@ -10384,10 +10384,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT004S"
+            "course_id": "IT004"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -10507,13 +10507,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -10573,10 +10573,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001S"
+            "course_id": "IT001"
           },
           {
-            "course_id": "E346"
+            "course_id": "SE346"
           }
         ]
       }
@@ -10606,10 +10606,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T008"
+            "course_id": "IT008"
           }
         ]
       }
@@ -10639,13 +10639,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -10705,13 +10705,13 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT001I"
+            "course_id": "IT001"
           },
           {
-            "course_id": "T002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T003"
+            "course_id": "IT003"
           }
         ]
       }
@@ -10801,10 +10801,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "SE104S"
+            "course_id": "SE104"
           },
           {
-            "course_id": "E100"
+            "course_id": "SE100"
           }
         ]
       }
@@ -10894,10 +10894,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT002I"
+            "course_id": "IT002"
           },
           {
-            "course_id": "T004"
+            "course_id": "IT004"
           }
         ]
       }
@@ -10957,10 +10957,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "SE100S"
+            "course_id": "SE100"
           },
           {
-            "course_id": "E104"
+            "course_id": "SE104"
           }
         ]
       }
@@ -11020,10 +11020,10 @@
         },
         "prior_courses": [
           {
-            "course_id": "IT005I"
+            "course_id": "IT005"
           },
           {
-            "course_id": "T008"
+            "course_id": "IT008"
           }
         ]
       }
