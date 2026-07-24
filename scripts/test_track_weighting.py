@@ -118,8 +118,10 @@ def main() -> None:
         print(f"{engine.upper()} CS410 gate: {blocked.reason}")
         ordering_changes[engine] = before != after
 
+    # CNTT has its own anchors now, but not this one (computer_vision is a
+    # KHMT track) — still exercises the neutral-score fallback correctly.
     unsupported = score_track_relevance("CS331", "CNTT", TRACK)
-    print(f"Unsupported-major neutral score (CNTT/CS331): {unsupported:.6f}")
+    print(f"Unmatched major/track neutral score (CNTT/{TRACK}): {unsupported:.6f}")
 
     if not available:
         print(

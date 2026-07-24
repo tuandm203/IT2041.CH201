@@ -103,5 +103,177 @@
         "description": "Các môn học về hệ thống điều khiển tự động, kỹ thuật robot, xử lý tín hiệu số, cơ điện tử"
       }
     }
+  },
+  "ATTT": {
+    "name": "Ngành An toàn Thông tin",
+    "description": "Tập trung vào bảo vệ hệ thống, dữ liệu và ứng phó các mối đe dọa an ninh mạng",
+    "anchors": {
+      "network_defense": {
+        "name": "Phòng thủ mạng & Phát hiện xâm nhập",
+        "keywords": ["an toàn mạng", "network security", "phát hiện xâm nhập", "ngăn ngừa xâm nhập", "IDS", "IPS", "an toàn mạng không dây", "bảo mật mạng di động", "an toàn kiến trúc hệ thống", "tường lửa", "network defense", "SOC", "incident response"],
+        "description": "Các môn học về an toàn mạng, phát hiện và ngăn ngừa xâm nhập, bảo vệ mạng không dây, di động và kiến trúc hệ thống"
+      },
+      "malware_forensics": {
+        "name": "Phân tích mã độc & Pháp chứng số",
+        "keywords": ["phân tích mã độc", "malware analysis", "cơ chế hoạt động của mã độc", "pháp chứng kỹ thuật số", "digital forensics", "tấn công mạng", "network attack", "điều tra số", "reverse engineering", "khôi phục thông tin", "phân tích sự cố"],
+        "description": "Các môn học về cơ chế và phân tích mã độc, tấn công mạng, điều tra pháp chứng kỹ thuật số và khôi phục sau sự cố"
+      },
+      "application_iot_security": {
+        "name": "Bảo mật Ứng dụng, Web & IoT",
+        "keywords": ["bảo mật web", "web security", "bảo mật ứng dụng", "lập trình an toàn", "khai thác lỗ hổng phần mềm", "software vulnerability", "penetration testing", "bảo mật Internet of Things", "IoT security", "mobile security", "secure coding"],
+        "description": "Các môn học về bảo mật Web và ứng dụng, lập trình an toàn, khai thác lỗ hổng phần mềm và bảo vệ hệ thống IoT"
+      },
+      "cryptography_governance": {
+        "name": "Mật mã, An toàn Dữ liệu & Quản trị ATTT",
+        "keywords": ["mật mã học", "cryptography", "an toàn dữ liệu", "data security", "định danh", "chứng thực", "identity and authentication", "quản lý rủi ro", "risk management", "an toàn thông tin doanh nghiệp", "máy tính lượng tử", "blockchain security", "chính sách an toàn thông tin"],
+        "description": "Các môn học về mật mã, bảo vệ dữ liệu, định danh và chứng thực, quản trị rủi ro và an toàn thông tin doanh nghiệp"
+      }
+    }
+  },
+  "CNTT": {
+    "name": "Ngành Công nghệ Thông tin",
+    "description": "Ứng dụng công nghệ Web, dữ liệu và hệ thống thông tin để giải quyết các bài toán thực tiễn",
+    "anchors": {
+      "social_web": {
+        "name": "Truyền thông Xã hội & Công nghệ Web",
+        "keywords": ["truyền thông xã hội", "social media", "công nghệ Web", "phát triển hệ thống Web", "web development", "mạng xã hội", "phân tích mạng xã hội", "khai thác dữ liệu truyền thông xã hội", "hệ khuyến nghị", "recommendation system", "SEO", "ứng dụng di động đa nền tảng", "customer relationship management"],
+        "description": "Hướng chính thức về hệ thống Web, ứng dụng di động, phân tích mạng xã hội, khai thác truyền thông xã hội và hệ khuyến nghị"
+      },
+      "information_science": {
+        "name": "Khoa học Thông tin",
+        "keywords": ["khoa học thông tin", "information science", "xử lý dữ liệu thống kê", "tiền xử lý dữ liệu", "xây dựng bộ dữ liệu", "phân tích dữ liệu", "trực quan dữ liệu", "data visualization", "dữ liệu lớn", "big data", "kiến trúc tích hợp hệ thống", "khai phá dữ liệu doanh nghiệp", "hệ thống thông tin địa lý", "GIS"],
+        "description": "Hướng chính thức về thu thập, tiền xử lý, phân tích và trực quan dữ liệu, dữ liệu lớn, tích hợp hệ thống và thông tin địa lý"
+      }
+    }
+  },
+  "KHdl": {
+    "name": "Ngành Khoa học Dữ liệu",
+    "description": "Tập trung vào thống kê, hạ tầng dữ liệu, học máy và các ứng dụng phân tích dữ liệu chuyên sâu",
+    "anchors": {
+      "data_engineering": {
+        "name": "Kỹ thuật Dữ liệu & Dữ liệu lớn",
+        "keywords": ["tiền xử lý dữ liệu", "xây dựng bộ dữ liệu", "phân tích dữ liệu lớn", "big data", "kho dữ liệu", "data warehouse", "tính toán song song", "tính toán phân tán", "parallel computing", "distributed computing", "ETL", "data pipeline", "thiết kế ứng dụng dữ liệu chuyên sâu"],
+        "description": "Các môn học về xây dựng bộ dữ liệu, kho dữ liệu, xử lý dữ liệu lớn, tính toán song song và phân tán"
+      },
+      "machine_learning_systems": {
+        "name": "Học máy & Hệ thống AI",
+        "keywords": ["học máy thống kê", "statistical machine learning", "deep learning", "thiết kế hệ thống học máy", "machine learning systems", "MLOps", "mô hình nền tảng", "foundation model", "hệ khuyến nghị", "recommendation system", "tối ưu hóa", "đạo đức trong trí tuệ nhân tạo"],
+        "description": "Các môn học về học máy thống kê, học sâu, thiết kế và vận hành hệ thống học máy, mô hình nền tảng và hệ khuyến nghị"
+      },
+      "language_multimodal": {
+        "name": "Ngôn ngữ, Hình ảnh & Dữ liệu Đa phương thức",
+        "keywords": ["xử lý ngôn ngữ tự nhiên", "NLP", "mô hình ngôn ngữ lớn", "LLM", "xử lý thông tin giọng nói", "speech processing", "xử lý ảnh y khoa", "khai thác dữ liệu ảnh số", "image mining", "học đa thể thức", "multimodal learning", "khai phá dữ liệu đa phương tiện", "rút trích thông tin"],
+        "description": "Các môn học khai thác dữ liệu văn bản, ngôn ngữ lớn, giọng nói, ảnh số, ảnh y khoa và dữ liệu đa phương thức"
+      },
+      "applied_analytics": {
+        "name": "Phân tích Dữ liệu Ứng dụng",
+        "keywords": ["phân tích dữ liệu doanh nghiệp", "business analytics", "phân tích dữ liệu tài chính", "financial analytics", "phân tích chuỗi thời gian", "time series", "phân tích dữ liệu truyền thông xã hội", "social media analytics", "phân tích thống kê đa biến", "thống kê Bayes", "Bayesian statistics", "khai phá dữ liệu trong doanh nghiệp"],
+        "description": "Các môn học ứng dụng thống kê và khai phá dữ liệu cho doanh nghiệp, tài chính, chuỗi thời gian và truyền thông xã hội"
+      }
+    }
+  },
+  "TKVM": {
+    "name": "Ngành Thiết kế Vi mạch",
+    "description": "Tập trung vào thiết kế, kiểm tra và hiện thực các hệ thống vi mạch số, tương tự và SoC",
+    "anchors": {
+      "digital_soc_fpga": {
+        "name": "Thiết kế Số, SoC & FPGA",
+        "keywords": ["thiết kế luận lý số", "digital logic design", "HDL", "Verilog", "VHDL", "thiết kế VLSI", "VLSI design", "thiết kế hệ thống SoC", "system on chip", "FPGA", "tối ưu hóa cho FPGA", "bộ tăng tốc phần cứng", "hardware accelerator", "hệ thống nhúng trên SoC"],
+        "description": "Các môn học về luận lý số, HDL, VLSI, thiết kế hệ thống SoC, tối ưu FPGA và bộ tăng tốc phần cứng"
+      },
+      "analog_mixed_signal": {
+        "name": "Vi mạch Tương tự & Hỗn hợp",
+        "keywords": ["thiết kế vi mạch tương tự", "analog IC design", "thiết kế vi mạch hỗn hợp", "mixed-signal IC", "mạch điện tử", "phân tích mạch", "circuit analysis", "vật lý bán dẫn", "semiconductor physics", "thiết bị bán dẫn", "analog circuit"],
+        "description": "Các môn học về phân tích mạch, linh kiện bán dẫn, thiết kế vi mạch tương tự và vi mạch hỗn hợp"
+      },
+      "eda_verification_physical": {
+        "name": "EDA, Kiểm tra & Thiết kế Vật lý",
+        "keywords": ["tự động hóa thiết kế vi mạch", "electronic design automation", "EDA", "kỹ thuật thiết kế kiểm tra", "design for test", "DFT", "verification", "thiết kế vật lý vi mạch", "physical design", "place and route", "timing", "layout", "ASIC flow"],
+        "description": "Các môn học về tự động hóa thiết kế điện tử, kỹ thuật thiết kế kiểm tra, xác minh và thiết kế vật lý vi mạch"
+      },
+      "signal_image_acceleration": {
+        "name": "Xử lý Tín hiệu & Ảnh trên Phần cứng",
+        "keywords": ["xử lý tín hiệu số", "digital signal processing", "DSP", "xử lý tín hiệu trên FPGA", "xử lý ảnh hướng ASIC", "image processing ASIC", "hardware acceleration", "FPGA acceleration", "parallel hardware", "bộ tăng tốc xử lý ảnh"],
+        "description": "Các môn học hiện thực xử lý tín hiệu số và xử lý ảnh bằng FPGA, ASIC và kiến trúc tăng tốc phần cứng"
+      }
+    }
+  },
+  "TMDT": {
+    "name": "Ngành Thương mại Điện tử",
+    "description": "Kết hợp công nghệ, tiếp thị và vận hành doanh nghiệp trên các nền tảng thương mại số",
+    "anchors": {
+      "digital_marketing_social": {
+        "name": "Digital Marketing & Thương mại Xã hội",
+        "keywords": ["marketing điện tử", "digital marketing", "tiếp thị trực tuyến", "online marketing", "tối ưu hóa công cụ tìm kiếm", "SEO", "SEM", "thương mại xã hội", "social commerce", "quản trị chiến lược kinh doanh điện tử", "digital business strategy", "quản trị bán hàng"],
+        "description": "Các môn học về marketing điện tử, SEO, tiếp thị trực tuyến, thương mại xã hội, bán hàng và chiến lược kinh doanh số"
+      },
+      "ecommerce_platform_mobile": {
+        "name": "Nền tảng TMĐT, Web & Mobile",
+        "keywords": ["thiết kế hệ thống thương mại điện tử", "e-commerce system design", "phát triển ứng dụng web", "web application", "thương mại di động", "mobile commerce", "phát triển ứng dụng thương mại di động", "quản trị dự án thương mại điện tử", "e-commerce project management", "quy trình nghiệp vụ doanh nghiệp"],
+        "description": "Các môn học về thiết kế nền tảng thương mại điện tử, ứng dụng Web và mobile, quy trình nghiệp vụ và quản trị dự án"
+      },
+      "payment_security_blockchain": {
+        "name": "Thanh toán, Bảo mật & Blockchain",
+        "keywords": ["hệ thống thanh toán trực tuyến", "online payment", "payment gateway", "an toàn thương mại điện tử", "e-commerce security", "bảo mật thương mại điện tử", "pháp luật trong thương mại điện tử", "e-commerce law", "blockchain", "công nghệ blockchain", "giao dịch số", "digital transaction"],
+        "description": "Các môn học về thanh toán trực tuyến, an toàn và pháp luật thương mại điện tử, giao dịch số và blockchain"
+      },
+      "digital_business_operations": {
+        "name": "Vận hành Doanh nghiệp Số",
+        "keywords": ["quản trị quan hệ khách hàng", "CRM", "quản trị quan hệ nhà cung cấp", "hoạch định nguồn lực doanh nghiệp", "ERP", "quản trị chuỗi cung ứng", "supply chain", "quản trị tài chính doanh nghiệp", "quản trị bán hàng", "business operations", "phân tích dữ liệu kinh doanh"],
+        "description": "Các môn học về CRM, ERP, chuỗi cung ứng, tài chính, bán hàng và phân tích dữ liệu phục vụ vận hành doanh nghiệp số"
+      }
+    }
+  },
+  "TTDM": {
+    "name": "Ngành Truyền thông Đa phương tiện",
+    "description": "Kết hợp sản xuất nội dung, công nghệ dữ liệu, thiết kế thị giác và chiến lược truyền thông số",
+    "anchors": {
+      "media_ai_analytics": {
+        "name": "AI & Phân tích Dữ liệu Truyền thông",
+        "keywords": ["học máy ứng dụng trong truyền thông đa phương tiện", "applied machine learning", "học sâu ứng dụng", "deep learning for multimedia", "xử lý ngôn ngữ tự nhiên", "NLP for multimedia", "dữ liệu lớn", "big data", "phân tích dữ liệu truyền thông số", "digital media analytics", "khai phá dữ liệu mạng xã hội", "phân tích đa phương thức"],
+        "description": "Các môn học ứng dụng học máy, học sâu, NLP, dữ liệu lớn và phân tích đa phương thức vào dữ liệu truyền thông"
+      },
+      "visual_content_xr": {
+        "name": "Thiết kế Thị giác, Video & XR",
+        "keywords": ["thiết kế đồ họa", "graphic design", "nguyên lý thị giác", "xử lý ảnh số và video", "digital image and video processing", "quay phim", "biên kịch", "hậu kỳ", "post production", "thực tế ảo", "thực tế tăng cường", "VR", "AR", "hoạt hình", "animation", "sản xuất ấn phẩm"],
+        "description": "Các môn học về thiết kế đồ họa, hình ảnh và video, quay phim hậu kỳ, xuất bản, hoạt hình, thực tế ảo và tăng cường"
+      },
+      "digital_marketing_brand": {
+        "name": "Digital Marketing & Thương hiệu",
+        "keywords": ["tiếp thị số", "digital marketing", "chiến lược phát triển thương hiệu", "brand strategy", "quan hệ công chúng", "public relations", "SEO", "search engine marketing", "kênh tiếp thị trực tuyến", "online marketing channel", "quản trị quan hệ khách hàng", "data-driven CRM", "tiếp thị sản phẩm dịch vụ"],
+        "description": "Các môn học về tiếp thị số, chiến lược thương hiệu, quan hệ công chúng, SEO, kênh trực tuyến và CRM dựa trên dữ liệu"
+      },
+      "journalism_social_media": {
+        "name": "Báo chí, Nội dung & Truyền thông Xã hội",
+        "keywords": ["truyền thông đại chúng", "mass communication", "truyền thông và dư luận xã hội", "public discourse", "viết nội dung đa phương tiện", "multimedia content writing", "nghiệp vụ truyền thông và báo chí", "journalism", "social media", "mạng xã hội", "kể chuyện tương tác", "interactive storytelling", "quản lý dự án truyền thông"],
+        "description": "Các môn học về truyền thông đại chúng, báo chí, viết nội dung, dư luận xã hội, kể chuyện và quản lý dự án truyền thông"
+      }
+    }
+  },
+  "TTNT": {
+    "name": "Ngành Trí tuệ Nhân tạo",
+    "description": "Tập trung vào học máy, tri thức, ngôn ngữ, thị giác và xây dựng các hệ thống thông minh",
+    "anchors": {
+      "machine_learning": {
+        "name": "Học máy & Học sâu",
+        "keywords": ["máy học", "machine learning", "máy học nâng cao", "advanced machine learning", "mạng neural", "neural network", "học sâu", "deep learning", "thuật giải di truyền", "genetic algorithm", "phát triển và vận hành hệ thống học máy", "MLOps", "học tăng cường"],
+        "description": "Các môn học về máy học nâng cao, mạng neural, học sâu, thuật giải di truyền và phát triển vận hành hệ thống học máy"
+      },
+      "nlp_speech": {
+        "name": "Ngôn ngữ Tự nhiên & Tiếng nói",
+        "keywords": ["xử lý ngôn ngữ tự nhiên", "natural language processing", "NLP", "ngôn ngữ học máy tính", "computational linguistics", "ngữ nghĩa học tính toán", "dịch máy", "machine translation", "hệ thống hỏi-đáp", "question answering", "ngôn ngữ học ngữ liệu", "xử lý âm thanh và tiếng nói", "speech processing", "tổng hợp tiếng nói"],
+        "description": "Các môn học về NLP, ngôn ngữ học tính toán, dịch máy, hỏi-đáp, ngữ liệu, xử lý và tổng hợp tiếng nói"
+      },
+      "computer_vision_multimedia": {
+        "name": "Thị giác Máy tính & Đa phương tiện",
+        "keywords": ["thị giác máy tính", "computer vision", "thị giác máy tính nâng cao", "nhận dạng", "pattern recognition", "xử lý ảnh", "image processing", "truy vấn thông tin đa phương tiện", "multimedia retrieval", "tính toán đa phương tiện", "thị giác trong tương tác người máy", "đồ họa game", "thực tại ảo"],
+        "description": "Các môn học về thị giác máy tính, nhận dạng, xử lý ảnh, truy vấn đa phương tiện, tương tác người-máy và thực tại ảo"
+      },
+      "knowledge_reasoning_agents": {
+        "name": "Biểu diễn Tri thức & Hệ Tác tử",
+        "keywords": ["biểu diễn tri thức", "knowledge representation", "suy luận", "reasoning", "hệ cơ sở tri thức", "knowledge-based systems", "hệ giải bài toán thông minh", "intelligent problem solving", "hệ thống đa tác tử", "multi-agent systems", "logic mờ", "fuzzy logic", "hệ suy diễn mờ", "web ngữ nghĩa"],
+        "description": "Các môn học về biểu diễn và suy luận tri thức, hệ cơ sở tri thức, giải bài toán thông minh, đa tác tử và logic mờ"
+      }
+    }
   }
 }

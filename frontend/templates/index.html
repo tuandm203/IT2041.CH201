@@ -65,6 +65,32 @@
                         </div>
                     </div>
 
+                    <!-- Khóa tuyển sinh và bộ máy đề xuất -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="cohort" class="form-label">Khóa tuyển sinh</label>
+                            <select class="form-select" name="cohort" id="cohort">
+                                <option value="K2025" selected>K2025</option>
+                                <option value="K2024">K2024</option>
+                                <option value="K2023">K2023</option>
+                                <option value="K2022">K2022</option>
+                                <option value="K2021">K2021</option>
+                                <option value="K2020">K2020</option>
+                                <option value="K2019">K2019</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="engine" class="form-label">Bộ máy đề xuất</label>
+                            <select class="form-select" name="engine" id="engine">
+                                <option value="gp1" selected>GP1 — Luật &amp; Đồ thị</option>
+                                <option value="gp2">GP2 — Mô hình học máy</option>
+                            </select>
+                            <div class="form-text">
+                                GP1 ưu tiên theo đồ thị; GP2 dùng mô hình đã huấn luyện.
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Nút submit -->
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success btn-lg" id="submitBtn">
