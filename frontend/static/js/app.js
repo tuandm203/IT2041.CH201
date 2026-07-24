@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (anchors.length === 0) {
             trackSelect.disabled = true;
-            trackField.classList.add("d-none");
+            trackField.classList.add("hidden");
             return;
         }
 
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
             trackSelect.appendChild(option);
         });
         trackSelect.disabled = false;
-        trackField.classList.remove("d-none");
+        trackField.classList.remove("hidden");
     }
 
     if (majorSelect) {
@@ -57,23 +57,33 @@ document.addEventListener("DOMContentLoaded", function () {
         majorSelect.addEventListener("change", updateTrackOptions);
     }
 
+    const fileError = document.getElementById("fileError");
+    const creditError = document.getElementById("creditError");
+
     if (form) {
         form.addEventListener("submit", function (e) {
             const fileInput = document.getElementById("file");
             const minCredits = document.getElementById("min_credits").value;
             const maxCredits = document.getElementById("max_credits").value;
+            let hasError = false;
+
+            if (fileError) fileError.classList.remove("show");
+            if (creditError) creditError.classList.remove("show");
 
             // Validate file
             if (!fileInput.files || fileInput.files.length === 0) {
-                e.preventDefault();
-                alert("Vui lòng chọn file Excel trước khi đề xuất.");
-                return;
+                if (fileError) fileError.classList.add("show");
+                hasError = true;
             }
 
             // Validate min <= max
             if (parseInt(minCredits) > parseInt(maxCredits)) {
+                if (creditError) creditError.classList.add("show");
+                hasError = true;
+            }
+
+            if (hasError) {
                 e.preventDefault();
-                alert("Số TC tối thiểu không được lớn hơn số TC tối đa.");
                 return;
             }
 

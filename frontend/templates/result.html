@@ -2,109 +2,110 @@
 {% block title %}Kết quả — Schedule Optimizer{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-lg-10">
 
-        <!-- Thông báo -->
-        {% if result.warnings %}
-        <div class="alert alert-warning">
-            <ul class="mb-0">
-                {% for w in result.warnings %}
-                <li>{{ w }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endif %}
+{% if result.warnings %}
+<div class="callout warn">
+    <span class="mark">!</span>
+    <ul>
+        {% for w in result.warnings %}
+        <li>{{ w }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
 
-        <!-- Thông điệp -->
-        <div class="alert alert-info">{{ result.message }}</div>
+<div class="callout info">
+    <span class="mark">i</span>
+    <p>{{ result.message }}</p>
+</div>
 
-        <!-- Tóm tắt -->
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header bg-success text-white">
-                <h4 class="mb-0">✅ Môn đã chọn ({{ result.total_courses }} môn — {{ result.total_credits }} TC)</h4>
-            </div>
-            <div class="card-body p-0">
-                <table class="table table-hover mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th>#</th>
-                            <th>Mã môn</th>
-                            <th>Tên môn</th>
-                            <th class="text-center">TC</th>
-                            {% if show_priority %}
-                            <th class="text-center">Điểm GP2</th>
+<div class="panel">
+    <div class="panel-head tone-good">
+        <span class="icon">✅</span>
+        <h2>Môn đã chọn ({{ result.total_courses }} môn — {{ result.total_credits }} TC)</h2>
+    </div>
+    <div class="panel-body flush">
+        <div class="data-table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th class="num">#</th>
+                        <th>Mã môn</th>
+                        <th>Tên môn</th>
+                        <th class="num">TC</th>
+                        {% if show_priority %}
+                        <th class="num">Điểm GP2</th>
+                        {% endif %}
+                        <th>Lý do đề xuất</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in result.selected %}
+                    <tr class="row-accent" style="--accent: var(--good)">
+                        <td class="num">{{ loop.index }}</td>
+                        <td class="course-code">{{ item.course_id }}</td>
+                        <td>{{ item.course_name }}</td>
+                        <td class="num">{{ item.credits }}</td>
+                        {% if show_priority %}
+                        <td class="num">
+                            {% if item.priority_score is not none %}
+                            {{ "%.4f"|format(item.priority_score) }}
+                            {% else %}
+                            —
                             {% endif %}
-                            <th>Lý do đề xuất</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for item in result.selected %}
-                        <tr>
-                            <td>{{ loop.index }}</td>
-                            <td><strong>{{ item.course_id }}</strong></td>
-                            <td>{{ item.course_name }}</td>
-                            <td class="text-center">{{ item.credits }}</td>
-                            {% if show_priority %}
-                            <td class="text-center">
-                                {% if item.priority_score is not none %}
-                                {{ "%.4f"|format(item.priority_score) }}
-                                {% else %}
-                                —
-                                {% endif %}
-                            </td>
-                            {% endif %}
-                            <td>{{ item.reason }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                    <tfoot class="table-light">
-                        <tr>
-                            <th colspan="{{ 4 if show_priority else 3 }}" class="text-end">Tổng cộng:</th>
-                            <th class="text-center">{{ result.total_credits }}</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
-                </table>
-            </div>
+                        </td>
+                        {% endif %}
+                        <td class="reason-text">{{ item.reason }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="{{ 4 if show_priority else 3 }}" style="text-align:right">Tổng cộng:</td>
+                        <td class="num">{{ result.total_credits }}</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
         </div>
-
-        <!-- Môn chưa chọn -->
-        {% if result.not_selected %}
-        <div class="card mb-4 shadow-sm">
-            <div class="card-header bg-secondary text-white">
-                <h4 class="mb-0">⏭️ Môn chưa chọn ({{ result.not_selected|length }} môn)</h4>
-            </div>
-            <div class="card-body p-0">
-                <table class="table table-hover mb-0">
-                    <thead class="table-light">
-                        <tr>
-                            <th>Mã môn</th>
-                            <th>Tên môn</th>
-                            <th class="text-center">TC</th>
-                            <th>Lý do chưa chọn</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for item in result.not_selected %}
-                        <tr>
-                            <td><strong>{{ item.course_id }}</strong></td>
-                            <td>{{ item.course_name }}</td>
-                            <td class="text-center">{{ item.credits }}</td>
-                            <td>{{ item.reason }}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        {% endif %}
-
-        <!-- Nút quay lại -->
-        <div class="text-center">
-            <a href="/" class="btn btn-outline-primary">← Quay lại đề xuất khác</a>
-        </div>
-
     </div>
 </div>
+
+{% if result.not_selected %}
+<div class="panel section-gap">
+    <div class="panel-head tone-muted">
+        <span class="icon">⏭️</span>
+        <h2>Môn chưa chọn ({{ result.not_selected|length }} môn)</h2>
+    </div>
+    <div class="panel-body flush">
+        <div class="data-table-wrap">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Mã môn</th>
+                        <th>Tên môn</th>
+                        <th class="num">TC</th>
+                        <th>Lý do chưa chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in result.not_selected %}
+                    <tr {% if item.category == 'blocked' %}class="row-accent" style="--accent: var(--critical)"{% endif %}>
+                        <td class="course-code">{{ item.course_id }}</td>
+                        <td>{{ item.course_name }}</td>
+                        <td class="num">{{ item.credits }}</td>
+                        <td class="reason-text{% if item.category == 'blocked' %} critical{% endif %}">{{ item.reason }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<div class="text-center section-gap">
+    <a href="/" class="btn btn-ghost">← Quay lại đề xuất khác</a>
+</div>
+
 {% endblock %}

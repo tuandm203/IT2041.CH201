@@ -2,136 +2,121 @@
 {% block title %}Schedule Optimizer — Đề xuất thời khóa biểu{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center">
-    <div class="col-lg-8">
-        <div class="card shadow-sm">
-            <div class="card-header bg-primary text-white">
-                <h4 class="mb-0">📤 Tải lên file Excel & cấu hình ràng buộc</h4>
+
+{% if error %}
+<div class="callout critical">
+    <span class="mark">✕</span>
+    <p>{{ error }}</p>
+</div>
+{% endif %}
+
+<div class="panel">
+    <div class="panel-head">
+        <span class="icon">📤</span>
+        <h2>Tải lên file Excel &amp; cấu hình ràng buộc</h2>
+    </div>
+    <div class="panel-body">
+
+        <form action="/optimize" method="post" enctype="multipart/form-data" id="optimizeForm">
+            <!-- File upload -->
+            <div class="field" style="margin-bottom: 1.3rem">
+                <label for="file">File Excel (.xlsx)</label>
+                <input type="file" name="file" id="file" accept=".xlsx,.xls" required>
+                <p class="hint" style="margin:0">
+                    File phải có cột <strong>mã_môn</strong>, <strong>tên_môn</strong>, <strong>tín_chỉ</strong>.
+                </p>
+                <details class="sample">
+                    <summary>Xem mẫu file</summary>
+                    <div class="sample-body">
+                        <table class="data-table">
+                            <thead>
+                                <tr><th>mã_môn</th><th>tên_môn</th><th>tín_chỉ</th><th>ghi_chú</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="course-code">IT001</td><td>Nhập môn IT</td><td class="num">3</td><td></td></tr>
+                                <tr><td class="course-code">IT002</td><td>Lập trình C</td><td class="num">4</td><td></td></tr>
+                                <tr><td class="course-code">IT003</td><td>Cấu trúc dữ liệu</td><td class="num">4</td><td></td></tr>
+                            </tbody>
+                        </table>
+                        <p class="muted" style="margin-top:0.6rem">
+                            Tên cột có thể viết khác nhau (VD: "ma_mon", "course_id", "tin_chi", ...) — hệ thống tự nhận diện.
+                        </p>
+                    </div>
+                </details>
+                <p class="field-error" id="fileError">Vui lòng chọn file Excel trước khi đề xuất.</p>
             </div>
-            <div class="card-body">
 
-                {% if error %}
-                <div class="alert alert-danger">{{ error }}</div>
-                {% endif %}
-
-                <form action="/optimize" method="post" enctype="multipart/form-data" id="optimizeForm">
-                    <!-- File upload -->
-                    <div class="mb-3">
-                        <label for="file" class="form-label fw-bold">File Excel (.xlsx)</label>
-                        <input class="form-control" type="file" name="file" id="file" accept=".xlsx,.xls" required>
-                        <div class="form-text">
-                            File phải có cột <strong>mã_môn</strong>, <strong>tên_môn</strong>, <strong>tín_chỉ</strong>.
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#formatModal">Xem mẫu file</a>
-                        </div>
-                    </div>
-
-                    <!-- Ràng buộc tín chỉ -->
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <label for="min_credits" class="form-label">Số TC tối thiểu</label>
-                            <input type="number" class="form-control" name="min_credits" id="min_credits"
-                                   min="1" max="50" value="12" required>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="max_credits" class="form-label">Số TC tối đa</label>
-                            <input type="number" class="form-control" name="max_credits" id="max_credits"
-                                   min="1" max="50" value="25" required>
-                        </div>
-                    </div>
-
-                    <!-- Số môn tối đa (tùy chọn) -->
-                    <div class="mb-3 mt-3">
-                        <label for="max_courses" class="form-label">Số môn tối đa (tùy chọn)</label>
-                        <input type="number" class="form-control" name="max_courses" id="max_courses"
-                               min="1" max="20" placeholder="Không giới hạn">
-                    </div>
-
-                    <!-- Cá nhân hóa theo định hướng chuyên ngành -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="major" class="form-label">Ngành học (tùy chọn)</label>
-                            <select class="form-select" name="major" id="major">
-                                <option value="">— Chọn ngành —</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6 d-none" id="trackField">
-                            <label for="track" class="form-label">Định hướng chuyên ngành</label>
-                            <select class="form-select" name="track" id="track" disabled>
-                                <option value="">— Không chọn định hướng —</option>
-                            </select>
-                            <div class="form-text">
-                                Dùng độ tương đồng nội dung để ưu tiên môn phù hợp.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Khóa tuyển sinh và bộ máy đề xuất -->
-                    <div class="row g-3 mb-3">
-                        <div class="col-md-6">
-                            <label for="cohort" class="form-label">Khóa tuyển sinh</label>
-                            <select class="form-select" name="cohort" id="cohort">
-                                <option value="K2025" selected>K2025</option>
-                                <option value="K2024">K2024</option>
-                                <option value="K2023">K2023</option>
-                                <option value="K2022">K2022</option>
-                                <option value="K2021">K2021</option>
-                                <option value="K2020">K2020</option>
-                                <option value="K2019">K2019</option>
-                            </select>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="engine" class="form-label">Bộ máy đề xuất</label>
-                            <select class="form-select" name="engine" id="engine">
-                                <option value="gp1" selected>GP1 — Luật &amp; Đồ thị</option>
-                                <option value="gp2">GP2 — Mô hình học máy</option>
-                            </select>
-                            <div class="form-text">
-                                GP1 ưu tiên theo đồ thị; GP2 dùng mô hình đã huấn luyện.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Nút submit -->
-                    <div class="d-grid">
-                        <button type="submit" class="btn btn-success btn-lg" id="submitBtn">
-                            🚀 Đề xuất thời khóa biểu
-                        </button>
-                    </div>
-                </form>
-
+            <!-- Ràng buộc tín chỉ -->
+            <div class="field-grid">
+                <div class="field">
+                    <label for="min_credits">Số TC tối thiểu</label>
+                    <input type="number" name="min_credits" id="min_credits" min="1" max="50" value="12" required>
+                </div>
+                <div class="field">
+                    <label for="max_credits">Số TC tối đa</label>
+                    <input type="number" name="max_credits" id="max_credits" min="1" max="50" value="25" required>
+                </div>
+                <p class="field-error" id="creditError" style="grid-column: 1 / -1; margin: -0.6rem 0 0">
+                    Số TC tối thiểu không được lớn hơn số TC tối đa.
+                </p>
             </div>
-        </div>
+
+            <!-- Số môn tối đa (tùy chọn) -->
+            <div class="field section-gap">
+                <label for="max_courses">Số môn tối đa (tùy chọn)</label>
+                <input type="number" name="max_courses" id="max_courses" min="1" max="20" placeholder="Không giới hạn">
+            </div>
+
+            <!-- Cá nhân hóa theo định hướng chuyên ngành -->
+            <div class="field-grid section-gap">
+                <div class="field">
+                    <label for="major">Ngành học (tùy chọn)</label>
+                    <select name="major" id="major">
+                        <option value="">— Chọn ngành —</option>
+                    </select>
+                </div>
+                <div class="field hidden" id="trackField">
+                    <label for="track">Định hướng chuyên ngành</label>
+                    <select name="track" id="track" disabled>
+                        <option value="">— Không chọn định hướng —</option>
+                    </select>
+                    <p class="hint" style="margin:0">Dùng độ tương đồng nội dung để ưu tiên môn phù hợp.</p>
+                </div>
+            </div>
+
+            <!-- Khóa tuyển sinh và bộ máy đề xuất -->
+            <div class="field-grid section-gap">
+                <div class="field">
+                    <label for="cohort">Khóa tuyển sinh</label>
+                    <select name="cohort" id="cohort">
+                        <option value="K2025" selected>K2025</option>
+                        <option value="K2024">K2024</option>
+                        <option value="K2023">K2023</option>
+                        <option value="K2022">K2022</option>
+                        <option value="K2021">K2021</option>
+                        <option value="K2020">K2020</option>
+                        <option value="K2019">K2019</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="engine">Bộ máy đề xuất</label>
+                    <select name="engine" id="engine">
+                        <option value="gp1" selected>GP1 — Luật &amp; Đồ thị</option>
+                        <option value="gp2">GP2 — Mô hình học máy</option>
+                    </select>
+                    <p class="hint" style="margin:0">GP1 ưu tiên theo đồ thị; GP2 dùng mô hình đã huấn luyện.</p>
+                </div>
+            </div>
+
+            <!-- Nút submit -->
+            <div class="section-gap">
+                <button type="submit" class="btn btn-primary" id="submitBtn">
+                    🚀 Đề xuất thời khóa biểu
+                </button>
+            </div>
+        </form>
+
     </div>
 </div>
 
-<!-- Modal: mẫu file Excel -->
-<div class="modal fade" id="formatModal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Định dạng file Excel</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p>File Excel cần có các cột sau:</p>
-                <table class="table table-sm table-bordered">
-                    <thead class="table-light">
-                        <tr>
-                            <th>mã_môn</th>
-                            <th>tên_môn</th>
-                            <th>tín_chỉ</th>
-                            <th>ghi_chú</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>IT001</td><td>Nhập môn IT</td><td>3</td><td></td></tr>
-                        <tr><td>IT002</td><td>Lập trình C</td><td>4</td><td></td></tr>
-                        <tr><td>IT003</td><td>Cấu trúc dữ liệu</td><td>4</td><td></td></tr>
-                    </tbody>
-                </table>
-                <p class="text-muted small">Lưu ý: Tên cột có thể viết khác nhau (ví dụ: "ma_mon", "course_id", "tin_chi", ...).</p>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
