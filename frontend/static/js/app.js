@@ -3,6 +3,59 @@
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("optimizeForm");
     const submitBtn = document.getElementById("submitBtn");
+    const majorSelect = document.getElementById("major");
+    const trackSelect = document.getElementById("track");
+    const trackField = document.getElementById("trackField");
+    let trackProfiles = {};
+
+    function updateTrackOptions() {
+        if (!majorSelect || !trackSelect || !trackField) {
+            return;
+        }
+
+        const anchors = trackProfiles[majorSelect.value] || [];
+        trackSelect.innerHTML = '<option value="">— Không chọn định hướng —</option>';
+
+        if (anchors.length === 0) {
+            trackSelect.disabled = true;
+            trackField.classList.add("d-none");
+            return;
+        }
+
+        anchors.forEach(function (anchor) {
+            const option = document.createElement("option");
+            option.value = anchor.key;
+            option.textContent = anchor.name;
+            option.title = anchor.description || "";
+            trackSelect.appendChild(option);
+        });
+        trackSelect.disabled = false;
+        trackField.classList.remove("d-none");
+    }
+
+    if (majorSelect) {
+        fetch("/api/form-data")
+            .then(function (response) {
+                if (!response.ok) {
+                    throw new Error("Không thể tải dữ liệu ngành học");
+                }
+                return response.json();
+            })
+            .then(function (data) {
+                trackProfiles = data.track_profiles || {};
+                (data.majors || []).forEach(function (major) {
+                    const option = document.createElement("option");
+                    option.value = major;
+                    option.textContent = major;
+                    majorSelect.appendChild(option);
+                });
+                updateTrackOptions();
+            })
+            .catch(function (error) {
+                console.warn("Không thể tải định hướng chuyên ngành:", error);
+            });
+        majorSelect.addEventListener("change", updateTrackOptions);
+    }
 
     if (form) {
         form.addEventListener("submit", function (e) {

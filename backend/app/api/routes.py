@@ -23,6 +23,10 @@ from app.models.schedule import (
 )
 from app.services.excel_parser import parse_excel_file
 from app.services.scheduler import optimize_schedule
+from app.services.track_matcher import (
+    get_frontend_track_profiles,
+    list_available_majors,
+)
 
 router = APIRouter()
 
@@ -124,6 +128,8 @@ async def get_form_data():
             {"value": "a1", "label": "A1 - Cơ bản"},
         ],
         "english_courses": ENGLISH_COURSE_MAP,
+        "majors": list_available_majors(),
+        "track_profiles": get_frontend_track_profiles(),
     })
 
 
@@ -142,6 +148,7 @@ async def optimize(
     training_system: Optional[str] = Form(None),
     major: Optional[str] = Form(None),
     cohort: Optional[str] = Form(None),
+    track: Optional[str] = Form(None),
     engine: Literal["gp1", "gp2"] = Form("gp1"),
     english_level: Optional[str] = Form("b1"),
     passed_pe_courses: Optional[str] = Form(None),      # comma-separated
@@ -215,6 +222,7 @@ async def optimize(
         training_system=training_system if training_system else None,
         major=major if major else None,
         cohort=cohort if cohort else None,
+        track=track if track else None,
         english_level=english_level if english_level else "b1",
         passed_pe_courses=_parse_comma_list(passed_pe_courses),
         completed_courses=_parse_comma_list(completed_courses),

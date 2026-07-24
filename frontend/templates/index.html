@@ -46,6 +46,25 @@
                                min="1" max="20" placeholder="Không giới hạn">
                     </div>
 
+                    <!-- Cá nhân hóa theo định hướng chuyên ngành -->
+                    <div class="row g-3 mb-3">
+                        <div class="col-md-6">
+                            <label for="major" class="form-label">Ngành học (tùy chọn)</label>
+                            <select class="form-select" name="major" id="major">
+                                <option value="">— Chọn ngành —</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 d-none" id="trackField">
+                            <label for="track" class="form-label">Định hướng chuyên ngành</label>
+                            <select class="form-select" name="track" id="track" disabled>
+                                <option value="">— Không chọn định hướng —</option>
+                            </select>
+                            <div class="form-text">
+                                Dùng độ tương đồng nội dung để ưu tiên môn phù hợp.
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Nút submit -->
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success btn-lg" id="submitBtn">

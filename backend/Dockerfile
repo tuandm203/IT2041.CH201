@@ -12,6 +12,9 @@ COPY backend/app/ ./app/
 # Copy frontend (templates + static)
 COPY frontend/ ./frontend/
 
+# Copy specialization anchor taxonomy
+COPY notebooks/anchor_profiles.json ./notebooks/anchor_profiles.json
+
 # Copy rule, curriculum, and trained model data
 COPY data/ ./data/
 

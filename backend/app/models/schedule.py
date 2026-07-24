@@ -63,6 +63,10 @@ class StudentProfile(BaseModel):
     training_system: Optional[str] = Field(None, description="Hệ đào tạo (VD: Đại học chính quy)")
     major: Optional[str] = Field(None, description="Mã ngành học (VD: CNTT)")
     cohort: Optional[str] = Field(None, description="Khóa tuyển sinh (VD: K2015)")
+    track: Optional[str] = Field(
+        None,
+        description="Khóa định hướng chuyên ngành (VD: computer_vision)",
+    )
     english_level: EnglishLevel = Field(
         EnglishLevel.B1,
         description="Trình độ tiếng Anh: passed (đã pass) / a1 / a2 / b1 / b2"

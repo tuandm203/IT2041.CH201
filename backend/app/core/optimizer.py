@@ -22,6 +22,11 @@ from app.services.ranker import (
     ranker_available,
     score_course,
 )
+from app.services.track_matcher import (
+    TRACK_SCORE_WEIGHT,
+    has_track_coverage,
+    score_track_relevance,
+)
 
 
 def optimize_schedule(
@@ -179,6 +184,25 @@ def optimize_schedule(
         for group in new_groups:
             priority_scores[group.course_id.upper()] = float(
                 unlock_count(graph, group.course_id)
+            )
+
+    # Track relevance is an additive ordering signal only. Hard prerequisite
+    # eligibility has already been enforced before new_groups is constructed.
+    use_track = bool(
+        student
+        and student.major
+        and student.track
+        and has_track_coverage(student.major, student.track)
+    )
+    if use_track and student and student.major and student.track:
+        for group in new_groups:
+            track_score = score_track_relevance(
+                group.course_id,
+                student.major,
+                student.track,
+            )
+            priority_scores[group.course_id.upper()] += (
+                TRACK_SCORE_WEIGHT * track_score
             )
 
     ordinary_sort_key = lambda group: (
