@@ -1,0 +1,1 @@
+STT Mã MH Tên MH Tóm tắt môn học  1 ACCT3603 Hệ thống thông tin kế toán Trình bày các kiến thức về công tác kế toán, chu trình nghiệp vụ kế toán, tố chức và xây dựng hệ thống thông tin kế toán, thiết kế và tin học hóa công tác kế toán.  2 ACCT5123 Hoạch định nguồn lực doanh nghiệp Cung cấp cho sinh viên các kiến thức về một hệ thống quản lý nguồn lực ERP trong một tổ chức và

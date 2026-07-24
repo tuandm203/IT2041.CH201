@@ -1,0 +1,107 @@
+{
+  "KHMT": {
+    "name": "Khoa Khoa học Máy tính",
+    "description": "Tập trung vào các thuật toán lõi, trí tuệ nhân tạo và xử lý dữ liệu phức tạp",
+    "anchors": {
+      "computer_vision": {
+        "name": "Thị giác máy tính (Computer Vision)",
+        "keywords": ["xử lý ảnh", "computer vision", "thị giác", "nhận dạng", "đồ họa", "image processing", "pattern recognition", "đặc trưng hình ảnh", "video", "điểm ảnh", "convolution", "CNN", "deep learning for vision"],
+        "description": "Các môn học về xử lý ảnh số, nhận dạng mẫu, đồ họa máy tính, trích xuất đặc trưng hình ảnh, thị giác máy tính và ứng dụng"
+      },
+      "nlp": {
+        "name": "Xử lý ngôn ngữ tự nhiên (NLP)",
+        "keywords": ["ngôn ngữ tự nhiên", "NLP", "xử lý văn bản", "dịch máy", "phân tích quan điểm", "LLM", "language model", "text mining", "chatbot", "sentiment", "information extraction", "word embedding", "transformer"],
+        "description": "Các môn học về dịch máy, xử lý văn bản, phân tích quan điểm, mô hình ngôn ngữ lớn, khai thác văn bản và xử lý ngôn ngữ"
+      },
+      "ai_ml": {
+        "name": "Trí tuệ nhân tạo & Học máy (AI & ML)",
+        "keywords": ["trí tuệ nhân tạo", "machine learning", "học máy", "học sâu", "deep learning", "neural network", "mạng nơ-ron", "học tăng cường", "reinforcement learning", "heuristic", "thuật toán tìm kiếm", "knowledge representation", "AI", "intelligent"],
+        "description": "Các môn học về mạng nơ-ron nhân tạo, học sâu, học tăng cường, thuật toán heuristic, biểu diễn tri thức và trí tuệ nhân tạo"
+      }
+    }
+  },
+  "CNPM": {
+    "name": "Khoa Công nghệ Phần mềm",
+    "description": "Tập trung vào kỹ nghệ xây dựng sản phẩm, quy trình và kiến trúc hệ thống",
+    "anchors": {
+      "web_mobile": {
+        "name": "Phát triển Web & Di động",
+        "keywords": ["web", "mobile", "app", "frontend", "backend", "microservices", "API", "REST", "responsive", "android", "iOS", "react", "angular", "vue", "spring", "website", "ứng dụng web", "ứng dụng di động"],
+        "description": "Các môn học về lập trình web, phát triển ứng dụng di động (Android/iOS), kiến trúc microservices, thiết kế API"
+      },
+      "software_engineering": {
+        "name": "Kỹ nghệ phần mềm & Đảm bảo chất lượng (QA/QC)",
+        "keywords": ["kỹ nghệ phần mềm", "software engineering", "kiểm thử", "testing", "QA", "QC", "CI/CD", "yêu cầu phần mềm", "quy trình", "agile", "scrum", "devops", "quality assurance", "đảm bảo chất lượng", "automation test"],
+        "description": "Các môn học về phân tích yêu cầu, kiểm thử phần mềm, tự động hóa kiểm thử, quy trình CI/CD, quản lý dự án phần mềm"
+      },
+      "game_dev": {
+        "name": "Phát triển Game (Game Development)",
+        "keywords": ["game", "đồ họa", "graphics", "unity", "unreal", "3D", "animation", "game design", "game logic", "game physics", "tương tác", "game engine", "shader", "rendering"],
+        "description": "Các môn học về lập trình game, toán học trong game, thiết kế logic và tương tác 3D, đồ họa game"
+      }
+    }
+  },
+  "HTTT": {
+    "name": "Khoa Hệ thống Thông tin",
+    "description": "Cầu nối giữa Công nghệ và Nghiệp vụ Doanh nghiệp (Business)",
+    "anchors": {
+      "ecommerce": {
+        "name": "Thương mại điện tử (E-commerce)",
+        "keywords": ["thương mại điện tử", "e-commerce", "marketing điện tử", "digital marketing", "thanh toán", "payment", "khách hàng", "customer behavior", "bán hàng", "online", "retail", "marketplace", "SEO", "SEM"],
+        "description": "Các môn học về marketing điện tử, quản trị dự án TMĐT, công nghệ thanh toán, phân tích hành vi khách hàng"
+      },
+      "erp": {
+        "name": "Hệ thống thông tin doanh nghiệp (ERP)",
+        "keywords": ["ERP", "doanh nghiệp", "enterprise", "CRM", "quản trị", "business process", "quy trình nghiệp vụ", "SAP", "Oracle", "hoạch định", "resource planning", "supply chain"],
+        "description": "Các môn học về phân tích quy trình nghiệp vụ, triển khai hệ thống ERP, quản trị quan hệ khách hàng (CRM)"
+      },
+      "data_bi": {
+        "name": "Quản trị và Phân tích dữ liệu (Data & BI)",
+        "keywords": ["dữ liệu", "data", "BI", "business intelligence", "data warehouse", "kho dữ liệu", "khai phá dữ liệu", "data mining", "phân tích", "analytics", "dashboard", "trực quan", "visualization", "ETL", "OLAP"],
+        "description": "Các môn học về kho dữ liệu (Data Warehouse), kinh doanh thông minh (Business Intelligence), khai phá dữ liệu và phân tích"
+      }
+    }
+  },
+  "MMT&TT": {
+    "name": "Khoa Mạng Máy tính & Truyền thông",
+    "description": "Hạ tầng viễn thông, kết nối mạng và an toàn dữ liệu",
+    "anchors": {
+      "cybersecurity": {
+        "name": "An toàn thông tin (Cybersecurity)",
+        "keywords": ["an toàn thông tin", "cybersecurity", "bảo mật", "security", "mật mã", "cryptography", "forensics", "điều tra số", "hacking", "penetration testing", "firewall", "malware", "vulnerability", "SOC", "incident response"],
+        "description": "Các môn học về mật mã học, bảo mật mạng, điều tra số (Forensics), hacking và phòng thủ, an toàn hệ điều hành"
+      },
+      "cloud_infra": {
+        "name": "Hạ tầng mạng & Điện toán đám mây (Cloud & Infra)",
+        "keywords": ["mạng", "network", "cloud", "đám mây", "AWS", "Azure", "ảo hóa", "virtualization", "data center", "trung tâm dữ liệu", "router", "switch", "quản trị mạng", "network design", "SDN", "NFV"],
+        "description": "Các môn học về quản trị mạng, thiết kế mạng trung tâm dữ liệu, ảo hóa, Cloud Computing (AWS, Azure)"
+      },
+      "iot": {
+        "name": "Internet Vạn Vật (IoT)",
+        "keywords": ["IoT", "internet vạn vật", "cảm biến", "sensor", "wireless", "không dây", "giao thức", "protocol", "MQTT", "ZigBee", "Bluetooth", "embedded network", "lập trình mạng", "truyền thông"],
+        "description": "Các môn học về lập trình mạng, giao thức truyền thông IoT, mạng cảm biến không dây, thiết bị thông minh"
+      }
+    }
+  },
+  "KTMT": {
+    "name": "Khoa Kỹ thuật Máy tính",
+    "description": "Giao thoa giữa phần cứng và phần mềm điều khiển mức thấp",
+    "anchors": {
+      "embedded": {
+        "name": "Hệ thống nhúng (Embedded Systems)",
+        "keywords": ["nhúng", "embedded", "vi điều khiển", "microcontroller", "RTOS", "real-time", "thời gian thực", "ARM", "firmware", "driver", "nhúng căn bản", "lập trình nhúng", "STM32", "Arduino"],
+        "description": "Các môn học về lập trình nhúng, vi điều khiển, hệ điều hành thời gian thực (RTOS), firmware"
+      },
+      "ic_design": {
+        "name": "Thiết kế Vi mạch (IC Design)",
+        "keywords": ["vi mạch", "IC", "chip", "Verilog", "VHDL", "HDL", "vi kiến trúc", "microarchitecture", "digital circuit", "mạch số", "luận lý", "logic design", "semiconductor", "bán dẫn", "FPGA", "ASIC"],
+        "description": "Các môn học về thiết kế luận lý vi mạch, kiến trúc máy tính nâng cao, ngôn ngữ mô tả phần cứng (Verilog/VHDL)"
+      },
+      "robotics": {
+        "name": "Robotics (Robot & Tự động hóa)",
+        "keywords": ["robot", "robotics", "tự động hóa", "automation", "điều khiển", "control", "tín hiệu", "signal processing", "cảm biến", "actuator", "cơ điện tử", "mechatronics", "ROS", "động lực học"],
+        "description": "Các môn học về hệ thống điều khiển tự động, kỹ thuật robot, xử lý tín hiệu số, cơ điện tử"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "case_id": "case_1_missing_english",
+  "case_name": "Sinh viên thiếu môn tiếng Anh",
+  "description": "Sinh viên đã hoàn thành các môn cơ bản nhưng chưa học môn tiếng Anh bắt buộc",
+  "cohort": "K2023",
+  "major": "KTPM",
+  "completed_courses": [
+    "IT001", "IT002", "IT003", "IT004", "IT005",
+    "MA003", "MA004", "MA005", "MA006",
+    "SS003", "SS007", "SS008", "SS009", "SS010", "SS006",
+    "ME001", "PE231", "PE232"
+  ],
+  "english_level": "b1",
+  "english_passed": false,
+  "retake_courses": [],
+  "expected_recommendations": {
+    "should_include": ["ENG01", "ENG02", "ENG03"],
+    "reason": "Sinh viên chưa pass tiếng Anh, cần học các môn tiếng Anh theo trình độ B1"
+  },
+  "min_credits": 12,
+  "max_credits": 25
+}
