@@ -10,7 +10,9 @@ services:
       - ./backend/app:/app/app
       - ./frontend:/frontend
       - ./uploads:/app/uploads
+      - ./data:/app/data
     environment:
       - PYTHONUNBUFFERED=1
       - UPLOAD_DIR=/app/uploads
+      - DATA_DIR=/app/data
     restart: unless-stopped

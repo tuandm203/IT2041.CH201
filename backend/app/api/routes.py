@@ -15,7 +15,7 @@ from fastapi import APIRouter, Request, File, UploadFile, Form, Query
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi import status
 
-from typing import Optional
+from typing import Literal, Optional
 from app.models.schedule import (
     OptimizeRequest, OptimizeResponse, StudentProfile,
     EnglishLevel, DEFAULT_PE_COURSES, TRAINING_SYSTEM_LIST,
@@ -140,6 +140,9 @@ async def optimize(
     department: Optional[str] = Form(None),
     # Student profile fields
     training_system: Optional[str] = Form(None),
+    major: Optional[str] = Form(None),
+    cohort: Optional[str] = Form(None),
+    engine: Literal["gp1", "gp2"] = Form("gp1"),
     english_level: Optional[str] = Form("b1"),
     passed_pe_courses: Optional[str] = Form(None),      # comma-separated
     completed_courses: Optional[str] = Form(None),       # comma-separated
@@ -202,11 +205,16 @@ async def optimize(
                 practical_map[cid.strip()] = ma_lop.strip()
 
     # Parse skip_pe_if_completed
-    skip_pe = skip_pe_if_completed and skip_pe_if_completed.strip().lower() == "true"
+    skip_pe = bool(
+        skip_pe_if_completed
+        and skip_pe_if_completed.strip().lower() == "true"
+    )
 
     # Parse student profile
     student_profile = StudentProfile(
         training_system=training_system if training_system else None,
+        major=major if major else None,
+        cohort=cohort if cohort else None,
         english_level=english_level if english_level else "b1",
         passed_pe_courses=_parse_comma_list(passed_pe_courses),
         completed_courses=_parse_comma_list(completed_courses),
@@ -221,12 +229,20 @@ async def optimize(
         max_courses=max_courses_int,
         course_groups=course_groups,
         student=student_profile,
+        engine=engine,
     )
 
     # Run optimizer
     result = optimize_schedule(req, practical_map)
 
-    return app_templates(request, "result.html", result=result)
+    return app_templates(
+        request,
+        "result.html",
+        result=result,
+        show_priority=any(
+            item.priority_score is not None for item in result.selected
+        ),
+    )
 
 
 # ── API: Progress data ───────────────────────────────────────────────────────

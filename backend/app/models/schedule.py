@@ -2,7 +2,7 @@
 Pydantic data models cho Schedule Optimizer.
 """
 
-from typing import Optional, List, Tuple
+from typing import Optional, List, Tuple, Literal
 from pydantic import BaseModel, Field
 from enum import Enum
 
@@ -61,6 +61,8 @@ class CourseGroup(BaseModel):
 class StudentProfile(BaseModel):
     """Thông tin sinh viên cho việc đề xuất thời khóa biểu."""
     training_system: Optional[str] = Field(None, description="Hệ đào tạo (VD: Đại học chính quy)")
+    major: Optional[str] = Field(None, description="Mã ngành học (VD: CNTT)")
+    cohort: Optional[str] = Field(None, description="Khóa tuyển sinh (VD: K2015)")
     english_level: EnglishLevel = Field(
         EnglishLevel.B1,
         description="Trình độ tiếng Anh: passed (đã pass) / a1 / a2 / b1 / b2"
@@ -91,6 +93,10 @@ class OptimizeRequest(BaseModel):
     course_groups: List[CourseGroup] = Field(default_factory=list, description="Danh sách nhóm môn học")
     courses: List[Course] = Field(default_factory=list, description="Danh sách môn học (legacy)")
     student: Optional[StudentProfile] = Field(None, description="Thông tin sinh viên")
+    engine: Literal["gp1", "gp2"] = Field(
+        "gp1",
+        description="Bộ máy xếp hạng môn học: gp1 (đồ thị) hoặc gp2 (mô hình Ridge)",
+    )
 
 
 class ScheduleItem(BaseModel):
@@ -101,6 +107,10 @@ class ScheduleItem(BaseModel):
     ma_lop: Optional[str] = Field(None, description="Mã lớp được chọn")
     reason: str = Field(..., description="Lý do được đề xuất (explainable)")
     category: Optional[str] = Field(None, description="Phân loại: new / retake / improvement / english / pe")
+    priority_score: Optional[float] = Field(
+        None,
+        description="Điểm ưu tiên GP2; giá trị lớn hơn được ưu tiên hơn",
+    )
     # Schedule info for timetable
     schedule_slots: List[Tuple[int, int, int]] = Field(
         default_factory=list,

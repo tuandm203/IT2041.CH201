@@ -16,6 +16,12 @@ from app.models.schedule import (
     OptimizeRequest, OptimizeResponse, ScheduleItem, CourseGroup,
     EnglishLevel, ENGLISH_COURSE_MAP, DEFAULT_PE_COURSES,
 )
+from app.services.prereq_graph import build_prereq_graph, is_eligible, unlock_count
+from app.services.ranker import (
+    load_program_json,
+    ranker_available,
+    score_course,
+)
 
 
 def optimize_schedule(
@@ -27,17 +33,18 @@ def optimize_schedule(
 
     Chiến lược:
       1. Lọc các môn đã pass (completed_courses)
-      2. Xác định môn học lại/cải thiện (retake) — ưu tiên
-      3. Xác định môn tiếng Anh cần học dựa trên trình độ
-      4. Bỏ qua môn thể dục nếu đã học xong (skip_pe_if_completed)
-      5. Tự động chọn lớp TH đầu tiên nếu user không chọn
-      6. Sắp xếp: học lại → môn mới (theo tín chỉ tăng dần)
-      7. Chọn môn cho đến khi đạt min_credits
-      8. Dừng nếu vượt max_credits hoặc max_courses
+      2. Chặn các môn còn thiếu điều kiện tiên quyết cứng
+      3. Xác định môn học lại/cải thiện (retake) — ưu tiên
+      4. Xác định môn tiếng Anh cần học dựa trên trình độ
+      5. Bỏ qua môn thể dục nếu đã học xong (skip_pe_if_completed)
+      6. Tự động chọn lớp TH đầu tiên nếu user không chọn
+      7. Xếp môn mới bằng GP1 (đồ thị) hoặc GP2 (Ridge)
+      8. Chọn môn theo giới hạn tín chỉ, số môn và xung đột lịch
     """
     if practical_map is None:
         practical_map = {}
 
+    graph = build_prereq_graph()
     groups = list(req.course_groups)
     student = req.student
     warnings: list[str] = []
@@ -53,18 +60,32 @@ def optimize_schedule(
         completed_set = set(c.upper() for c in student.completed_courses)
         retake_set = set(c.upper() for c in student.retake_courses)
 
-    # Lọc bỏ môn đã pass
+    # Lọc bỏ môn đã pass (trừ môn muốn học lại/cải thiện — retake_courses
+    # luôn là tập con của completed_courses, không thể lọc bỏ ở đây)
     filtered_groups: list[CourseGroup] = []
     for g in groups:
         cid_upper = g.course_id.upper()
-        if cid_upper in completed_set:
+        if cid_upper in completed_set and cid_upper not in retake_set:
             not_selected.append(_to_item_from_group(
                 g, "Môn đã được pass trước đó", category="completed"
             ))
         else:
             filtered_groups.append(g)
 
-    # ── 2. Xác định các nhóm môn ─────────────────────────────────────
+    # ── 2. Lọc điều kiện tiên quyết cứng ─────────────────────────────
+    eligible_groups: list[CourseGroup] = []
+    for g in filtered_groups:
+        eligible, missing = is_eligible(graph, g.course_id, completed_set)
+        if eligible:
+            eligible_groups.append(g)
+        else:
+            not_selected.append(_to_item_from_group(
+                g,
+                f"Chưa đủ điều kiện tiên quyết: cần {', '.join(missing)}",
+                category="blocked",
+            ))
+
+    # ── 3. Xác định các nhóm môn ─────────────────────────────────────
     retake_groups: list[CourseGroup] = []
     new_groups: list[CourseGroup] = []
     english_groups: list[CourseGroup] = []
@@ -73,7 +94,7 @@ def optimize_schedule(
     # Tập hợp tên môn thể dục (để nhận diện)
     pe_names_lower = set(name.lower() for name in DEFAULT_PE_COURSES)
 
-    for g in filtered_groups:
+    for g in eligible_groups:
         cid_upper = g.course_id.upper()
 
         if cid_upper in retake_set:
@@ -95,7 +116,7 @@ def optimize_schedule(
                 else:
                     new_groups.append(g)
 
-    # ── 3. Thêm môn tiếng Anh nếu cần ────────────────────────────────
+    # ── 4. Thêm môn tiếng Anh nếu cần ────────────────────────────────
     english_to_add: list[CourseGroup] = []
     if student and student.english_level != EnglishLevel.PASSED:
         level = student.english_level.value
@@ -113,7 +134,7 @@ def optimize_schedule(
                     f"Cần {eng['credits']} TC tiếng Anh."
                 )
 
-    # ── 4. Xử lý môn thể dục ─────────────────────────────────────────
+    # ── 5. Xử lý môn thể dục ─────────────────────────────────────────
     pe_to_add: list[CourseGroup] = []
     if student and student.skip_pe_if_completed:
         # Nếu đã học xong thể dục (có ít nhất 1 môn PE đã pass), bỏ qua tất cả môn PE
@@ -130,22 +151,58 @@ def optimize_schedule(
         # Không bỏ qua, vẫn đề xuất
         pe_to_add = pe_groups
 
-    # ── 5. Sắp xếp: học lại → môn mới (theo TC tăng dần) ────────────
-    def sort_key(g: CourseGroup) -> tuple:
-        # (priority, credits, course_id)
-        if g.course_id.upper() in retake_set:
-            priority = 0
-        elif any(g.course_id.upper() == eng["course_id"].upper() for eng_list in ENGLISH_COURSE_MAP.values() for eng in eng_list):
-            priority = 1
-        else:
-            priority = 2
-        return (priority, g.total_credits, g.course_id)
+    # ── 6. Xếp hạng môn mới bằng GP1 hoặc GP2 ────────────────────────
+    gp2_requested = req.engine == "gp2"
+    use_gp2 = bool(
+        gp2_requested
+        and student
+        and student.major
+        and ranker_available()
+    )
+    priority_scores: dict[str, float] = {}
 
+    if gp2_requested and not use_gp2:
+        warnings.append(
+            "Không thể dùng GP2 vì thiếu ngành học hoặc model; đã chuyển sang GP1."
+        )
+
+    if use_gp2 and student and student.major:
+        program = load_program_json(student.major, student.cohort)
+        for group in new_groups:
+            priority_scores[group.course_id.upper()] = score_course(
+                group.course_id,
+                student.major,
+                program,
+                graph,
+            )
+    else:
+        for group in new_groups:
+            priority_scores[group.course_id.upper()] = float(
+                unlock_count(graph, group.course_id)
+            )
+
+    ordinary_sort_key = lambda group: (
+        group.total_credits,
+        group.course_id.upper(),
+    )
+    retake_groups.sort(key=ordinary_sort_key)
+    english_to_add.sort(key=ordinary_sort_key)
+    pe_to_add.sort(key=ordinary_sort_key)
+    new_groups.sort(
+        key=lambda group: (
+            -priority_scores[group.course_id.upper()],
+            group.course_id.upper(),
+        )
+    )
     all_candidates = retake_groups + english_to_add + pe_to_add + new_groups
-    all_candidates.sort(key=sort_key)
 
-    # ── 6. Chọn môn ──────────────────────────────────────────────────
+    # ── 7. Chọn môn ──────────────────────────────────────────────────
     for g in all_candidates:
+        item_priority_score = (
+            priority_scores.get(g.course_id.upper())
+            if use_gp2 and g in new_groups
+            else None
+        )
         # Kiểm tra môn có thực hành
         chosen_th_class = None
         if g.has_practical:
@@ -169,12 +226,14 @@ def optimize_schedule(
                     g,
                     f"Môn có thực hành nhưng không có lớp TH khả dụng.",
                     category=_get_category(g, retake_set),
+                    priority_score=item_priority_score,
                 ))
                 continue
             if not g.theory_classes:
                 not_selected.append(_to_item_from_group(
                     g, "Môn có thực hành nhưng thiếu lớp lý thuyết.",
                     category=_get_category(g, retake_set),
+                    priority_score=item_priority_score,
                 ))
                 continue
 
@@ -183,6 +242,7 @@ def optimize_schedule(
             not_selected.append(_to_item_from_group(
                 g, "Đã đạt số môn tối đa",
                 category=_get_category(g, retake_set),
+                priority_score=item_priority_score,
             ))
             continue
 
@@ -194,6 +254,7 @@ def optimize_schedule(
             not_selected.append(_to_item_from_group(
                 g, reason,
                 category=_get_category(g, retake_set),
+                priority_score=item_priority_score,
             ))
             continue
 
@@ -209,6 +270,7 @@ def optimize_schedule(
                 g,
                 f"Xung đột lịch với môn đã chọn.",
                 category=_get_category(g, retake_set),
+                priority_score=item_priority_score,
             ))
             continue
 
@@ -231,6 +293,7 @@ def optimize_schedule(
             ma_lop=lt_ma_lop,
             reason=lt_reason,
             category=category,
+            priority_score=item_priority_score,
             schedule_slots=lt_slots,
         ))
 
@@ -247,6 +310,7 @@ def optimize_schedule(
                 ma_lop=th_ma_lop,
                 reason=th_reason,
                 category=category,
+                priority_score=item_priority_score,
                 schedule_slots=th_slots,
             ))
 
@@ -348,7 +412,12 @@ def _has_conflict(new_slots: list[tuple[int, int, int]], selected: list[Schedule
     return False
 
 
-def _to_item_from_group(group: CourseGroup, reason: str, category: str = "new") -> ScheduleItem:
+def _to_item_from_group(
+    group: CourseGroup,
+    reason: str,
+    category: str = "new",
+    priority_score: float | None = None,
+) -> ScheduleItem:
     """Convert CourseGroup → ScheduleItem."""
     ma_lop = group.theory_classes[0].ma_lop if group.theory_classes else group.course_id
     
@@ -364,5 +433,6 @@ def _to_item_from_group(group: CourseGroup, reason: str, category: str = "new") 
         ma_lop=ma_lop,
         reason=reason,
         category=category,
+        priority_score=priority_score,
         schedule_slots=schedule_slots,
     )

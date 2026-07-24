@@ -32,6 +32,9 @@
                             <th>Mã môn</th>
                             <th>Tên môn</th>
                             <th class="text-center">TC</th>
+                            {% if show_priority %}
+                            <th class="text-center">Điểm GP2</th>
+                            {% endif %}
                             <th>Lý do đề xuất</th>
                         </tr>
                     </thead>
@@ -42,13 +45,22 @@
                             <td><strong>{{ item.course_id }}</strong></td>
                             <td>{{ item.course_name }}</td>
                             <td class="text-center">{{ item.credits }}</td>
+                            {% if show_priority %}
+                            <td class="text-center">
+                                {% if item.priority_score is not none %}
+                                {{ "%.4f"|format(item.priority_score) }}
+                                {% else %}
+                                —
+                                {% endif %}
+                            </td>
+                            {% endif %}
                             <td>{{ item.reason }}</td>
                         </tr>
                         {% endfor %}
                     </tbody>
                     <tfoot class="table-light">
                         <tr>
-                            <th colspan="3" class="text-end">Tổng cộng:</th>
+                            <th colspan="{{ 4 if show_priority else 3 }}" class="text-end">Tổng cộng:</th>
                             <th class="text-center">{{ result.total_credits }}</th>
                             <th></th>
                         </tr>

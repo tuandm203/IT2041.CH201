@@ -12,8 +12,13 @@ COPY backend/app/ ./app/
 # Copy frontend (templates + static)
 COPY frontend/ ./frontend/
 
+# Copy rule, curriculum, and trained model data
+COPY data/ ./data/
+
 # Tạo thư mục uploads
 RUN mkdir -p /app/uploads
+
+ENV DATA_DIR=/app/data
 
 # Expose port
 EXPOSE 8000
