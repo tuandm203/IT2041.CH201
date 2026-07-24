@@ -1,0 +1,23 @@
+{
+  "case_id": "case_4_normal_progress",
+  "case_name": "Sinh viên tiến độ bình thường",
+  "description": "Sinh viên đang tiến độ bình thường, đã hoàn thành các môn cơ bản, sẵn sàng học môn chuyên ngành",
+  "cohort": "K2023",
+  "major": "KTPM",
+  "completed_courses": [
+    "IT001", "IT002", "IT003", "IT004", "IT005", "IT007",
+    "MA003", "MA004", "MA005", "MA006",
+    "SS003", "SS007", "SS008", "SS009", "SS010", "SS006",
+    "ENG01", "ENG02", "ENG03",
+    "ME001", "PE231", "PE232"
+  ],
+  "english_level": "passed",
+  "english_passed": true,
+  "retake_courses": [],
+  "expected_recommendations": {
+    "should_include": ["SE005", "SE100", "SE101", "SE102"],
+    "reason": "Sinh viên đã hoàn thành các môn tiên quyết, sẵn sàng học các môn chuyên ngành cơ sở"
+  },
+  "min_credits": 12,
+  "max_credits": 25
+}

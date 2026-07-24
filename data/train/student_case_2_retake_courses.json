@@ -1,0 +1,24 @@
+{
+  "case_id": "case_2_retake_courses",
+  "case_name": "Sinh viên có môn học lại/cải thiện",
+  "description": "Sinh viên muốn học lại một số môn để cải thiện điểm số",
+  "cohort": "K2023",
+  "major": "KTPM",
+  "completed_courses": [
+    "IT001", "IT002", "IT003", "IT004", "IT005",
+    "MA003", "MA004", "MA005", "MA006",
+    "SS003", "SS007", "SS008", "SS009", "SS010", "SS006",
+    "ENG01", "ENG02", "ENG03",
+    "ME001", "PE231", "PE232"
+  ],
+  "english_level": "passed",
+  "english_passed": true,
+  "retake_courses": ["IT002", "MA003"],
+  "expected_recommendations": {
+    "should_include": ["IT002", "MA003"],
+    "reason": "Sinh viên muốn học lại IT002 và MA003 để cải thiện điểm, ưu tiên cao nhất",
+    "priority": "retake courses should be recommended first"
+  },
+  "min_credits": 12,
+  "max_credits": 25
+}
