@@ -435,14 +435,11 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ## 12. Tổng kết
 
-Đồ án xây dựng thành công một hệ thống hỗ trợ ra quyết định 2 tầng cho việc đăng ký học phần, với 3 thành phần đã hoạt động và verify bằng chạy thật: **GP1** (đồ thị tiên quyết, baseline không train), **GP2** (mô hình Ridge huấn luyện thật trên 832 nhãn thật, không synthetic), và **track-weighting** (cá nhân hóa bằng GTE embedding, phủ 12/12 ngành).
+Với các hạn chế ở mục 11 — đặc biệt độ phủ nhãn chỉ 7/12 ngành và chất lượng GP2 chưa đều giữa các ngành — đồ án nên được nhìn nhận đúng tầm: một **prototype nghiên cứu** kiểm chứng được một cách tiếp cận, chưa phải hệ thống sẵn sàng triển khai thật cho toàn bộ 12 ngành của trường.
 
-**Đã chứng minh được**:
-- Một mô hình học máy thật (GP2) vượt baseline luật/đồ thị (GP1) trên cả Precision@5 và Recall@5 (macro 0.658 vs 0.620), đo bằng phương pháp leave-future-out tái lập được, không cần dữ liệu tổng hợp hay người dùng thử nghiệm.
-- Toàn bộ pipeline — từ dữ liệu thô, đồ thị tiên quyết, huấn luyện, tới phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật 100%, không dùng bảng điểm SV thật (NDA) lẫn dữ liệu tổng hợp.
-- Quy trình kiểm thử thật (không phải suy diễn) đã tìm ra và sửa được 2 lỗi thật trong hệ thống (mục 8), với tác động đo được cụ thể (R² tăng 0.089→0.199 sau 1 lỗi sửa) — minh chứng giá trị của việc test bằng case thật thay vì chỉ tin vào code review.
+Trong phạm vi đó, phần có giá trị tái sử dụng nhất không nằm ở con số P@5/R² cụ thể (vốn còn khiêm tốn và không đều, mục 7.6), mà ở **phương pháp luận**: cách lấy nhãn huấn luyện thật từ khung chương trình thay vì synthetic data, cách đánh giá leave-future-out không cần người dùng thử, và việc quy trình test bằng case thật (không phải review code suông) đã lộ ra 2 lỗi dữ liệu thật (mục 8) — loại lỗi mà nếu chỉ tin vào logic "trông có vẻ đúng" sẽ không bao giờ phát hiện được. Cách làm này áp dụng được cho các ngành/khóa chưa có nhãn, miễn thu thập thêm được dữ liệu `semester` thật.
 
-**Đánh giá trung thực**: hệ thống đã sẵn sàng như một proof-of-concept có cơ sở khoa học vững — không phải if-else đơn thuần, có model thật, có đánh giá định lượng thật. Giới hạn chính nằm ở **độ phủ dữ liệu nhãn** (7/12 ngành có ground truth) chứ không phải ở phương pháp luận — đây là hướng mở rộng rõ ràng và khả thi nhất (mục 11.2).
+Hướng đi hợp lý tiếp theo là mục 11.2 #1 (mở rộng nhãn) trước khi tính tới mở rộng tính năng — vì phần lớn hạn chế còn lại (độ chính xác GP2, độ tin cậy track-weighting) đều bắt nguồn từ cùng một nút thắt: chưa đủ dữ liệu nhãn thật để mô hình tổng quát hóa tốt hơn.
 
 ---
 
