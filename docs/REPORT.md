@@ -31,13 +31,14 @@ Ngoài ra, hệ thống có một lớp cá nhân hóa bổ sung (**track-weight
 4. [Kiến trúc hệ thống](#4-kiến-trúc-hệ-thống)
 5. [Phương pháp luận](#5-phương-pháp-luận)
 6. [Pipeline dữ liệu](#6-pipeline-dữ-liệu)
-7. [Đánh giá & Kết quả](#7-đánh-giá--kết-quả)
+7. [Đánh giá & Kết quả](#7-đánh-giá--kết-quả) (gồm 7.6 [Phân tích kết quả](#76-phân-tích--diễn-giải-kết-quả))
 8. [Lỗi dữ liệu phát hiện & đã sửa](#8-lỗi-dữ-liệu-phát-hiện--đã-sửa)
 9. [Sản phẩm & Demo](#9-sản-phẩm--demo)
 10. [Xác thực (Verification)](#10-xác-thực-verification)
 11. [Hạn chế & Hướng phát triển](#11-hạn-chế--hướng-phát-triển)
-12. [Tham khảo](#12-tham-khảo)
-13. [Phụ lục](#13-phụ-lục)
+12. [Tổng kết](#12-tổng-kết)
+13. [Tham khảo](#13-tham-khảo)
+14. [Phụ lục](#14-phụ-lục)
 
 ---
 
@@ -336,6 +337,18 @@ Model xếp đúng theo trực giác chuyên môn: `CS331` (Computer Vision) và
 | 3 | Thiếu tiên quyết cho môn chuyên ngành | PASS |
 | 4 | Tiến độ bình thường, sẵn sàng học chuyên ngành | PASS |
 
+### 7.6 Phân tích & diễn giải kết quả
+
+**Vì sao GP2 thắng GP1 ở phần lớn ngành**: hệ số Ridge cho thấy `block_category` (0.865) là tín hiệu mạnh nhất, mạnh hơn hẳn `graph_depth` (0.269) hay `credits` (0.159) — nghĩa là mô hình học được đúng logic sư phạm thật: môn thuộc khối "đại cương"/"cơ sở ngành" nên học trước, khối "chuyên ngành" học sau, một quy luật ẩn trong dữ liệu chương trình mà GP1 (chỉ nhìn cấu trúc đồ thị tiên quyết) không nắm được vì không phải môn nào cũng có quan hệ tiên quyết tường minh.
+
+**Vì sao ATTT là ngoại lệ (GP2 thua GP1 ở P@5)**: đây cũng là fold có R² tệ nhất khi train (-1.07, xem mục 7.3) — tức khi giữ ATTT ra làm test và train trên 6 ngành còn lại, mô hình gần như không tổng quát hóa được. Khả năng cao cấu trúc chương trình ATTT (thứ tự khối kiến thức, tỷ lệ môn theo khối) khác biệt đáng kể so với 6 ngành còn lại, trong khi tập train chỉ có 7 ngành — quá ít để mô hình học được sự khác biệt liên-ngành thay vì chỉ khớp với "ngành đa số".
+
+**Data quality quan trọng ngang model choice**: sau khi sửa bug tách mã môn (mục 8.1), hệ số `graph_depth` tăng gấp ~10 lần (0.025 → 0.269) — cùng một thuật toán, cùng một kiến trúc, chỉ sửa lại đồ thị đầu vào cho đúng đã tạo ra khác biệt lớn hơn nhiều so với việc đổi từ GP1 sang GP2. Kết luận thực dụng: đầu tư vào chất lượng dữ liệu (rule tiên quyết đúng) mang lại ROI cao hơn đầu tư thêm vào độ phức tạp mô hình.
+
+**Track-weighting: biên độ hẹp nhưng thứ hạng đúng**: cosine similarity của 5 môn ứng viên chỉ trải từ 0.854–0.939 (mục 7.4) — biên độ hẹp vì mọi môn đều thuộc nhóm "CS" cùng miền kiến thức. Điều có ý nghĩa không phải giá trị tuyệt đối mà là **thứ hạng tương đối**: đúng 2 môn liên quan Computer Vision nhất (CS331, CS338) lên đầu, đúng môn thiên NLP (CS321) xuống cuối — cho thấy embedding phân biệt được ở độ chi tiết cần thiết dù chênh lệch số học nhỏ.
+
+**Giới hạn thống kê cần lưu ý**: leave-future-out có N=16–32 scenario/ngành (mục 7.2) — đủ để so sánh xu hướng macro (182 scenario gộp) nhưng **không đủ lớn để khẳng định ý nghĩa thống kê ở từng ngành riêng lẻ** (đặc biệt KHMT chỉ 16 scenario). Số liệu per-major nên đọc như tín hiệu định hướng, không phải kết luận chắc chắn.
+
 ---
 
 ## 8. Lỗi dữ liệu phát hiện & đã sửa
@@ -393,19 +406,47 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ## 11. Hạn chế & Hướng phát triển
 
-**Trong phạm vi đã làm**: 1 hệ (đại học chính quy), GP2 train/test chính trên 7 ngành có nhãn `semester` đầy đủ (K2012–K2015); track-weighting phủ đủ 12/12 ngành.
+### 11.1 Hạn chế
 
-**Ngoài phạm vi, hướng mở rộng**:
+| # | Hạn chế | Chi tiết |
+|---|---|---|
+| 1 | GP2 chỉ có ground truth ở 7/12 ngành | Nhãn `semester` thật chỉ tồn tại ở K2012–K2015; ngành/khóa khác (K2019+, KHdl, TKVM, TMDT, TTDM, TTNT) chỉ suy luận qua đặc trưng, không tự đánh giá độc lập được |
+| 2 | Chất lượng mô hình GP2 chưa cao & không đều | R² = 0.199 (GroupKFold); riêng ATTT R² âm (-1.07) — mô hình tổng quát kém ở một số ngành |
+| 3 | Feature `is_mandatory` không có tác dụng | Hệ số = 0 vì 832/832 nhãn train đều là môn bắt buộc — không có dữ liệu để học phân biệt bắt buộc/tự chọn |
+| 4 | Taxonomy track-weighting biên soạn tay | 2–4 hướng/ngành, tạo thủ công dựa trên đọc chương trình, chưa được chuyên gia ngành thẩm định |
+| 5 | Không đánh giá được trên dữ liệu SV thật | Bảng điểm SV thật bị giới hạn NDA — mọi đánh giá đều gián tiếp qua khung chương trình, không đo được mức hài lòng/hiệu quả thực tế |
+| 6 | Chỉ tối ưu 1 học kỳ | Chưa có lộ trình nhiều kỳ tới tốt nghiệp (multi-semester roadmap) |
+| 7 | TKB là snapshot tĩnh | Không cập nhật sĩ số lớp real-time; lớp đầy giữa lúc SV thao tác không được phản ánh |
+| 8 | Chưa có đánh giá định tính từ người thật | Chưa khảo sát cố vấn học tập/sinh viên thật — toàn bộ kết quả hiện là định lượng/offline |
 
-- Dự đoán độ khó/rủi ro trượt môn — cần dữ liệu điểm số sinh viên thật (hiện không có do NDA).
-- Tối ưu đa học kỳ (multi-semester planning) — hiện chỉ tối ưu cho 1 học kỳ tại một thời điểm.
-- Real-time cập nhật sĩ số lớp khi đăng ký đông.
-- Mở rộng taxonomy hướng chuyên ngành sâu hơn (hiện 2–4 hướng/ngành, có thể chi tiết hơn dựa trên phân tích cluster embedding thay vì hoàn toàn biên soạn tay).
-- Đánh giá định tính bổ sung: khảo sát nhỏ với cố vấn học tập/sinh viên thật (chưa thực hiện do giới hạn thời gian, không phải giới hạn phương pháp).
+### 11.2 Hướng phát triển
+
+| # | Hướng | Giải quyết hạn chế nào |
+|---|---|---|
+| 1 | Mở rộng nhãn train (làm việc với phòng đào tạo để có `semester` cho K2016+) | #1, #2 |
+| 2 | Thử model phi tuyến có giải thích được (VD GBM + SHAP) thay vì chỉ Ridge | #2 |
+| 3 | Dự đoán rủi ro học vụ (trượt môn, cảnh báo sớm) khi có dữ liệu điểm hợp lệ | #5 |
+| 4 | Tối ưu đa học kỳ — lộ trình tới tốt nghiệp, không chỉ 1 kỳ | #6 |
+| 5 | Tích hợp sĩ số lớp real-time từ hệ thống đăng ký thật | #7 |
+| 6 | Kiểm định/tinh chỉnh taxonomy track bằng cluster embedding tự động + review chuyên gia | #4 |
+| 7 | User study với cố vấn học tập & sinh viên thật | #8 |
 
 ---
 
-## 12. Tham khảo
+## 12. Tổng kết
+
+Đồ án xây dựng thành công một hệ thống hỗ trợ ra quyết định 2 tầng cho việc đăng ký học phần, với 3 thành phần đã hoạt động và verify bằng chạy thật: **GP1** (đồ thị tiên quyết, baseline không train), **GP2** (mô hình Ridge huấn luyện thật trên 832 nhãn thật, không synthetic), và **track-weighting** (cá nhân hóa bằng GTE embedding, phủ 12/12 ngành).
+
+**Đã chứng minh được**:
+- Một mô hình học máy thật (GP2) vượt baseline luật/đồ thị (GP1) trên cả Precision@5 và Recall@5 (macro 0.658 vs 0.620), đo bằng phương pháp leave-future-out tái lập được, không cần dữ liệu tổng hợp hay người dùng thử nghiệm.
+- Toàn bộ pipeline — từ dữ liệu thô, đồ thị tiên quyết, huấn luyện, tới phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật 100%, không dùng bảng điểm SV thật (NDA) lẫn dữ liệu tổng hợp.
+- Quy trình kiểm thử thật (không phải suy diễn) đã tìm ra và sửa được 2 lỗi thật trong hệ thống (mục 8), với tác động đo được cụ thể (R² tăng 0.089→0.199 sau 1 lỗi sửa) — minh chứng giá trị của việc test bằng case thật thay vì chỉ tin vào code review.
+
+**Đánh giá trung thực**: hệ thống đã sẵn sàng như một proof-of-concept có cơ sở khoa học vững — không phải if-else đơn thuần, có model thật, có đánh giá định lượng thật. Giới hạn chính nằm ở **độ phủ dữ liệu nhãn** (7/12 ngành có ground truth) chứ không phải ở phương pháp luận — đây là hướng mở rộng rõ ràng và khả thi nhất (mục 11.2).
+
+---
+
+## 13. Tham khảo
 
 - Flicke, M. et al. (2025). *Scholar Inbox: Personalized Paper Recommendations for Scientists*. Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (ACL 2025), System Demonstrations, pp. 307–317. — tham khảo kiến trúc content-based recommendation + cold-start bằng embedding cho phần track-weighting (mục 5.3).
 - Quy chế đào tạo 790/QĐ-ĐHCNTT-2022, Đại học Công nghệ Thông tin — ĐHQG-HCM.
@@ -415,9 +456,9 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ---
 
-## 13. Phụ lục
+## 14. Phụ lục
 
-### 13.1 Cấu trúc thư mục liên quan
+### 14.1 Cấu trúc thư mục liên quan
 
 ```
 backend/app/services/
@@ -447,7 +488,7 @@ data/
 notebooks/anchor_profiles.json
 ```
 
-### 13.2 Lệnh chạy nhanh
+### 14.2 Lệnh chạy nhanh
 
 ```bash
 # Chạy web app (xem README.md mục "Chạy Demo" để biết đầy đủ)
