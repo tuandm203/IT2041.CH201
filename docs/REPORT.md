@@ -31,7 +31,7 @@ Ngoài ra, hệ thống có một lớp cá nhân hóa bổ sung (**track-weight
 4. [Kiến trúc hệ thống](#4-kiến-trúc-hệ-thống)
 5. [Phương pháp luận](#5-phương-pháp-luận)
 6. [Pipeline dữ liệu](#6-pipeline-dữ-liệu)
-7. [Đánh giá & Kết quả](#7-đánh-giá--kết-quả) (gồm 7.6 [Phân tích kết quả](#76-phân-tích--diễn-giải-kết-quả))
+7. [Đánh giá & Kết quả](#7-đánh-giá--kết-quả) (gồm 7.7 [Phân tích kết quả](#77-phân-tích--diễn-giải-kết-quả))
 8. [Lỗi dữ liệu phát hiện & đã sửa](#8-lỗi-dữ-liệu-phát-hiện--đã-sửa)
 9. [Sản phẩm & Demo](#9-sản-phẩm--demo)
 10. [Xác thực (Verification)](#10-xác-thực-verification)
@@ -282,15 +282,33 @@ Các bước 1–5 chạy một lần khi cập nhật dữ liệu nguồn; bư�
 
 ## 7. Đánh giá & Kết quả
 
-### 7.1 Phương pháp đánh giá
+### 7.1 Cách tạo scenario đánh giá
+
+Trường đã có sẵn chương trình chuẩn cho từng ngành: môn nào học vào kỳ mấy (kỳ 1 tới kỳ 8). Đây là dữ liệu thật trường công bố, không phải tự bịa.
+
+**Cách tạo 1 "kịch bản" (scenario) để test:**
+
+1. Chọn 1 ngành (VD KHMT), 1 khóa (VD K2012), chọn 1 mốc kỳ (VD kỳ 5).
+2. Giả sử có 1 sinh viên đã học xong hết mọi môn mà chương trình chuẩn xếp vào kỳ 1, 2, 3, 4 (tức trước kỳ 5).
+3. Hỏi hệ thống (GP1 hoặc GP2): "kỳ này sinh viên nên học môn gì?" — hệ thống trả lời top 5 môn.
+4. Mở đáp án: chương trình chuẩn ghi kỳ 5 thật ra có những môn gì — so với câu trả lời của hệ thống ở bước 3.
+5. Trùng nhiều → hệ thống đoán tốt. Trùng ít → đoán tệ.
+
+Làm lại y hệt vậy cho từng mốc kỳ, từng ngành (7 ngành), từng khóa (4 khóa K2012–K2015) — mỗi lần lặp là 1 kịch bản, tổng cộng ra **182 kịch bản**.
+
+**Ví dụ đời thường**: trường có sẵn 1 tờ lịch học chuẩn, ghi rõ ngành này năm 1 học môn gì, năm 2 học môn gì... tới năm 4. Tờ này có thật, trường công bố công khai. Lấy tay che phần dưới lại, chỉ để lộ ra "năm 1 + năm 2 học môn gì". Đưa hệ thống xem phần lộ ra đó, hỏi: "vậy năm 3 nên học môn gì?". Hệ thống đoán ra 5 môn. Bỏ tay che ra, nhìn xuống phần bị che (năm 3 thật sự học môn gì theo tờ lịch chuẩn), so xem hệ thống đoán trúng mấy môn. Trúng nhiều → hệ thống thông minh, trúng ít → hệ thống dở. Làm trò che-đoán-mở này lặp lại khắp các mốc kỳ, các ngành, các khóa — ra 182 lần như vậy.
+
+**Vì sao làm được mà không cần sinh viên thật**: "sinh viên giả" ở đây không phải bịa ra hành vi gì cả — nó chỉ là cách nói khác của việc cắt chương trình chuẩn thật ra làm nhiều đoạn theo mốc thời gian, rồi lấy đoạn sau làm đáp án để chấm đoạn trước đoán có đúng không. Chương trình chuẩn vốn dĩ đã là thứ tự đúng do trường quy định — chỉ mượn lại chính thứ tự đó để vừa làm đề bài, vừa làm đáp án.
+
+### 7.2 Phương pháp đánh giá
 
 Không dùng dữ liệu tổng hợp, không cần người dùng thật thử nghiệm (xem ràng buộc thiết kế ở mục 1.3). Ba trục đánh giá:
 
-1. **Leave-future-out** trên 832 nhãn thật: với mỗi `(major, semester=k)`, giả lập sinh viên đã hoàn thành mọi môn có `semester < k` theo khung chuẩn thật, lấy top-5 đề xuất của GP1/GP2, so với tập môn **thật sự** có `semester = k` — đo Precision@5, Recall@5.
+1. **Leave-future-out** trên 832 nhãn thật (cách sinh scenario ở mục 7.1): lấy top-5 đề xuất của GP1/GP2 cho từng scenario, so với tập môn **thật sự** có `semester = k` — đo Precision@5, Recall@5.
 2. **Formal rule-compliance**: kiểm tra mọi output không bao giờ vi phạm tiên quyết cứng, xung đột lịch, trần tín chỉ.
 3. **Regression test** trên 4 kịch bản sinh viên biên soạn tay (`data/train/student_case_*.json`) — kiểm tra tính đúng của logic (không phải benchmark thống kê).
 
-### 7.2 Kết quả GP1 vs GP2 (leave-future-out, Top-N=5)
+### 7.3 Kết quả GP1 vs GP2 (leave-future-out, Top-N=5)
 
 | Ngành | Số scenario | GP1 P@5 | GP1 R@5 | GP2 P@5 | GP2 R@5 |
 |---|---|---|---|---|---|
@@ -305,7 +323,7 @@ Không dùng dữ liệu tổng hợp, không cần người dùng thật thử 
 
 **Nhận xét**: GP2 vượt GP1 ở 6/7 ngành trên Precision@5 (chỉ thua ở ATTT) và ở tất cả 7/7 ngành trên Recall@5 — cho thấy mô hình học được pattern thật từ dữ liệu chương trình đào tạo, không chỉ dựa vào cấu trúc đồ thị thuần túy.
 
-### 7.3 Chất lượng mô hình GP2 (GroupKFold theo ngành)
+### 7.4 Chất lượng mô hình GP2 (GroupKFold theo ngành)
 
 | | MAE | R² |
 |---|---|---|
@@ -314,7 +332,7 @@ Không dùng dữ liệu tổng hợp, không cần người dùng thật thử 
 
 Hệ số Ridge: `graph_depth=0.269`, `unlock_count=-0.027`, `credits=0.159`, `is_mandatory=0.000`, `block_category=0.865`. Hệ số `is_mandatory` bằng 0 không phải lỗi — toàn bộ 832 dòng nhãn thật đều có `is_mandatory=True` (chỉ môn bắt buộc mới có `semester` cố định trong khung chương trình; môn tự chọn không có), nên đặc trưng này không có phương sai để học — một giới hạn thật của nguồn nhãn, không phải lỗi code.
 
-### 7.4 Track-weighting — bằng chứng hoạt động thật
+### 7.5 Track-weighting — bằng chứng hoạt động thật
 
 Kịch bản: sinh viên KHMT chọn hướng `computer_vision`, 5 môn tự chọn ứng viên (CS105, CS321, CS331, CS338, CS419):
 
@@ -328,7 +346,7 @@ Kịch bản: sinh viên KHMT chọn hướng `computer_vision`, 5 môn tự ch�
 
 Model xếp đúng theo trực giác chuyên môn: `CS331` (Computer Vision) và `CS338` (Nhận dạng) được xếp cao nhất, `CS321` (Ngôn ngữ học ngữ liệu — thiên NLP hơn CV) xếp thấp nhất trong nhóm. Cả thứ tự đề xuất của GP1 lẫn GP2 đều thay đổi khi bật track (`ordering_changed = True` cho cả hai), trong khi môn bị chặn tiên quyết (`CS410` — thiếu `IT003`) vẫn bị chặn không đổi bất kể engine/track — xác nhận cá nhân hóa không bao giờ ghi đè ràng buộc cứng.
 
-### 7.5 Regression test (4 case sinh viên)
+### 7.6 Regression test (4 case sinh viên)
 
 | Case | Mô tả | Kết quả |
 |---|---|---|
@@ -337,23 +355,23 @@ Model xếp đúng theo trực giác chuyên môn: `CS331` (Computer Vision) và
 | 3 | Thiếu tiên quyết cho môn chuyên ngành | PASS |
 | 4 | Tiến độ bình thường, sẵn sàng học chuyên ngành | PASS |
 
-### 7.6 Phân tích & diễn giải kết quả
+### 7.7 Phân tích & diễn giải kết quả
 
 **Vì sao GP2 thắng GP1 ở phần lớn ngành**: hệ số Ridge cho thấy `block_category` (0.865) là tín hiệu mạnh nhất, mạnh hơn hẳn `graph_depth` (0.269) hay `credits` (0.159) — nghĩa là mô hình học được đúng logic sư phạm thật: môn thuộc khối "đại cương"/"cơ sở ngành" nên học trước, khối "chuyên ngành" học sau, một quy luật ẩn trong dữ liệu chương trình mà GP1 (chỉ nhìn cấu trúc đồ thị tiên quyết) không nắm được vì không phải môn nào cũng có quan hệ tiên quyết tường minh.
 
-**Vì sao ATTT là ngoại lệ (GP2 thua GP1 ở P@5)**: đây cũng là fold có R² tệ nhất khi train (-1.07, xem mục 7.3) — tức khi giữ ATTT ra làm test và train trên 6 ngành còn lại, mô hình gần như không tổng quát hóa được. Khả năng cao cấu trúc chương trình ATTT (thứ tự khối kiến thức, tỷ lệ môn theo khối) khác biệt đáng kể so với 6 ngành còn lại, trong khi tập train chỉ có 7 ngành — quá ít để mô hình học được sự khác biệt liên-ngành thay vì chỉ khớp với "ngành đa số".
+**Vì sao ATTT là ngoại lệ (GP2 thua GP1 ở P@5)**: đây cũng là fold có R² tệ nhất khi train (-1.07, xem mục 7.4) — tức khi giữ ATTT ra làm test và train trên 6 ngành còn lại, mô hình gần như không tổng quát hóa được. Khả năng cao cấu trúc chương trình ATTT (thứ tự khối kiến thức, tỷ lệ môn theo khối) khác biệt đáng kể so với 6 ngành còn lại, trong khi tập train chỉ có 7 ngành — quá ít để mô hình học được sự khác biệt liên-ngành thay vì chỉ khớp với "ngành đa số".
 
 **Data quality quan trọng ngang model choice**: sau khi sửa bug tách mã môn (mục 8.1), hệ số `graph_depth` tăng gấp ~10 lần (0.025 → 0.269) — cùng một thuật toán, cùng một kiến trúc, chỉ sửa lại đồ thị đầu vào cho đúng đã tạo ra khác biệt lớn hơn nhiều so với việc đổi từ GP1 sang GP2. Kết luận thực dụng: đầu tư vào chất lượng dữ liệu (rule tiên quyết đúng) mang lại ROI cao hơn đầu tư thêm vào độ phức tạp mô hình.
 
-**Track-weighting: biên độ hẹp nhưng thứ hạng đúng**: cosine similarity của 5 môn ứng viên chỉ trải từ 0.854–0.939 (mục 7.4) — biên độ hẹp vì mọi môn đều thuộc nhóm "CS" cùng miền kiến thức. Điều có ý nghĩa không phải giá trị tuyệt đối mà là **thứ hạng tương đối**: đúng 2 môn liên quan Computer Vision nhất (CS331, CS338) lên đầu, đúng môn thiên NLP (CS321) xuống cuối — cho thấy embedding phân biệt được ở độ chi tiết cần thiết dù chênh lệch số học nhỏ.
+**Track-weighting: biên độ hẹp nhưng thứ hạng đúng**: cosine similarity của 5 môn ứng viên chỉ trải từ 0.854–0.939 (mục 7.5) — biên độ hẹp vì mọi môn đều thuộc nhóm "CS" cùng miền kiến thức. Điều có ý nghĩa không phải giá trị tuyệt đối mà là **thứ hạng tương đối**: đúng 2 môn liên quan Computer Vision nhất (CS331, CS338) lên đầu, đúng môn thiên NLP (CS321) xuống cuối — cho thấy embedding phân biệt được ở độ chi tiết cần thiết dù chênh lệch số học nhỏ.
 
-**Giới hạn thống kê cần lưu ý**: leave-future-out có N=16–32 scenario/ngành (mục 7.2) — đủ để so sánh xu hướng macro (182 scenario gộp) nhưng **không đủ lớn để khẳng định ý nghĩa thống kê ở từng ngành riêng lẻ** (đặc biệt KHMT chỉ 16 scenario). Số liệu per-major nên đọc như tín hiệu định hướng, không phải kết luận chắc chắn.
+**Giới hạn thống kê cần lưu ý**: leave-future-out có N=16–32 scenario/ngành (mục 7.3) — đủ để so sánh xu hướng macro (182 scenario gộp) nhưng **không đủ lớn để khẳng định ý nghĩa thống kê ở từng ngành riêng lẻ** (đặc biệt KHMT chỉ 16 scenario). Số liệu per-major nên đọc như tín hiệu định hướng, không phải kết luận chắc chắn.
 
 ---
 
 ## 8. Lỗi dữ liệu phát hiện & đã sửa
 
-Việc xây dựng bộ test thật (mục 7.5) phát hiện 2 lỗi thật trong hệ thống — không phải giả định, đều được xác minh và sửa tận gốc.
+Việc xây dựng bộ test thật (mục 7.6) phát hiện 2 lỗi thật trong hệ thống — không phải giả định, đều được xác minh và sửa tận gốc.
 
 ### 8.1 Mã môn dính liền bị tách sai trong catalog tiên quyết
 
