@@ -435,13 +435,11 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ## 12. Tổng kết
 
-Đồ án xây dựng hệ thống hỗ trợ sinh viên UIT chọn môn đăng ký học kỳ tới — đúng điều kiện tiên quyết, tối ưu tiến độ tốt nghiệp — mà không dùng bảng điểm sinh viên thật (NDA) và không dùng dữ liệu tổng hợp.
-
-Hệ thống dùng kiến trúc 2 tầng: chọn môn rồi chọn lớp. Tầng chọn môn dựng đồ thị tiên quyết từ dữ liệu quy định thật của trường, lọc cứng theo điều kiện tiên quyết, rồi xếp hạng bằng 1 trong 2 giải pháp so sánh song song — **GP1** theo cấu trúc đồ thị (critical path/unlock-count, không train) và **GP2**, một mô hình Ridge **huấn luyện thật** trên nhãn `semester` thật lấy từ khung chương trình đào tạo do trường công bố, kiểm định bằng GroupKFold theo ngành. Có thêm lớp cá nhân hóa **track-weighting** dùng embedding ngữ nghĩa so khớp mô tả môn với định hướng chuyên ngành sinh viên chọn, phủ toàn bộ các ngành đào tạo hiện có. Tầng chọn lớp giải bài toán CSP trên thời khóa biểu thật của trường để tránh trùng lịch và đúng trần tín chỉ.
-
-Kết quả: GP2 vượt GP1 trên cả Precision@5 và Recall@5 khi đánh giá bằng phương pháp leave-future-out trên chính nhãn thật, không cần thu thập thêm dữ liệu hay người dùng thử nghiệm. Toàn bộ pipeline — crawl dữ liệu, sinh rule, huấn luyện, phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật, đã verify bằng chạy thật chứ không chỉ đọc code. Việc test bằng các kịch bản sinh viên thật, thay vì chỉ review logic, đã phát hiện và sửa được các lỗi thật trong hệ thống, với tác động đo được cụ thể lên chất lượng mô hình.
-
-Hạn chế chính hiện nay nằm ở độ phủ dữ liệu nhãn dùng để huấn luyện GP2 — chưa đủ cho mọi ngành đào tạo — và đây cũng là hướng mở rộng khả thi và ưu tiên nhất trong thời gian tới.
+- Xây hệ thống hỗ trợ sinh viên UIT chọn môn đăng ký đúng tiên quyết, tối ưu tiến độ tốt nghiệp — không dùng bảng điểm SV thật (NDA), không dùng dữ liệu tổng hợp.
+- Kiến trúc 2 tầng: **chọn môn** (GP1 — đồ thị tiên quyết, không train; GP2 — model Ridge huấn luyện thật trên nhãn chương trình đào tạo thật) rồi **chọn lớp** (CSP trên thời khóa biểu thật), có cá nhân hóa theo định hướng chuyên ngành bằng embedding ngữ nghĩa.
+- GP2 (có train) vượt GP1 (rule-based) trên cả Precision@5 và Recall@5, đánh giá bằng leave-future-out trên dữ liệu thật, không cần người dùng thử nghiệm.
+- Toàn bộ pipeline chạy thật đầu-cuối, đã verify bằng chạy thật; test bằng kịch bản thật đã phát hiện và sửa được lỗi thật trong hệ thống.
+- Hạn chế & hướng phát triển chính: mở rộng độ phủ dữ liệu nhãn huấn luyện GP2 cho đủ mọi ngành.
 
 ---
 
