@@ -435,11 +435,13 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ## 12. Tổng kết
 
-Với các hạn chế ở mục 11 — đặc biệt độ phủ nhãn chỉ 7/12 ngành và chất lượng GP2 chưa đều giữa các ngành — đồ án nên được nhìn nhận đúng tầm: một **prototype nghiên cứu** kiểm chứng được một cách tiếp cận, chưa phải hệ thống sẵn sàng triển khai thật cho toàn bộ 12 ngành của trường.
+**Bài toán**: sinh viên UIT cần công cụ hỗ trợ chọn môn đăng ký học kỳ tới — đúng điều kiện tiên quyết, tối ưu tiến độ tốt nghiệp — trong điều kiện không được dùng bảng điểm sinh viên thật (NDA) và không dùng dữ liệu tổng hợp (mục 1).
 
-Trong phạm vi đó, phần có giá trị tái sử dụng nhất không nằm ở con số P@5/R² cụ thể (vốn còn khiêm tốn và không đều, mục 7.6), mà ở **phương pháp luận**: cách lấy nhãn huấn luyện thật từ khung chương trình thay vì synthetic data, cách đánh giá leave-future-out không cần người dùng thử, và việc quy trình test bằng case thật (không phải review code suông) đã lộ ra 2 lỗi dữ liệu thật (mục 8) — loại lỗi mà nếu chỉ tin vào logic "trông có vẻ đúng" sẽ không bao giờ phát hiện được. Cách làm này áp dụng được cho các ngành/khóa chưa có nhãn, miễn thu thập thêm được dữ liệu `semester` thật.
+**Phương pháp**: kiến trúc 2 tầng — chọn môn rồi chọn lớp (mục 4). Tầng chọn môn dựng đồ thị tiên quyết từ 355 rule thật của trường, lọc cứng theo điều kiện tiên quyết, rồi xếp hạng bằng 1 trong 2 giải pháp so sánh song song: **GP1** theo cấu trúc đồ thị (critical path/unlock-count, không train) và **GP2** — một mô hình Ridge **huấn luyện thật** trên 832 nhãn `semester` thật lấy từ khung chương trình K2012–K2015, kiểm định bằng GroupKFold theo ngành (mục 5). Có thêm lớp cá nhân hóa **track-weighting** dùng embedding GTE so khớp mô tả môn với định hướng chuyên ngành SV chọn, phủ 12/12 ngành. Tầng chọn lớp giải bài toán CSP trên thời khóa biểu thật của trường để tránh trùng lịch và đúng trần tín chỉ.
 
-Hướng đi hợp lý tiếp theo là mục 11.2 #1 (mở rộng nhãn) trước khi tính tới mở rộng tính năng — vì phần lớn hạn chế còn lại (độ chính xác GP2, độ tin cậy track-weighting) đều bắt nguồn từ cùng một nút thắt: chưa đủ dữ liệu nhãn thật để mô hình tổng quát hóa tốt hơn.
+**Kết quả**: GP2 vượt GP1 trên cả Precision@5 và Recall@5 (macro 0.658 so với 0.620) khi đánh giá bằng leave-future-out trên chính 832 nhãn thật (mục 7). Toàn bộ pipeline — crawl dữ liệu, sinh rule, huấn luyện, phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật, đã verify bằng chạy thật chứ không chỉ đọc code (mục 10). Việc test bằng 4 case sinh viên thật (thay vì chỉ review logic) đã phát hiện và sửa được 2 lỗi thật trong hệ thống, với tác động đo được cụ thể lên chất lượng model (mục 8).
+
+Hạn chế và hướng mở rộng cụ thể đã nêu ở mục 11 — trọng tâm gần nhất là mở rộng độ phủ dữ liệu nhãn cho GP2.
 
 ---
 
