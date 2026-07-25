@@ -435,13 +435,13 @@ Nguyên tắc xuyên suốt: **mọi con số/khẳng định trong báo cáo n�
 
 ## 12. Tổng kết
 
-**Bài toán**: sinh viên UIT cần công cụ hỗ trợ chọn môn đăng ký học kỳ tới — đúng điều kiện tiên quyết, tối ưu tiến độ tốt nghiệp — trong điều kiện không được dùng bảng điểm sinh viên thật (NDA) và không dùng dữ liệu tổng hợp (mục 1).
+Đồ án xây dựng hệ thống hỗ trợ sinh viên UIT chọn môn đăng ký học kỳ tới — đúng điều kiện tiên quyết, tối ưu tiến độ tốt nghiệp — mà không dùng bảng điểm sinh viên thật (NDA) và không dùng dữ liệu tổng hợp.
 
-**Phương pháp**: kiến trúc 2 tầng — chọn môn rồi chọn lớp (mục 4). Tầng chọn môn dựng đồ thị tiên quyết từ 355 rule thật của trường, lọc cứng theo điều kiện tiên quyết, rồi xếp hạng bằng 1 trong 2 giải pháp so sánh song song: **GP1** theo cấu trúc đồ thị (critical path/unlock-count, không train) và **GP2** — một mô hình Ridge **huấn luyện thật** trên 832 nhãn `semester` thật lấy từ khung chương trình K2012–K2015, kiểm định bằng GroupKFold theo ngành (mục 5). Có thêm lớp cá nhân hóa **track-weighting** dùng embedding GTE so khớp mô tả môn với định hướng chuyên ngành SV chọn, phủ 12/12 ngành. Tầng chọn lớp giải bài toán CSP trên thời khóa biểu thật của trường để tránh trùng lịch và đúng trần tín chỉ.
+Hệ thống dùng kiến trúc 2 tầng: chọn môn rồi chọn lớp. Tầng chọn môn dựng đồ thị tiên quyết từ dữ liệu quy định thật của trường, lọc cứng theo điều kiện tiên quyết, rồi xếp hạng bằng 1 trong 2 giải pháp so sánh song song — **GP1** theo cấu trúc đồ thị (critical path/unlock-count, không train) và **GP2**, một mô hình Ridge **huấn luyện thật** trên nhãn `semester` thật lấy từ khung chương trình đào tạo do trường công bố, kiểm định bằng GroupKFold theo ngành. Có thêm lớp cá nhân hóa **track-weighting** dùng embedding ngữ nghĩa so khớp mô tả môn với định hướng chuyên ngành sinh viên chọn, phủ toàn bộ các ngành đào tạo hiện có. Tầng chọn lớp giải bài toán CSP trên thời khóa biểu thật của trường để tránh trùng lịch và đúng trần tín chỉ.
 
-**Kết quả**: GP2 vượt GP1 trên cả Precision@5 và Recall@5 (macro 0.658 so với 0.620) khi đánh giá bằng leave-future-out trên chính 832 nhãn thật (mục 7). Toàn bộ pipeline — crawl dữ liệu, sinh rule, huấn luyện, phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật, đã verify bằng chạy thật chứ không chỉ đọc code (mục 10). Việc test bằng 4 case sinh viên thật (thay vì chỉ review logic) đã phát hiện và sửa được 2 lỗi thật trong hệ thống, với tác động đo được cụ thể lên chất lượng model (mục 8).
+Kết quả: GP2 vượt GP1 trên cả Precision@5 và Recall@5 khi đánh giá bằng phương pháp leave-future-out trên chính nhãn thật, không cần thu thập thêm dữ liệu hay người dùng thử nghiệm. Toàn bộ pipeline — crawl dữ liệu, sinh rule, huấn luyện, phục vụ qua web app và Docker — chạy được đầu-cuối bằng dữ liệu thật, đã verify bằng chạy thật chứ không chỉ đọc code. Việc test bằng các kịch bản sinh viên thật, thay vì chỉ review logic, đã phát hiện và sửa được các lỗi thật trong hệ thống, với tác động đo được cụ thể lên chất lượng mô hình.
 
-Hạn chế và hướng mở rộng cụ thể đã nêu ở mục 11 — trọng tâm gần nhất là mở rộng độ phủ dữ liệu nhãn cho GP2.
+Hạn chế chính hiện nay nằm ở độ phủ dữ liệu nhãn dùng để huấn luyện GP2 — chưa đủ cho mọi ngành đào tạo — và đây cũng là hướng mở rộng khả thi và ưu tiên nhất trong thời gian tới.
 
 ---
 
